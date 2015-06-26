@@ -1,0 +1,22 @@
+{
+    "name": "honeybee/honeybee-agavi-demo",
+    "type": "library",
+    "description": "Demo Agavi application based on the Honeybee platform",
+    "keywords": ["demo", "honeybee", "agavi", "mvc", "cqrs", "ddd", "event-sourcing", "hexagonal", "framework", "php"],
+    "homepage": "https://github.com/honeybee/honeybee-agavi-demo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thorsten Schmitt-Rink"
+        },
+        {
+            "name": "Steffen Gransow"
+        },
+        {
+            "name": "Igor Pelligrini"
+        },
+        {
+            "name": "Hasham Ahmad"
+        }
+    ]
+}
