@@ -1,7 +1,7 @@
 {
     "name": "honeybee/honeybee-agavi-demo",
     "type": "library",
-    "description": "Demo Agavi application based on the Honeybee platform",
+    "description": "A demo CMS built on top of the Honeybee-Agavi CMF.",
     "keywords": ["demo", "honeybee", "agavi", "mvc", "cqrs", "ddd", "event-sourcing", "hexagonal", "framework", "php"],
     "homepage": "https://github.com/honeybee/honeybee-agavi-demo",
     "license": "MIT",
