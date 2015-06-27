@@ -1,1 +1,1 @@
-# honeybee-agavi-demo
+# Honeybee-Agavi Demo
