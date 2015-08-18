@@ -1,0 +1,36 @@
+---
+berlinonline::project_name: "honeybee-agavi-cmf-demo"
+berlinonline::project_prefix: "honeybee-agavi-cmf-demo"
+berlinonline::cms_name: "honeybee-agavi-cmf-demo.local"
+berlinonline::cms_dir: "pub"
+berlinonline::bo_environment: "development"
+berlinonline::webdir_app_mode: "0777"
+berlinonline::webdir_cms_mode: "0777"
+berlinonline::webdirectory_mode: "0777"
+berlinonline::aliases_root_recipient: vagrant
+berlinonline::project_git_path: "git@github.com:honeybee/honeybee-agavi-cmf-demo.git"
+
+berlinonline::sudos:all:
+  - deploy
+
+elasticsearch::version: "1.5.1"
+
+couchdb::bind_address: "0.0.0.0"
+
+converjon::url_whitelist:
+  - '~ ^http:\/\/honeybee-agavi-cmf-demo.local:?\d*\/\S+'
+converjon::base_url_path: /converjon/
+converjon::nginx_deployment: path
+converjon::reject_invalid_ssl: false
+converjon::aliases:
+  -
+    name: "dev"
+    base_file_path: "/srv/www/honeybee-agavi-cmf-demo.local/data/assets"
+    fallback_base_file_paths:
+        - "/srv/www/honeybee-agavi-cmf-demo.local/data/temp_assets"
+    headers:
+      - 'Cache-Control: "public, max-age=86400"'
+
+roles:
+  - "berlinonline::roles::honeybee"
+
