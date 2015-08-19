@@ -1,0 +1,14 @@
+/data
+/npm-debug.log
+/tags
+/build
+/app/modules/Honeybee_SystemAccount/fixture
+/dev/trellis_templates
+.environment
+.environaut.cache
+codecache
+.sass-cache
+.DS_Store
+.project
+.buildpath
+.settings
