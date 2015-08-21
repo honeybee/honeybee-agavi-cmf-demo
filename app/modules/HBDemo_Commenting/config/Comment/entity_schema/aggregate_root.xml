@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<type_schema namespace="HBDemo\Commenting\Comment\Model\Aggregate"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns="http://berlinonline.net/trellis/1.0/schema">
+    <type_definition name="Comment">
+        <implementor>\Honeybee\Model\Aggregate\AggregateRootType</implementor>
+        <entity_implementor>\Honeybee\Model\Aggregate\AggregateRoot</entity_implementor>
+        <description>
+            Defines a set of attributes that are used to manage the comment aggregate root.
+        </description>
+        <options>
+            <option name="vendor">HBDemo</option>
+            <option name="package">Commenting</option>
+            <option name="is_hierarchical">false</option>
+        </options>
+        <!-- attribute definitions -->
+        <attributes>
+            <attribute name="content" type="text" />
+            
+            <attribute name="topic" type="entity-reference-list">
+                <option name="min_count">1</option>
+                <option name="max_count">1</option>
+                <option name="entity_types">
+                    <option>Topic</option>
+                </option>
+            </attribute>
+            
+            <attribute name="owner" type="entity-reference-list">
+                <option name="min_count">1</option>
+                <option name="max_count">1</option>
+                <option name="entity_types">
+                    <option>Owner</option>
+                </option>
+            </attribute>
+        </attributes>
+    </type_definition>
+    <reference_definitions>
+        <reference_definition name="Topic">
+            <implementor>\Honeybee\Model\Aggregate\ReferencedEntityType</implementor>
+            <entity_implementor>\Honeybee\Model\Aggregate\ReferencedEntity</entity_implementor>
+            <option name="referenced_type">\HBDemo\Commenting\Topic\Model\Aggregate\TopicType</option>
+            <option name="identifying_attribute">identifier</option>
+        </reference_definition>
+        
+        <reference_definition name="Owner">
+            <implementor>\Honeybee\Model\Aggregate\ReferencedEntityType</implementor>
+            <entity_implementor>\Honeybee\Model\Aggregate\ReferencedEntity</entity_implementor>
+            <option name="referenced_type">\HBDemo\Commenting\Owner\Model\Aggregate\OwnerType</option>
+            <option name="identifying_attribute">identifier</option>
+        </reference_definition>
+    </reference_definitions>
+</type_schema>

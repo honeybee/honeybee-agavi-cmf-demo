@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<type_schema namespace="HBDemo\Commenting\Comment\Projection\Standard"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns="http://berlinonline.net/trellis/1.0/schema">
+    <type_definition name="Comment">
+        <implementor>\Honeybee\Projection\ProjectionType</implementor>
+        <entity_implementor>\Honeybee\Projection\Projection</entity_implementor>
+        <description>
+            Defines the (normalized) strucuture of the standard comment projection.
+        </description>
+        <options>
+            <option name="vendor">HBDemo</option>
+            <option name="package">Commenting</option>
+            <option name="is_hierarchical">false</option>
+        </options>
+        <!-- attribute definitions -->
+        <xi:include href="../aggregate_root.xml" xpointer="xmlns(dt=http://berlinonline.net/trellis/1.0/schema)
+            xpointer(/dt:type_schema/dt:type_definition/dt:attributes)">
+        </xi:include>
+    </type_definition>
+    <reference_definitions>
+        <reference_definition name="Topic">
+            <implementor>\Honeybee\Projection\ReferencedEntityType</implementor>
+            <entity_implementor>\Honeybee\Projection\ReferencedEntity</entity_implementor>
+            <option name="referenced_type">\HBDemo\Commenting\Topic\Projection\Standard\TopicType</option>
+            <option name="identifying_attribute">identifier</option>
+            <attributes>
+                <attribute name="title" type="text">
+                    <option name="mirrored">true</option>
+                </attribute>
+            </attributes>
+        </reference_definition>
+        <reference_definition name="Owner">
+            <implementor>\Honeybee\Projection\ReferencedEntityType</implementor>
+            <entity_implementor>\Honeybee\Projection\ReferencedEntity</entity_implementor>
+            <option name="referenced_type">\HBDemo\Commenting\Owner\Projection\Standard\OwnerType</option>
+            <option name="identifying_attribute">identifier</option>
+            <attributes>
+                <attribute name="name" type="text">
+                    <option name="mirrored">true</option>
+                </attribute>
+            </attributes>
+        </reference_definition>
+    </reference_definitions>
+</type_schema>

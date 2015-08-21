@@ -296,7 +296,7 @@ module:
 type:
 
 	@make config
-	@./bin/cli honeybee.core.util.generate_code -skeleton honeybee_type -quiet
+	@bin/cli honeybee.core.util.generate_code -skeleton honeybee_type -quiet
 	@make config
 	@echo ""
 	@echo "    When you have updated your entity attributes and reference"
@@ -309,22 +309,36 @@ type:
 trellis:
 
 	@make config
-	@./bin/cli honeybee.core.trellis.generate_code -quiet
+	@bin/cli honeybee.core.trellis.generate_code -quiet
 	@make config
 
 trellis-all:
 
 	@make config
-	@./bin/cli honeybee.core.trellis.generate_code -target all -quiet
+	@bin/cli honeybee.core.trellis.generate_code -target all -quiet
 	@make config
 
 migration:
 
-	@./bin/cli honeybee.core.migrate.create
+	@bin/cli honeybee.core.migrate.create
 
 fixture:
 
-	@./bin/cli honeybee.core.fixture.create
+	@bin/cli honeybee.core.fixture.create
+
+destroy-data:
+	
+	@echo "Destroying databases..."
+	@curl -s -XDELETE http://localhost:9200/honeybee-agavi-cmf-demo.* > /dev/null
+	@curl -s -XDELETE http://127.0.0.1:5984/honeybee-agavi-cmf-demo%2Bdomain_events > /dev/null
+
+rebuild-all:
+	
+	@make destroy-data
+	@echo "Rebuilding databases and importing fixtures..."
+	@bin/cli honeybee.core.migrate.run -target all
+	@bin/cli honeybee.core.fixture.import -target 'honeybee.system_account::fixture::writer' -fixture '20150819120801:import_demo_user'
+	@bin/cli honeybee.core.fixture.import -target 'hbdemo.commenting::fixture::writer' -fixture '20150810231335:initial_test_data'
 
 #
 #

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/view_templates/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <view_templates scope="hbdemo.commenting.account.collection">
+            <view_template name="hbdemo.commenting.account">
+                <tab name="accounts">
+                    <panel name="main">
+                        <row>
+                            <cell>
+                                <group name="user">
+                                    <field name="name" attribute_path="name" />
+                                    
+                                    <field name="owner" attribute_path="owner.owner.name" attribute_value_path="owner.owner[0].name" />
+                                    
+                                    <field name="modified_at" attribute_path="modified_at" />
+                                    
+                                    <field name="workflow_state" attribute_path="workflow_state" />
+                                </group>
+                            </cell>
+                        </row>
+                    </panel>
+                </tab>
+            </view_template>
+        </view_templates>
+    </ae:configuration>
+</ae:configurations>

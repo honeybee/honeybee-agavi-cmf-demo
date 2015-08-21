@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/HBDemo_Commenting/config/validators.xml">
+    <ae:configuration>
+        <validators translation_domain="hbdemo.commenting.owner.errors">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ResourceValidator" name="invalid_owner_resource" required="true" provides="valid_owner_resource">
+                <error>The given ownerresource (identifier) is invalid.</error>
+                <ae:parameter name="resource_type">hbdemo.commenting.owner</ae:parameter>
+                <ae:parameter name="allow_default_payload">true</ae:parameter>
+                <ae:parameter name="create_fresh_resource">true</ae:parameter>
+                <ae:parameter name="export">resource</ae:parameter>
+            </validator>
+
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\EmbedPathValidator" name="invalid_embed_path" depends="valid_owner_resource">
+                <argument>embed_path</argument>
+                <error>Missing required embed_path within request params.</error>
+                <error for="invalid_type">The given embed-path format/value-type is invalid.</error>
+                <error for="unknown_embed">The given embed-path doesn't point to an existing embed.</error>
+                <error for="missing_resource">Cant find a valid root-entity within the request-payload.</error>
+                <ae:parameter name="export">embed</ae:parameter>
+            </validator>
+
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ArrayValidator" name="invalid_input_group" required="false">
+                <argument>input_group</argument>
+                <ae:parameter name="explode_strings">true</ae:parameter>
+                <ae:parameter name="separator">,</ae:parameter>
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>

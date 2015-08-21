@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/view_templates/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <view_templates scope="hbdemo.commenting.owner.hierarchy">
+            <view_template name="hbdemo.commenting.owner">
+                <tab name="owners">
+                    <panel name="main">
+                        <row>
+                            <cell>
+                                <group name="owner">
+                                    <field name="identifier" attribute_path="identifier" />
+                                    <field name="workflow_state" attribute_path="workflow_state" />
+                                    <field name="created_at" attribute_path="created_at" />
+                                    <field name="modified_at" attribute_path="modified_at" />
+                                </group>
+                            </cell>
+                        </row>
+                    </panel>
+                </tab>
+            </view_template>
+
+            <view_template name="hbdemo.commenting.owner.parent">
+                <tab name="owners">
+                    <panel name="main">
+                        <row>
+                            <cell>
+                                <group name="owner">
+                                    <field name="identifier" attribute_path="identifier" />
+                                    <field name="workflow_state" attribute_path="workflow_state" />
+                                    <field name="created_at" attribute_path="created_at" />
+                                    <field name="modified_at" attribute_path="modified_at" />
+                                </group>
+                            </cell>
+                        </row>
+                    </panel>
+                </tab>
+            </view_template>
+        </view_templates>
+    </ae:configuration>
+</ae:configurations>

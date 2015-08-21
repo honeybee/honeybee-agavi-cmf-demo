@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/fixture/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+>
+    <ae:configuration>
+        <fixture_targets>
+
+            <fixture_target name="hbdemo.commenting::fixture::writer" active="true">
+                <fixture_loader class="Honeybee\Infrastructure\Fixture\FileSystemLoader">
+                    <setting name="directory">%core.module_dir%/HBDemo_Commenting/fixture</setting>
+                </fixture_loader>
+            </fixture_target>
+
+        </fixture_targets>
+    </ae:configuration>
+</ae:configurations>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/module/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+    <ae:configuration>
+        <module enabled="true">
+            <settings>
+                <setting name="title">Commenting Module</setting>
+                <setting name="version">1.0</setting>
+                <setting name="agavi.action.path">%core.module_dir%/${moduleName}/impl/${actionName}/${shortActionName}Action.class.php</setting>
+                <setting name="agavi.cache.path">%core.module_dir%/${moduleName}/impl/${actionName}/${shortActionName}.cache.xml</setting>
+                <setting name="agavi.template.directory">%core.module_dir%/${module}/impl</setting>
+                <setting name="agavi.validate.path">%core.module_dir%/${moduleName}/impl/${actionName}/${shortActionName}.validate.xml</setting>
+                <setting name="agavi.view.path">%core.module_dir%/${moduleName}/impl/${viewName}View.class.php</setting>
+                <setting name="agavi.view.name">${actionName}/${shortActionName}${viewName}</setting>
+            </settings>
+        </module>
+    </ae:configuration>
+</ae:configurations>

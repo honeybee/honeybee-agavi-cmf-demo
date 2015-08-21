@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE shortcuts [
+    <!ENTITY hbdemo_commenting_comment_related_entity_events
+    'event.getType() matches "/^hbdemo\.commenting\.(owner|topic)\..*/"'>
+]>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/event_bus/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <event_bus>
+            <channels>
+                <channel name="honeybee.events.domain">
+                    <subscriptions>
+                        <subscription enabled="true">
+                            <transport>sync</transport>
+                            <filter>
+                                <setting name="expression">&hbdemo_commenting_comment_related_entity_events;</setting>
+                            </filter>
+                            <handler implementor="\Honeybee\Projection\EventHandler\RelationProjectionUpdater">
+                                <setting name="projection_type">hbdemo.commenting.comment</setting>
+                            </handler>
+                        </subscription>
+                    </subscriptions>
+                </channel>
+
+                <channel name="honeybee.events.replay">
+                    <subscription>
+                        <transport>sync</transport>
+                        <filter>
+                            <setting name="expression">&hbdemo_commenting_comment_related_entity_events;</setting>
+                        </filter>
+                        <handler implementor="\Honeybee\Projection\EventHandler\RelationProjectionUpdater">
+                            <setting name="projection_type">hbdemo.commenting.comment</setting>
+                        </handler>
+                    </subscription>
+                </channel>
+
+            </channels>
+        </event_bus>
+    </ae:configuration>
+
+</ae:configurations>

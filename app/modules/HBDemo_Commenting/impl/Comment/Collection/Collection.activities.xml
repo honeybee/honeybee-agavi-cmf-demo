@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/activities/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+>
+    <ae:configuration>
+        <activity_containers>
+            <activity_container scope="hbdemo.commenting.comment.collection" extends="hbdemo.commenting.comment">
+                <activity name="search">
+                    <description>comment.activity.collection.search.description</description>
+                    <label>comment.activity.collection.search.title</label>
+                    <url type="route">null</url>
+                    <url_param name="offset">0</url_param>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>collection</rel>
+                        <rel>comment_list</rel>
+                    </rels>
+                </activity>
+            </activity_container>
+
+            <activity_container scope="hbdemo.commenting.comment.collection.primary_activities">
+                <activity name="create_resource">
+                    <description>comment.activity.create_resource.description</description>
+                    <label>comment.activity.create_resource.title</label>
+                    <url type="route">hbdemo.commenting.comment.create</url>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>create_resource</rel>
+                        <rel>create_comment</rel>
+                    </rels>
+                </activity>
+            </activity_container>
+
+            <activity_container scope="hbdemo.commenting.comment.collection.sort_activities">
+                <activity name="sort_by_modified_at">
+                    <description>comment.activity.sort_by_modified_at.description</description>
+                    <label>comment.activity.sort_by_modified_at.title</label>
+                    <url type="route">null</url>
+                    <url_param name="sort">modified_at:desc</url_param>
+                    <url_param name="offset">0</url_param>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>sort</rel>
+                        <rel>sort-by-modified_at:desc</rel>
+                    </rels>
+                </activity>
+                <activity name="sort_by_workflow_state">
+                    <description>comment.activity.sort_by_workflow_state.description</description>
+                    <label>comment.activity.sort_by_workflow_state.title</label>
+                    <url type="route">null</url>
+                    <url_param name="sort">workflow_state:asc</url_param>
+                    <url_param name="offset">0</url_param>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>sort</rel>
+                        <rel>sort-by-workflow_state:asc</rel>
+                    </rels>
+                </activity>
+            </activity_container>
+        </activity_containers>
+    </ae:configuration>
+</ae:configurations>

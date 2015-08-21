@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<type_schema namespace="HBDemo\Commenting\Owner\Model\Aggregate"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns="http://berlinonline.net/trellis/1.0/schema">
+    <type_definition name="Owner">
+        <implementor>\Honeybee\Model\Aggregate\AggregateRootType</implementor>
+        <entity_implementor>\Honeybee\Model\Aggregate\AggregateRoot</entity_implementor>
+        <description>
+            Defines a set of attributes that are used to manage a owner aggregate-root's internal state.
+        </description>
+        <options>
+            <option name="vendor">HBDemo</option>
+            <option name="package">Commenting</option>
+            <option name="is_hierarchical">false</option>
+        </options>
+        <!-- attribute definitions -->
+        <attributes>
+            <attribute name="name" type="text">
+                <option name="min_length">1</option>
+                <option name="max_length">100</option>
+            </attribute>
+            
+            <attribute name="email" type="email" />
+            
+            <attribute name="password_hash" type="text">
+                <option name="min_length">60</option>
+                <option name="max_length">60</option>
+            </attribute>
+            
+            <attribute name="authorization_token" type="token">
+                <option name="min_length">20</option>
+                <option name="max_length">20</option>
+                <option name="default_value">auto_gen</option>
+            </attribute>
+            
+            <attribute name="authorization_expires" type="timestamp" />
+        </attributes>
+    </type_definition>
+</type_schema>

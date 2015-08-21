@@ -1,0 +1,484 @@
+{
+    "hbdemo.commenting.comment": [
+        {
+            "identifier": "hbdemo.commenting.comment-d1b7514d-ba05-31ee-b73e-19c410163f62-de_DE-85019",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 77189,
+            "uuid": "d1b7514d-ba05-31ee-b73e-19c410163f62",
+            "short_id": 35720,
+            "language": "de_DE",
+            "version": 85019,
+            "content": "Eum sequi et aut adipisci nam qui eum.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "b8ffa625-0550-3b4e-b511-1a770576f40b",
+                    "referenced_identifier": "hbdemo.commenting.topic-bc47bab1-c9b0-3e07-b9e9-8220ba56c0a8-de_DE-25040"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "6140f6c7-f3cc-34e8-adf1-63887c727814",
+                    "referenced_identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-e90932ba-0122-357c-9306-3117b7113457-de_DE-35868",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 30068,
+            "uuid": "e90932ba-0122-357c-9306-3117b7113457",
+            "short_id": 54587,
+            "language": "de_DE",
+            "version": 35868,
+            "content": "Ducimus commodi qui voluptas vitae repudiandae velit tempore.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "3d3f3bd5-dcad-3bf8-bbe0-3f529a761336",
+                    "referenced_identifier": "hbdemo.commenting.topic-bc47bab1-c9b0-3e07-b9e9-8220ba56c0a8-de_DE-25040"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "7bb58bd5-05ad-3a96-942e-19a989c6218e",
+                    "referenced_identifier": "hbdemo.commenting.owner-34da796b-ae7b-337c-9a50-5a428ec8f107-de_DE-67674"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-f5102726-80ab-38b8-91d4-4e803d32b7f2-de_DE-12388",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 25867,
+            "uuid": "f5102726-80ab-38b8-91d4-4e803d32b7f2",
+            "short_id": 3751,
+            "language": "de_DE",
+            "version": 12388,
+            "content": "Eius quibusdam ut sit in et delectus.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "33dc7c13-f47f-389f-bc08-b8c9060747db",
+                    "referenced_identifier": "hbdemo.commenting.topic-bc47bab1-c9b0-3e07-b9e9-8220ba56c0a8-de_DE-25040"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "65c05fc6-6629-3cf5-b505-c3d86cdd0c1e",
+                    "referenced_identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-1ad508b8-b173-3b5e-849b-d2e8ab97f0d2-de_DE-37273",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 56682,
+            "uuid": "1ad508b8-b173-3b5e-849b-d2e8ab97f0d2",
+            "short_id": 66973,
+            "language": "de_DE",
+            "version": 37273,
+            "content": "Voluptatem ex tempore voluptatem impedit.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "f366135d-28ce-3e12-a61a-3047dd353d6a",
+                    "referenced_identifier": "hbdemo.commenting.topic-bc47bab1-c9b0-3e07-b9e9-8220ba56c0a8-de_DE-25040"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "040d7b5b-0246-3988-8671-cf5b6ad1de72",
+                    "referenced_identifier": "hbdemo.commenting.owner-968724a5-b174-3b81-a8df-95ec3b1c9a6d-de_DE-6900"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-a5c14ad8-2a4e-316f-983d-6fcbf7e5bad2-de_DE-50623",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 15986,
+            "uuid": "a5c14ad8-2a4e-316f-983d-6fcbf7e5bad2",
+            "short_id": 90054,
+            "language": "de_DE",
+            "version": 50623,
+            "content": "Iure provident voluptatibus illum omnis.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "596e476c-f9d0-3bd4-8298-220b2ee26171",
+                    "referenced_identifier": "hbdemo.commenting.topic-bc47bab1-c9b0-3e07-b9e9-8220ba56c0a8-de_DE-25040"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "2a5bb173-de47-3c39-9788-db58ff6e63f9",
+                    "referenced_identifier": "hbdemo.commenting.owner-163328eb-7064-3863-bd0c-ae6e949f5261-de_DE-77509"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-ccc5414d-e871-377c-ab6a-7a46577fc637-de_DE-22413",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 84506,
+            "uuid": "ccc5414d-e871-377c-ab6a-7a46577fc637",
+            "short_id": 19029,
+            "language": "de_DE",
+            "version": 22413,
+            "content": "Incidunt sint saepe et aut reprehenderit molestiae debitis.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "35012ddb-af80-3d23-9b22-d03ec4d2084a",
+                    "referenced_identifier": "hbdemo.commenting.topic-76b6af98-c7db-3e60-93ce-6ddd023eec1a-de_DE-65333"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "1e96b760-aa8a-3043-8d4c-f2d4d98759cb",
+                    "referenced_identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-6a3d9d33-9df2-3bec-ab57-6f07d2a2e5ac-de_DE-61934",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 16414,
+            "uuid": "6a3d9d33-9df2-3bec-ab57-6f07d2a2e5ac",
+            "short_id": 90150,
+            "language": "de_DE",
+            "version": 61934,
+            "content": "Ea ut omnis similique magni saepe libero dolorem.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "08b4a368-df51-344c-94e3-ad5f076a1104",
+                    "referenced_identifier": "hbdemo.commenting.topic-76b6af98-c7db-3e60-93ce-6ddd023eec1a-de_DE-65333"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "6a50101f-883c-309d-a18a-dab20c034b13",
+                    "referenced_identifier": "hbdemo.commenting.owner-34da796b-ae7b-337c-9a50-5a428ec8f107-de_DE-67674"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-1fac7996-b9e0-3924-a54a-06539306ecf2-de_DE-35805",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 60075,
+            "uuid": "1fac7996-b9e0-3924-a54a-06539306ecf2",
+            "short_id": 13787,
+            "language": "de_DE",
+            "version": 35805,
+            "content": "Itaque et at sit ut eum et.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "8a69fa33-22d7-31c4-9bdb-75d166de3b8a",
+                    "referenced_identifier": "hbdemo.commenting.topic-76b6af98-c7db-3e60-93ce-6ddd023eec1a-de_DE-65333"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "637aa5ef-217b-3bfa-b1b3-2ee5c4e13291",
+                    "referenced_identifier": "hbdemo.commenting.owner-163328eb-7064-3863-bd0c-ae6e949f5261-de_DE-77509"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-2ac65549-85c1-3f02-a214-6eea2f138f60-de_DE-49784",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 6688,
+            "uuid": "2ac65549-85c1-3f02-a214-6eea2f138f60",
+            "short_id": 37426,
+            "language": "de_DE",
+            "version": 49784,
+            "content": "Magni sit est est tempora.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "8afd52d8-d753-3a84-951c-dd81eaeebe2a",
+                    "referenced_identifier": "hbdemo.commenting.topic-f07d0b67-f9c9-3974-adbd-3a02072f3f1a-de_DE-20259"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "d33033b4-ea6b-399b-bb2d-1c9e010ece23",
+                    "referenced_identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-8b535e66-d8f2-3b74-a4a0-ad25d45c63a1-de_DE-88724",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 75892,
+            "uuid": "8b535e66-d8f2-3b74-a4a0-ad25d45c63a1",
+            "short_id": 20994,
+            "language": "de_DE",
+            "version": 88724,
+            "content": "Maiores laboriosam nesciunt asperiores quis odit.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "9a3d621c-756b-3ad1-a7e7-811e60d636d9",
+                    "referenced_identifier": "hbdemo.commenting.topic-f07d0b67-f9c9-3974-adbd-3a02072f3f1a-de_DE-20259"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "bde69b6d-5958-32e8-81b4-434d024903ea",
+                    "referenced_identifier": "hbdemo.commenting.owner-163328eb-7064-3863-bd0c-ae6e949f5261-de_DE-77509"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-8a21c44c-f85c-3123-8d8a-4b02dcd699fe-de_DE-70153",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 24615,
+            "uuid": "8a21c44c-f85c-3123-8d8a-4b02dcd699fe",
+            "short_id": 3765,
+            "language": "de_DE",
+            "version": 70153,
+            "content": "Quas dolores quasi modi odit distinctio tempora et.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "c7cfdb84-9270-34d6-91bc-44782b309f42",
+                    "referenced_identifier": "hbdemo.commenting.topic-9b18ed68-31a7-3bd2-9cd7-04c3a9b70b93-de_DE-98975"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "657f7440-0e25-367a-8eec-973796894037",
+                    "referenced_identifier": "hbdemo.commenting.owner-163328eb-7064-3863-bd0c-ae6e949f5261-de_DE-77509"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-12f82947-dc2f-30ab-9e3b-664814e85582-de_DE-51879",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 58208,
+            "uuid": "12f82947-dc2f-30ab-9e3b-664814e85582",
+            "short_id": 88215,
+            "language": "de_DE",
+            "version": 51879,
+            "content": "Quibusdam dolores officiis optio omnis sunt voluptatem.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "adb779b3-c437-3ae9-8af7-ecbfc08cb6f0",
+                    "referenced_identifier": "hbdemo.commenting.topic-9b18ed68-31a7-3bd2-9cd7-04c3a9b70b93-de_DE-98975"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "7a4c23e4-f13c-3954-8fc2-b173879eab68",
+                    "referenced_identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-3f0be912-c615-3771-8efe-b44fdc9aa0c0-de_DE-35029",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 61018,
+            "uuid": "3f0be912-c615-3771-8efe-b44fdc9aa0c0",
+            "short_id": 13140,
+            "language": "de_DE",
+            "version": 35029,
+            "content": "Rerum vero quaerat quaerat et.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "cebe166d-3e69-3087-ad46-683db8149ccb",
+                    "referenced_identifier": "hbdemo.commenting.topic-9b18ed68-31a7-3bd2-9cd7-04c3a9b70b93-de_DE-98975"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "3275d7b4-d3d7-3041-94be-290b0d46913c",
+                    "referenced_identifier": "hbdemo.commenting.owner-34da796b-ae7b-337c-9a50-5a428ec8f107-de_DE-67674"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-687d6b62-6885-34f7-8293-b47940e9865b-de_DE-13381",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 44749,
+            "uuid": "687d6b62-6885-34f7-8293-b47940e9865b",
+            "short_id": 613,
+            "language": "de_DE",
+            "version": 13381,
+            "content": "Non aut et optio.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "12ce5ead-e253-3cd7-b721-cc86e76b0af5",
+                    "referenced_identifier": "hbdemo.commenting.topic-9b18ed68-31a7-3bd2-9cd7-04c3a9b70b93-de_DE-98975"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "d926244f-deb2-3aa2-a9cd-134cfbc9bb69",
+                    "referenced_identifier": "hbdemo.commenting.owner-163328eb-7064-3863-bd0c-ae6e949f5261-de_DE-77509"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-1a5d74c9-e48b-3d80-83b2-3e03f11230f4-de_DE-32092",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 58754,
+            "uuid": "1a5d74c9-e48b-3d80-83b2-3e03f11230f4",
+            "short_id": 46609,
+            "language": "de_DE",
+            "version": 32092,
+            "content": "Explicabo assumenda id consequatur sed dolorem nam.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "a2cd743c-3126-3a78-8064-6cd787c3ee82",
+                    "referenced_identifier": "hbdemo.commenting.topic-fc3feed0-ddb0-3e72-9a3b-4973d4357e86-de_DE-25852"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "2ac54de2-d78b-3def-9181-b7fea6ac8dd2",
+                    "referenced_identifier": "hbdemo.commenting.owner-968724a5-b174-3b81-a8df-95ec3b1c9a6d-de_DE-6900"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-963c9401-2d0e-3e88-b9a9-3fbdafbee925-de_DE-43861",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 53012,
+            "uuid": "963c9401-2d0e-3e88-b9a9-3fbdafbee925",
+            "short_id": 9207,
+            "language": "de_DE",
+            "version": 43861,
+            "content": "Quo qui est magni aut ut qui et.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "7709adcd-3381-3c8f-a2ca-4a3cf0f83bea",
+                    "referenced_identifier": "hbdemo.commenting.topic-3990dda7-f762-3c9f-98e5-27495a9988c0-de_DE-98093"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "73d00b8a-08df-3ede-86dd-46c180a7c506",
+                    "referenced_identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-4132fb7d-4a36-3cae-ac56-2b8b1b2ad2c2-de_DE-68042",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 33787,
+            "uuid": "4132fb7d-4a36-3cae-ac56-2b8b1b2ad2c2",
+            "short_id": 44728,
+            "language": "de_DE",
+            "version": 68042,
+            "content": "Quasi assumenda sit tempora consectetur maxime maiores aliquam.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "978686bf-4298-37b7-bf7d-bcb22c0dc571",
+                    "referenced_identifier": "hbdemo.commenting.topic-3990dda7-f762-3c9f-98e5-27495a9988c0-de_DE-98093"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "cbeac2b5-90fd-3e57-b83f-46f255e8e748",
+                    "referenced_identifier": "hbdemo.commenting.owner-968724a5-b174-3b81-a8df-95ec3b1c9a6d-de_DE-6900"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-e9f18aa3-92ba-3f0b-b881-a76a39301290-de_DE-9837",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 30250,
+            "uuid": "e9f18aa3-92ba-3f0b-b881-a76a39301290",
+            "short_id": 19055,
+            "language": "de_DE",
+            "version": 9837,
+            "content": "Quis et eveniet error ex est.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "db32ac18-4c4e-35a9-82e6-696be7ba26bd",
+                    "referenced_identifier": "hbdemo.commenting.topic-3990dda7-f762-3c9f-98e5-27495a9988c0-de_DE-98093"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "7a34161d-4cc0-363f-ad65-38e768b4f506",
+                    "referenced_identifier": "hbdemo.commenting.owner-15ff4c43-8c6f-38dd-a104-194e487545a9-de_DE-60889"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-2f698bea-1148-32c1-9e38-753ed25ed21c-de_DE-89959",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 10227,
+            "uuid": "2f698bea-1148-32c1-9e38-753ed25ed21c",
+            "short_id": 53733,
+            "language": "de_DE",
+            "version": 89959,
+            "content": "Est ad placeat minima reprehenderit.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "f9d7e111-41aa-3b06-8be5-f82c36708168",
+                    "referenced_identifier": "hbdemo.commenting.topic-8211ef79-2cc3-359c-925f-0a682294cbdb-de_DE-5365"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "3e97c20d-46ca-3266-bbec-b1b8cf4415df",
+                    "referenced_identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.comment-ea568644-192b-3c1c-8b7f-22a6de397c39-de_DE-36942",
+            "@type": "HBDemo\\Commenting\\Comment\\Model\\Aggregate\\Comment",
+            "revision": 92616,
+            "uuid": "ea568644-192b-3c1c-8b7f-22a6de397c39",
+            "short_id": 27975,
+            "language": "de_DE",
+            "version": 36942,
+            "content": "Ipsa nemo est suscipit.",
+            "topic": [
+                {
+                    "@type": "topic",
+                    "identifier": "586c0ec6-6561-3aa9-9072-943592dac953",
+                    "referenced_identifier": "hbdemo.commenting.topic-6dcd72c2-935e-36d2-b309-8ca8fafff600-de_DE-60869"
+                }
+            ],
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "c2302dd7-a44e-3954-a7e4-6f39bff2c79b",
+                    "referenced_identifier": "hbdemo.commenting.owner-15ff4c43-8c6f-38dd-a104-194e487545a9-de_DE-60889"
+                }
+            ]
+        }
+    ]
+}

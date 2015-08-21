@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE shortcuts [
+    <!ENTITY hbdemo_commenting_events_only
+    'event.getType() matches "/^hbdemo\.commenting\..*/"'>
+]>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/event_bus/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <event_bus>
+            <channels>
+                <channel name="honeybee.events.domain">
+                    <subscriptions>
+                        <subscription enabled="true">
+                            <transport>sync</transport>
+                            <filter>
+                                <setting name="expression">&hbdemo_commenting_events_only;</setting>
+                            </filter>
+                            <handler implementor="\Honeybee\Projection\EventHandler\ProjectionUpdater" />
+                        </subscription>
+                    </subscriptions>
+                </channel>
+
+                <channel name="honeybee.events.replay">
+                    <subscriptions>
+                        <subscription>
+                            <transport>sync</transport>
+                            <filter>
+                                <setting name="expression">&hbdemo_commenting_events_only;</setting>
+                            </filter>
+                            <handler implementor="\Honeybee\Projection\EventHandler\ProjectionUpdater" />
+                        </subscription>
+                    </subscriptions>
+                </channel>
+            </channels>
+        </event_bus>
+    </ae:configuration>
+</ae:configurations>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<state_machines xmlns="urn:schemas-workflux:statemachine:0.5.0">
+    <state_machine name="hbdemo_commenting_topic_workflow_default">
+
+        <initial name="active" class="Workflux\State\VariableState">
+            <event name="edit">
+                <transition target="edit_task" />
+            </event>
+            <event name="promote">
+                <transition target="frozen" />
+            </event>
+            <event name="delete">
+                <transition target="deleted" />
+            </event>
+            <option name="read_only_actions">
+                <option name="resource_history">
+                    <option name="route">hbdemo.commenting.topic.resource.history</option>
+                </option>
+                <option name="view_resource">
+                    <option name="route">hbdemo.commenting.topic.resource</option>
+                </option>
+            </option>
+        </initial>
+
+        <state name="frozen" class="Workflux\State\VariableState">
+            <event name="edit">
+                <transition target="edit_task" />
+            </event>
+            <event name="demote">
+                <transition target="active" />
+            </event>
+            <event name="delete">
+                <transition target="deleted" />
+            </event>
+            <option name="read_only_actions">
+                <option name="resource_history">
+                    <option name="route">hbdemo.commenting.owner.resource.history</option>
+                </option>
+                <option name="view_resource">
+                    <option name="route">hbdemo.commenting.owner.resource</option>
+                </option>
+                <option name="resource_hierarchy">
+                    <option name="route">hbdemo.commenting.owner.hierarchy</option>
+                </option>
+            </option>
+        </state>
+
+        <state name="edit_task" class="Workflux\State\VariableState">
+            <transition target="active">
+                <guard class="Workflux\Guard\VariableGuard">
+                    <option name="expression">current_state == "active"</option>
+                </guard>
+            </transition>
+            <transition target="frozen">
+                <guard class="Workflux\Guard\VariableGuard">
+                    <option name="expression">current_state == "frozen"</option>
+                </guard>
+            </transition>
+            <option name="variables">
+                <option name="task_action">
+                    <option name="module">HBDemo_Commenting</option>
+                    <option name="action">Topic.Resource.Modify</option>
+                </option>
+            </option>
+        </state>
+
+        <final name="deleted" />
+
+    </state_machine>
+</state_machines>

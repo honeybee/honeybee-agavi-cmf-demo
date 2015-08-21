@@ -1,0 +1,49 @@
+{
+    "properties": {
+        "url": {
+            "type": "string",
+            "index": "no"
+        },
+        "title": {
+            "type": "string",
+            "fields": {
+                "sort": {
+                    "type": "string",
+                    "analyzer": "IcuAnalyzer_DE",
+                    "include_in_all": false
+                },
+                "filter": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "suggest": {
+                    "type": "string",
+                    "analyzer": "AutoCompleteAnalyzer",
+                    "include_in_all": false
+                }
+            }
+        },
+        "description": {
+            "type": "string",
+            "fields": {
+                "sort": {
+                    "type": "string",
+                    "analyzer": "IcuAnalyzer_DE",
+                    "include_in_all": false
+                },
+                "filter": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "suggest": {
+                    "type": "string",
+                    "analyzer": "AutoCompleteAnalyzer",
+                    "include_in_all": false
+                }
+            }
+        },
+        "account": {
+            "type": "object"
+        }
+    }
+}

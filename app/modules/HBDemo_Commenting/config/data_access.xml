@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/data_access/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <storage_writers>
+            <storage_writer name="hbdemo.commenting::version_list::event_source::writer" class="Honeybee\Infrastructure\DataAccess\Storage\CouchDb\StructureVersionList\StructureVersionListWriter">
+                <connection>Default.EventSource</connection>
+            </storage_writer>
+
+            <storage_writer name="hbdemo.commenting::version_list::view_store::writer" class="Honeybee\Infrastructure\DataAccess\Storage\Elasticsearch\StructureVersionList\StructureVersionListWriter">
+                <connection>Default.ViewStore</connection>
+                <settings>
+                    <setting name="index">%hbdemo-commenting.index%</setting>
+                    <setting name="type">%hbdemo-commenting.version_list%</setting>
+                </settings>
+            </storage_writer>
+        </storage_writers>
+
+        <storage_readers>
+            <storage_reader name="hbdemo.commenting::version_list::event_source::reader" class="Honeybee\Infrastructure\DataAccess\Storage\CouchDb\StructureVersionList\StructureVersionListReader">
+                <connection>Default.EventSource</connection>
+            </storage_reader>
+
+            <storage_reader name="hbdemo.commenting::version_list::view_store::reader" class="Honeybee\Infrastructure\DataAccess\Storage\Elasticsearch\StructureVersionList\StructureVersionListReader">
+                <connection>Default.ViewStore</connection>
+                <settings>
+                    <setting name="index">%hbdemo-commenting.index%</setting>
+                    <setting name="type">%hbdemo-commenting.version_list%</setting>
+                </settings>
+            </storage_reader>
+        </storage_readers>
+    </ae:configuration>
+</ae:configurations>

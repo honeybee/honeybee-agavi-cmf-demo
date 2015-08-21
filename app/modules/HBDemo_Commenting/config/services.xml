@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/services/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <service_map>
+            <service_definitions>
+                <service name="hbdemo.commenting.mail_service">
+                    <class>HBDemo\Commenting\MailService</class>
+                    <settings>
+                        <setting name="sender_email">no-reply@honeybee-cms.local</setting>
+                        <setting name="sender_name">%core.app_name%</setting>
+                        <setting name="contact_email">no-reply@honeybee-cms.local</setting>
+                        <setting name="contact_name">%core.app_name%</setting>
+                    </settings>
+                </service>
+            </service_definitions>
+        </service_map>
+    </ae:configuration>
+</ae:configurations>

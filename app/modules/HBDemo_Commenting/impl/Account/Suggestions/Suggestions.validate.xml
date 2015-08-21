@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/HBDemo_Commenting/config/validators.xml">
+    <ae:configuration>
+        <validators translation_domain="hbdemo.commenting.account.errors">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ListConfigValidator" name="invalid_suggest_config" required="true">
+                <ae:parameter name="default_limit">50</ae:parameter>
+            </validator>
+
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ArrayValidator" name="invalid_display_fields" required="true">
+                <argument>display_fields</argument>
+                <ae:parameter name="explode_strings">true</ae:parameter>
+                <ae:parameter name="separator">,</ae:parameter>
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>

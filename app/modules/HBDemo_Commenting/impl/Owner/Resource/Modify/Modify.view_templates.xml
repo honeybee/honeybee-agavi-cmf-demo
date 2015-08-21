@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/view_templates/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <view_templates scope="hbdemo.commenting.owner.resource.modify">
+            <view_template name="hbdemo.commenting.owner">
+                <tab name="content">
+                    <panel name="main">
+                        <row>
+                            <cell>
+                                <group name="primary">
+                                    <field name="identifier" attribute_path="identifier" template="html/attribute/as_input_text.twig">
+                                        <setting name="readonly">true</setting>
+                                    </field>
+                                    <field name="revision" attribute_path="revision" template="html/attribute/as_input_text.twig">
+                                        <setting name="readonly">true</setting>
+                                    </field>
+                                    <field name="name" attribute_path="name" template="html/attribute/as_input_text.twig" />
+                                    <field name="email" attribute_path="email" template="html/attribute/as_input_text.twig" />
+                                </group>
+                            </cell>
+                        </row>
+                    </panel>
+                </tab>
+            </view_template>
+        </view_templates>
+    </ae:configuration>
+</ae:configurations>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/HBDemo_Commenting/config/validators.xml">
+    <ae:configuration>
+        <validators translation_domain="hbdemo.commenting.account.errors" method="read">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ResourceValidator" name="invalid_account_read">
+                <argument>resource</argument>
+                <error>The given account(identifier) is invalid.</error>
+                <ae:parameter name="resource_type">hbdemo.commenting.account</ae:parameter>
+            </validator>
+
+            <validator class="string" name="invalid_data_ns">
+                <argument>event</argument>
+                <ae:parameter name="export">data_ns</ae:parameter>
+            </validator>
+        </validators>
+
+        <validators translation_domain="hbdemo.commenting.account.errors" method="write">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\AggregateRootCommandValidator" name="invalid_task_data">
+                <arguments base="edit" />
+                <ae:parameter name="aggregate_root_type">hbdemo.commenting.account</ae:parameter>
+                <ae:parameter name="identifier_arg">identifier</ae:parameter>
+                <ae:parameter name="command_implementor">HBDemo\Commenting\Account\Model\Task\ModifyAccount\ModifyAccountCommand</ae:parameter>
+                <!--
+                These attributes will be ignored. Alternatively you can use an attribute_whitelist
+                to select which attributes are acceptable to your command payload.
+                <ae:parameter name="attribute_blacklist">
+                    <ae:parameter>auth_token</ae:parameter>
+                    <ae:parameter>password_hash</ae:parameter>
+                    <ae:parameter>token_expire_date</ae:parameter>
+                </ae:parameter>
+                -->
+                <error>Invalid command payload given.</error>
+                <!--
+                Set your error messages here on attribute paths
+                <error for="email.invalid_format">Email has an invalid format.</error>
+                <error for="ownername.min_length">Ownername is too short.</error>
+                <error for="comments.comment.title.min_length">Comment-Title is too short.</error>
+                 -->
+            </validator>
+
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ResourceValidator" name="invalid_account_write" depends="edit[invalid_payload]">
+                <arguments base="edit">
+                    <argument>identifier</argument>
+                </arguments>
+                <error>The given account(identifier) is invalid.</error>
+                <ae:parameter name="resource_type">hbdemo.commenting.account</ae:parameter>
+                <ae:parameter name="export">resource</ae:parameter>
+                <ae:parameter name="allow_default_payload">true</ae:parameter>
+            </validator>
+
+            <validator class="string" name="invalid_data_ns">
+                <argument>event</argument>
+                <ae:parameter name="export">data_ns</ae:parameter>
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>

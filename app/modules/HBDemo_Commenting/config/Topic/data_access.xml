@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/data_access/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <storage_writers>
+            <storage_writer name="hbdemo.commenting.topic::domain_event::event_source::writer" class="Honeybee\Infrastructure\DataAccess\Storage\CouchDb\EventStream\EventStreamAppender">
+                <connection>Default.EventSource</connection>
+            </storage_writer>
+
+            <storage_writer name="hbdemo.commenting.topic::projection.standard::view_store::writer" class="Honeybee\Infrastructure\DataAccess\Storage\Elasticsearch\Projection\ProjectionWriter">
+                <connection>Default.ViewStore</connection>
+                <settings>
+                    <setting name="index">%hbdemo-commenting.index%</setting>
+                    <setting name="type">%hbdemo-commenting-topic.standard.type%</setting>
+                    <setting name="parameters">
+                        <setting name="index">
+                            <setting name="refresh">true</setting>
+                        </setting>
+                        <setting name="delete">
+                            <setting name="refresh">true</setting>
+                        </setting>
+                    </setting>
+                </settings>
+            </storage_writer>
+        </storage_writers>
+
+        <storage_readers>
+            <storage_reader name="hbdemo.commenting.topic::event_stream::event_source::reader" class="Honeybee\Infrastructure\DataAccess\Storage\CouchDb\EventStream\EventStreamReader">
+                <connection>Default.EventSource</connection>
+                <settings>
+                    <setting name="design_doc">%hbdemo-commenting-topic.type%</setting>
+                </settings>
+            </storage_reader>
+            <storage_reader name="hbdemo.commenting.topic::domain_event::event_source::reader" class="Honeybee\Infrastructure\DataAccess\Storage\CouchDb\DomainEvent\DomainEventReader">
+                <connection>Default.EventSource</connection>
+                <settings>
+                    <setting name="design_doc">%hbdemo-commenting-topic.type%</setting>
+                </settings>
+            </storage_reader>
+
+            <storage_reader name="hbdemo.commenting.topic::projection.standard::view_store::reader" class="Honeybee\Infrastructure\DataAccess\Storage\Elasticsearch\Projection\ProjectionReader">
+                <connection>Default.ViewStore</connection>
+                <settings>
+                    <setting name="index">%hbdemo-commenting.index%</setting>
+                    <setting name="type">%hbdemo-commenting-topic.standard.type%</setting>
+                </settings>
+                <dependencies>
+                    <dependency key="resource_type">HBDemo\Commenting\Topic\Projection\Standard\TopicType</dependency>
+                </dependencies>
+            </storage_reader>
+        </storage_readers>
+
+        <units_of_work>
+            <unit_of_work name="hbdemo.commenting.topic::domain_event::event_source::unit_of_work" class="Honeybee\Infrastructure\DataAccess\UnitOfWork\UnitOfWork">
+                <event_reader>hbdemo.commenting.topic::event_stream::event_source::reader</event_reader>
+                <event_writer>hbdemo.commenting.topic::domain_event::event_source::writer</event_writer>
+                <dependencies>
+                    <dependency key="aggregate_root_type">HBDemo\Commenting\Topic\Model\Aggregate\TopicType</dependency>
+                </dependencies>
+            </unit_of_work>
+        </units_of_work>
+
+        <finders>
+            <finder name="hbdemo.commenting.topic::projection.standard::view_store::finder" class="Honeybee\Infrastructure\DataAccess\Finder\Elasticsearch\Projection\ProjectionFinder">
+                <connection>Default.ViewStore</connection>
+                <settings>
+                    <setting name="index">%hbdemo-commenting.index%</setting>
+                    <setting name="type">%hbdemo-commenting-topic.standard.type%</setting>
+                    <setting name="log_search_query">false</setting>
+                </settings>
+                <dependencies>
+                    <dependency key="resource_type">HBDemo\Commenting\Topic\Projection\Standard\TopicType</dependency>
+                </dependencies>
+            </finder>
+        </finders>
+       
+        <query_services>
+            <query_service name="hbdemo.commenting.topic::query_service" class="Honeybee\Infrastructure\DataAccess\Query\QueryService">
+                <setting name="default_mapping">topic.standard</setting>
+                <finder_mappings>
+                    <finder_mapping name="topic.standard">
+                        <finder>hbdemo.commenting.topic::projection.standard::view_store::finder</finder>
+                        <query_translation class="Honeybee\Infrastructure\DataAccess\Finder\Elasticsearch\ElasticsearchQueryTranslation">
+                            <setting name="query_filters">
+                                <setting name="workflow_state">!deleted</setting>
+                            </setting>
+                        </query_translation>
+                    </finder_mapping>
+                    <finder_mapping name="domain_event">
+                        <finder>honeybee::domain_event::view_store::finder</finder>
+                        <query_translation class="Honeybee\Infrastructure\DataAccess\Finder\Elasticsearch\ElasticsearchQueryTranslation" />
+                    </finder_mapping>
+                </finder_mappings>
+            </query_service>
+        </query_services>
+    </ae:configuration>
+</ae:configurations>

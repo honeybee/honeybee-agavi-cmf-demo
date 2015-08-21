@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/HBDemo_Commenting/config/validators.xml">
+    <ae:configuration>
+        <validators translation_domain="hbdemo.commenting.comment.errors">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ListConfigValidator" name="invalid_list_config" required="true">
+                <ae:parameter name="default_limit">50</ae:parameter>
+            </validator>
+        </validators>
+
+        <validators method="write" translation_domain="hbdemo.commenting.comment.errors">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\AggregateRootTypeCommandValidator" name="invalid_comment" required="true">
+                <arguments base="create_comment" />
+                <error>Invalid command payload given.</error>
+                <ae:parameter name="aggregate_root_type">hbdemo.commenting.comment</ae:parameter>
+                <ae:parameter name="command_implementor">HBDemo\Commenting\Comment\Model\Task\CreateComment\CreateCommentCommand</ae:parameter>
+                <!--
+                These attributes will be ignored. Alternatively you can use an attribute_whitelist
+                to select which attributes are acceptable to your command payload.
+                <ae:parameter name="attribute_blacklist">
+                    <ae:parameter>auth_token</ae:parameter>
+                    <ae:parameter>password_hash</ae:parameter>
+                    <ae:parameter>token_expire_date</ae:parameter>
+                </ae:parameter>
+                -->
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>

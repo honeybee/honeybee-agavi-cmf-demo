@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/translation/1.0">
+    <ae:configuration>
+        <translators default_domain="application.ui">
+            <!--
+                Translations can be dependant on the workflow state of the root resource:
+
+                    For FIELDS and ENTITIES is possible to define a per-state translation just appending
+                    the workflow_state (see workflows.xml for a list of states) at the end of the
+                    translation key (this is valid just for default translation keys defined into the
+                    specific renderers).
+                    If no state is appended then the state-less translation will be used regardless the
+                    workflow_state.
+            -->
+
+            <!--
+                Owner module's translations go here
+            -->
+            <translator domain="hbdemo.commenting.owner">
+                <message_translator class="AgaviSimpleTranslator">
+
+                    <ae:parameter name="views">
+                        <ae:parameter name="de">
+                        <!--
+                            Example view translation:
+
+                                <ae:parameter name="collection.page_title">List of Owner items</ae:parameter>
+                                <ae:parameter name="resource.modify.page_title">Edit Owner item</ae:parameter>
+
+                            Translation here will be used by default also for the browser title.
+                        -->
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="tabs">
+                        <ae:parameter name="de">
+                        <!--
+                            Example tab name translation:
+
+                                <ae:parameter name="first_tab">Owner main section</ae:parameter>
+
+                            Another translation domain can be passed as setting to the renderer, if needed.
+                        -->
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="panels">
+                        <ae:parameter name="de">
+                        <!--
+                            Example panel translation:
+
+                                <ae:parameter name="panel_name">Panel title</ae:parameter>
+                                <ae:parameter name="panel_name.description">Detailed panel description</ae:parameter>
+
+                            'panel_name' corresponds to the one defined into the view_template.xml
+
+                            Another translation domain can be passed as setting to the renderer, if needed.
+                        -->
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        Owner/Embed action's translations go here
+                    -->
+                    <ae:parameter name="embed">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="groups">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="fields">
+                        <ae:parameter name="de">
+                            <ae:parameter name="uuid.field_name">UUID</ae:parameter>
+                            <ae:parameter name="workflow_state.field_name">Status</ae:parameter>
+                            <ae:parameter name="created_at.field_name">Created at</ae:parameter>
+                            <ae:parameter name="modified_at.field_name">Modified at</ae:parameter>
+                            <ae:parameter name="identifier.field_name">Identifer</ae:parameter>
+                            <ae:parameter name="revision.field_name">Revision</ae:parameter>
+                            <ae:parameter name="version.field_name">Version</ae:parameter>
+                            <ae:parameter name="language.field_name">Language</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="uuid.field_name">UUID</ae:parameter>
+                            <ae:parameter name="workflow_state.field_name">Status</ae:parameter>
+                            <ae:parameter name="created_at.field_name">Created at</ae:parameter>
+                            <ae:parameter name="modified_at.field_name">Modified at</ae:parameter>
+                            <ae:parameter name="identifier.field_name">Identifer</ae:parameter>
+                            <ae:parameter name="revision.field_name">Revision</ae:parameter>
+                            <ae:parameter name="version.field_name">Version</ae:parameter>
+                            <ae:parameter name="language.field_name">Language</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="activities">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+
+                </message_translator>
+            </translator>
+
+            <!--
+                Module's translations go here
+            -->
+            <translator domain="hbdemo.commenting">
+                <message_translator class="AgaviSimpleTranslator">
+                    <ae:parameter name="views">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+                </message_translator>
+            </translator>
+
+            <!--
+                Default translation domain for generic translations
+            -->
+            <translator domain="application">
+                <message_translator class="AgaviSimpleTranslator">
+                    <ae:parameter name="navigations">
+                        <ae:parameter name="de">
+                            <ae:parameter name="main.hbdemo.commenting.owner">HBDemo-Commenting-Owner</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="main.hbdemo.commenting.owner">HBDemo-Commenting-Owner</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+                </message_translator>
+            </translator>
+
+            <!--
+                Others translation domains
+            -->
+            <translator domain="hbdemo.commenting.owner">
+
+                <message_translator class="AgaviSimpleTranslator">
+
+                    <ae:parameter name="module">
+                        <ae:parameter name="de">
+                            <ae:parameter name="name">Owner</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="name">Owner</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="activity">
+                     <ae:parameter name="de">
+                            <ae:parameter name="edit">Bearbeiten</ae:parameter>
+                            <ae:parameter name="delete">Löschen</ae:parameter>
+                            <ae:parameter name="promote">Aktivieren</ae:parameter>
+                            <ae:parameter name="demote">Deaktivieren</ae:parameter>
+                            <ae:parameter name="view_resource">Anschauen</ae:parameter>
+                            <ae:parameter name="history">Historie</ae:parameter>
+                            <ae:parameter name="hierarchy">Baumansicht</ae:parameter>
+                            <ae:parameter name="owner.activity.collection.search.description">Suchen</ae:parameter>
+                            <ae:parameter name="owner.activity.collection.search.title">Suche</ae:parameter>
+                            <ae:parameter name="owner.activity.create_resource.title">Owner erstellen</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_modified_at.description">Sortiert neueste Owner nach oben</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_modified_at.title">Neueste oben</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_workflow_state.description">Sortiert Owner aufsteigend nach Status</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_workflow_state.title">Status</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="edit">Edit</ae:parameter>
+                            <ae:parameter name="delete">Delete</ae:parameter>
+                            <ae:parameter name="promote">Promote</ae:parameter>
+                            <ae:parameter name="demote">Demote</ae:parameter>
+                            <ae:parameter name="view_resource">View</ae:parameter>
+                            <ae:parameter name="history">History</ae:parameter>
+                            <ae:parameter name="hierarchy">Hierarchy</ae:parameter>
+                            <ae:parameter name="owner.activity.collection.search.description">Search</ae:parameter>
+                            <ae:parameter name="owner.activity.collection.search.title">Search</ae:parameter>
+                            <ae:parameter name="owner.activity.create_resource.title">Create Owner</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_modified_at.description">Sort by modification date</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_modified_at.title">Modified At</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_workflow_state.description">Sort by status</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_workflow_state.title">Status</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        Workflow state translations.
+                    -->
+                    <ae:parameter name="workflow">
+                        <ae:parameter name="de">
+                            <ae:parameter name="inactive">Inaktiv</ae:parameter>
+                            <ae:parameter name="active">Aktiv</ae:parameter>
+                            <ae:parameter name="deleted">Gelöscht</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="inactive">Inactive</ae:parameter>
+                            <ae:parameter name="active">Active</ae:parameter>
+                            <ae:parameter name="deleted">Deleted</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        List translations for the Owner module go here.
+                    -->
+                    <ae:parameter name="list">
+                        <ae:parameter name="de">
+                            <!-- list headers/column-labels -->
+                            <ae:parameter name="created_at">Erstellt</ae:parameter>
+
+                            <!-- batch dialogs -->
+                            <ae:parameter name="batch_actions">Stapelverarbeitung</ae:parameter>
+
+                            <!-- item actions -->
+                            <ae:parameter name="actions">Aktionen</ae:parameter>
+                            <ae:parameter name="promote">Aktivieren</ae:parameter>
+                            <ae:parameter name="demote">Deaktivieren</ae:parameter>
+                            <ae:parameter name="edit">Bearbeiten</ae:parameter>
+                            <ae:parameter name="view">Ansehen</ae:parameter>
+                            <ae:parameter name="disabled">Gesperrt</ae:parameter>
+                            <ae:parameter name="delete">Löschen</ae:parameter>
+
+                            <!-- workflow transitions (context sensitive action names for promote and demote) -->
+                            <ae:parameter name="edit.promote">Aktivieren</ae:parameter>
+                            <ae:parameter name="edit.delete">Löschen</ae:parameter>
+                            <ae:parameter name="published.demote">Deaktivieren</ae:parameter>
+                            <ae:parameter name="published.delete">Löschen</ae:parameter>
+
+                            <!-- workflow transition prompts -->
+                            <ae:parameter name="edit.delete.prompt">Sind sie sicher, dass sie dieses Dokument löschen möchten?</ae:parameter>
+                            <ae:parameter name="published.delete.prompt">Sind sie sicher, dass sie dieses Dokument löschen möchten?</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        Error translations for the Owner module go here.
+                    -->
+                    <ae:parameter name="errors">
+                        <ae:parameter name="de">
+                            <ae:parameter name="storage_error">Das speichern der (Owner) Daten schlug fehl.</ae:parameter>
+                            <ae:parameter name="export_error">Während der Datenverarbeitung trat ein unerwarteter Fehler auf.</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        Any other non-ui translations may be added here
+                    -->
+                    <ae:parameter name="messages">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+                </message_translator>
+            </translator>
+        </translators>
+    </ae:configuration>
+</ae:configurations>

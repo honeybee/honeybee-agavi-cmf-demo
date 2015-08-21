@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/routing/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration context="web">
+        <route name=".404" pattern="" module="%actions.error_404_module%" action="%actions.error_404_action%" />
+    </ae:configuration>
+
+    <ae:configuration context="console">
+        <route name=".404" pattern="" module="%actions.error_404_module%" action="%actions.error_404_action%" />
+    </ae:configuration>
+</ae:configurations>

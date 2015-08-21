@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<type_schema namespace="HBDemo\Commenting\Topic\Model\Aggregate"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns="http://berlinonline.net/trellis/1.0/schema">
+    <type_definition name="Topic">
+        <implementor>\Honeybee\Model\Aggregate\AggregateRootType</implementor>
+        <entity_implementor>\Honeybee\Model\Aggregate\AggregateRoot</entity_implementor>
+        <description>
+            Defines a set of attributes that are used to manage the topic aggregate root.
+        </description>
+        <options>
+            <option name="vendor">HBDemo</option>
+            <option name="package">Commenting</option>
+            <option name="is_hierarchical">false</option>
+        </options>
+        <!-- attribute definitions -->
+        <attributes>
+            <attribute name="url" type="url" />
+            
+            <attribute name="title" type="text">
+                <option name="max_length">100</option>
+            </attribute>
+            
+            <attribute name="description" type="text" />
+            
+            <attribute name="account" type="entity-reference-list">
+                <option name="min_count">1</option>
+                <option name="max_count">1</option>
+                <option name="entity_types">
+                    <option>Account</option>
+                </option>
+            </attribute>
+        </attributes>
+    </type_definition>
+    <reference_definitions>
+        <reference_definition name="Account">
+            <implementor>\Honeybee\Model\Aggregate\ReferencedEntityType</implementor>
+            <entity_implementor>\Honeybee\Model\Aggregate\ReferencedEntity</entity_implementor>
+            <option name="referenced_type">\Honeybee\SystemAccount\Account\Model\Aggregate\AccountType</option>
+            <option name="identifying_attribute">identifier</option>
+        </reference_definition>
+    </reference_definitions>
+</type_schema>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/command_bus/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+>
+
+    <ae:configuration>
+        <command_bus>
+            <subscriptions>
+                <subscription transport="sync">
+                    <commands>
+                        <command type="hbdemo.commenting.account.create_account">
+                            <handler>HBDemo\Commenting\Account\Model\Task\CreateAccount\CreateAccountCommandHandler</handler>
+                        </command>
+                        <command type="hbdemo.commenting.account.modify_account">
+                            <handler>HBDemo\Commenting\Account\Model\Task\ModifyAccount\ModifyAccountCommandHandler</handler>
+                        </command>
+                        <command type="hbdemo.commenting.account.proceed_account_workflow">
+                            <handler>HBDemo\Commenting\Account\Model\Task\ProceedAccountWorkflow\ProceedAccountWorkflowCommandHandler</handler>
+                        </command>
+                        <command type="hbdemo.commenting.account.move_account_node">
+                            <handler>HBDemo\Commenting\Account\Model\Task\MoveAccountNode\MoveAccountNodeCommandHandler</handler>
+                        </command>
+                    </commands>
+                </subscription>
+            </subscriptions>
+        </command_bus>
+    </ae:configuration>
+
+</ae:configurations>

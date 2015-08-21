@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/translation/1.0">
+    <ae:configuration>
+        <translators default_domain="application.ui">
+            <!--
+                Translations can be dependant on the workflow state of the root resource:
+
+                    For FIELDS and ENTITIES is possible to define a per-state translation just appending
+                    the workflow_state (see workflows.xml for a list of states) at the end of the
+                    translation key (this is valid just for default translation keys defined into the
+                    specific renderers).
+                    If no state is appended then the state-less translation will be used regardless the
+                    workflow_state.
+            -->
+
+            <!--
+                Comment module's translations go here
+            -->
+            <translator domain="hbdemo.commenting.comment">
+                <message_translator class="AgaviSimpleTranslator">
+
+                    <ae:parameter name="views">
+                        <ae:parameter name="de">
+                        <!--
+                            Example view translation:
+
+                                <ae:parameter name="collection.page_title">List of Comment items</ae:parameter>
+                                <ae:parameter name="resource.modify.page_title">Edit Comment item</ae:parameter>
+
+                            Translation here will be used by default also for the browser title.
+                        -->
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="tabs">
+                        <ae:parameter name="de">
+                        <!--
+                            Example tab name translation:
+
+                                <ae:parameter name="first_tab">Comment main section</ae:parameter>
+
+                            Another translation domain can be passed as setting to the renderer, if needed.
+                        -->
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="panels">
+                        <ae:parameter name="de">
+                        <!--
+                            Example panel translation:
+
+                                <ae:parameter name="panel_name">Panel title</ae:parameter>
+                                <ae:parameter name="panel_name.description">Detailed panel description</ae:parameter>
+
+                            'panel_name' corresponds to the one defined into the view_template.xml
+
+                            Another translation domain can be passed as setting to the renderer, if needed.
+                        -->
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        Comment/Embed action's translations go here
+                    -->
+                    <ae:parameter name="embed">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="groups">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="fields">
+                        <ae:parameter name="de">
+                        <!--
+                            Example field translation:
+
+                                <ae:parameter name="url.field_name">Web URL</ae:parameter>
+                                <ae:parameter name="url.placeholder">http://</ae:parameter>
+                                <ae:parameter name="url.pattern"><![CDATA[^http\:\/\/.*]]></ae:parameter>
+                                <ae:parameter name="location.url.field_name">Location Web URL</ae:parameter>
+
+                            <field_name>.<message>, with the key <message> specified into
+                            the template or into the renderer for the field named <field_name>.
+
+                            Different fields with the same name can rely on a single
+                            message translation.
+                            A different name into the action view_template.xml can be specified
+                            to allow different translations.
+                        -->
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="activities">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+
+                </message_translator>
+            </translator>
+
+            <!--
+                Module's translations go here
+            -->
+            <translator domain="hbdemo.commenting">
+                <message_translator class="AgaviSimpleTranslator">
+                    <ae:parameter name="views">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+                </message_translator>
+            </translator>
+
+            <!--
+                Default translation domain for generic translations
+            -->
+            <translator domain="application">
+                <message_translator class="AgaviSimpleTranslator">
+                    <ae:parameter name="navigations">
+                        <ae:parameter name="de">
+                            <ae:parameter name="main.hbdemo.commenting.comment">HBDemo-Commenting-Comment</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="main.hbdemo.commenting.comment">HBDemo-Commenting-Comment</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+                </message_translator>
+            </translator>
+
+            <!--
+                Others translation domains
+            -->
+            <translator domain="hbdemo.commenting.comment">
+
+                <message_translator class="AgaviSimpleTranslator">
+
+                    <ae:parameter name="module">
+                        <ae:parameter name="de">
+                            <ae:parameter name="name">Comment</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <ae:parameter name="activity">
+                        <ae:parameter name="de">
+                            <ae:parameter name="edit">Bearbeiten</ae:parameter>
+                            <ae:parameter name="delete">Löschen</ae:parameter>
+                            <ae:parameter name="promote">Aktivieren</ae:parameter>
+                            <ae:parameter name="demote">Deaktivieren</ae:parameter>
+                            <ae:parameter name="view_resource">Anschauen</ae:parameter>
+                            <ae:parameter name="view_history">Historie</ae:parameter>
+                            <ae:parameter name="hierarchy">Baumansicht</ae:parameter>
+                            <ae:parameter name="comment.activity.collection.search.description">Suchen</ae:parameter>
+                            <ae:parameter name="comment.activity.collection.search.title">Suche</ae:parameter>
+                            <ae:parameter name="comment.activity.create_resource.title">Dokument erstellen</ae:parameter>
+                            <ae:parameter name="comment.activity.sort_by_workflow_state.description">Aufsteigend nach Status sortiert</ae:parameter>
+                            <ae:parameter name="comment.activity.sort_by_workflow_state.title">Status</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        Workflow state translations.
+                    -->
+                    <ae:parameter name="workflow">
+                        <ae:parameter name="de">
+                            <ae:parameter name="inactive">Inaktiv</ae:parameter>
+                            <ae:parameter name="active">Aktiv</ae:parameter>
+                            <ae:parameter name="deleted">Gelöscht</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        List translations for the Comment module go here.
+                    -->
+                    <ae:parameter name="list">
+                        <ae:parameter name="de">
+                            <!-- list headers/column-labels -->
+                            <ae:parameter name="created_at">Erstellt</ae:parameter>
+
+                            <!-- batch dialogs -->
+                            <ae:parameter name="batch_actions">Stapelverarbeitung</ae:parameter>
+
+                            <!-- item actions -->
+                            <ae:parameter name="actions">Aktionen</ae:parameter>
+                            <ae:parameter name="promote">Aktivieren</ae:parameter>
+                            <ae:parameter name="demote">Deaktivieren</ae:parameter>
+                            <ae:parameter name="edit">Bearbeiten</ae:parameter>
+                            <ae:parameter name="view">Ansehen</ae:parameter>
+                            <ae:parameter name="disabled">Gesperrt</ae:parameter>
+                            <ae:parameter name="delete">Löschen</ae:parameter>
+
+                            <!-- workflow transitions (context sensitive action names for promote and demote) -->
+                            <ae:parameter name="edit.promote">Aktivieren</ae:parameter>
+                            <ae:parameter name="edit.delete">Löschen</ae:parameter>
+                            <ae:parameter name="published.demote">Deaktivieren</ae:parameter>
+                            <ae:parameter name="published.delete">Löschen</ae:parameter>
+
+                            <!-- workflow transition prompts -->
+                            <ae:parameter name="edit.delete.prompt">Sind sie sicher, dass sie dieses Dokument löschen möchten?</ae:parameter>
+                            <ae:parameter name="published.delete.prompt">Sind sie sicher, dass sie dieses Dokument löschen möchten?</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        Error translations for the Comment module go here.
+                    -->
+                    <ae:parameter name="errors">
+                        <ae:parameter name="de">
+                            <ae:parameter name="storage_error">Das speichern der (Comment) Daten schlug fehl.</ae:parameter>
+                            <ae:parameter name="export_error">Während der Datenverarbeitung trat ein unerwarteter Fehler auf.</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
+                    <!--
+                        Any other non-ui translations may be added here
+                    -->
+                    <ae:parameter name="messages">
+                        <ae:parameter name="de">
+                        </ae:parameter>
+                    </ae:parameter>
+                </message_translator>
+            </translator>
+        </translators>
+    </ae:configuration>
+</ae:configurations>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/HBDemo_Commenting/config/validators.xml">
+    <ae:configuration>
+        <validators translation_domain="hbdemo.commenting.owner.errors">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\AggregateRootTypeFileExistsValidator" name="invalid_file_identifier">
+                <argument>file</argument>
+                <error>File not found.</error>
+                <ae:parameter name="aggregate_root_type">hbdemo.commenting.owner</ae:parameter>
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>

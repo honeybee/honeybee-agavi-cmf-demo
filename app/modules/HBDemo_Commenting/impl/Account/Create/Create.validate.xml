@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/HBDemo_Commenting/config/validators.xml">
+    <ae:configuration>
+        <validators translation_domain="hbdemo.commenting.account.errors" method="write">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\AggregateRootTypeCommandValidator" name="invalid_task_data">
+                <arguments base="create_account" />
+                <ae:parameter name="aggregate_root_type">hbdemo.commenting.account</ae:parameter>
+                <ae:parameter name="command_implementor">HBDemo\Commenting\Account\Model\Task\CreateAccount\CreateAccountCommand</ae:parameter>
+                <ae:parameter name="attribute_blacklist">
+                    <ae:parameter>account_token</ae:parameter>
+                </ae:parameter>
+                <ae:parameter name="export">__command</ae:parameter>
+                <error>Invalid command payload given.</error>
+                <!-- 
+                Set your error messages here on attribute paths
+                <error for="email.invalid_format">Email has an invalid format.</error>
+                <error for="ownername.min_length">Ownername is too short.</error>
+                <error for="comments.comment.title.min_length">Comment-Title is too short.</error>
+                 -->
+            </validator>
+
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ResourceValidator" name="invalid_account_write" depends="create_account[invalid_payload]">
+                <arguments base="create_account" />
+                <ae:parameter name="resource_type">hbdemo.commenting.account</ae:parameter>
+                <ae:parameter name="export">resource</ae:parameter>
+                <ae:parameter name="create_fresh_resource">true</ae:parameter>
+                <ae:parameter name="allow_default_payload">true</ae:parameter>
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>

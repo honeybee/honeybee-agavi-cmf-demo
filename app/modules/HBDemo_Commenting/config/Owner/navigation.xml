@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/navigation/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+>
+    <ae:configuration>
+
+        <available_items>
+            <items name="hbdemo.commenting.owner">
+                <activity scope="hbdemo.commenting.owner">create_resource</activity>
+                <activity scope="hbdemo.commenting.owner">collection</activity>
+                <activity scope="hbdemo.commenting.owner">hierarchy_root</activity>
+            </items>
+        </available_items>
+
+        <navigations default="main">
+            <navigation name="main">
+                <groups>
+                    <group name="hbdemo.commenting.owner">
+                        <include>hbdemo.commenting.owner</include>
+                    </group>
+                </groups>
+            </navigation>
+        </navigations>
+
+    </ae:configuration>
+</ae:configurations>

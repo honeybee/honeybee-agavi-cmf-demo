@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/migration/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+>
+    <ae:configuration>
+        <migration_targets>
+
+            <migration_target name="hbdemo.commenting::migration::event_source" active="true">
+                <settings>
+                    <setting name="version_list_reader">hbdemo.commenting::version_list::event_source::reader</setting>
+                    <setting name="version_list_writer">hbdemo.commenting::version_list::event_source::writer</setting>
+                    <setting name="target_connection">Default.EventSource</setting>
+                </settings>
+                <migration_loader class="Honeybee\Infrastructure\Migration\FileSystemLoader">
+                    <setting name="directory">%core.module_dir%/HBDemo_Commenting/migration/couchdb</setting>
+                </migration_loader>
+            </migration_target>
+            
+            <migration_target name="hbdemo.commenting::migration::view_store" active="true">
+                <settings>
+                    <setting name="version_list_reader">hbdemo.commenting::version_list::view_store::reader</setting>
+                    <setting name="version_list_writer">hbdemo.commenting::version_list::view_store::writer</setting>
+                    <setting name="index">%hbdemo-commenting.index%</setting>
+                    <setting name="target_connection">Default.ViewStore</setting>
+                </settings>
+                <migration_loader class="Honeybee\Infrastructure\Migration\FileSystemLoader">
+                    <setting name="directory">%core.module_dir%/HBDemo_Commenting/migration/elasticsearch</setting>
+                </migration_loader>
+            </migration_target>
+
+        </migration_targets>
+    </ae:configuration>
+</ae:configurations>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://agavi.org/agavi/config/parts/settings/1.0">
+    <ae:configuration>
+        <settings prefix="hbdemo-commenting.">
+            <setting name="index">%core.db_prefix%.hbdemo-commenting</setting>
+            <setting name="version_list">hbdemo-commenting-version_list</setting>
+        </settings>
+    </ae:configuration>
+</ae:configurations>

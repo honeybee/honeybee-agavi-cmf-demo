@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/view_configs/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <view_configs>
+            <view_config scope="hbdemo.commenting.comment.resource">
+                <output_formats>
+                    <output_format name="html">
+                        <renderer_configs>
+                            <renderer_config subject="hbdemo.commenting.comment">
+                                <settings>
+                                    <setting name="template">html/resource/as_fields.twig</setting>
+                                </settings>
+                            </renderer_config>
+                        </renderer_configs>
+                    </output_format>
+                </output_formats>
+            </view_config>
+        </view_configs>
+    </ae:configuration>
+</ae:configurations>

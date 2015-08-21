@@ -1,0 +1,74 @@
+{
+    "hbdemo.commenting.owner": [
+        {
+            "identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697",
+            "@type": "HBDemo\\Commenting\\Owner\\Model\\Aggregate\\Owner",
+            "revision": 97477,
+            "uuid": "25e446d5-cce1-3439-b676-1650680c579d",
+            "short_id": 38492,
+            "language": "de_DE",
+            "version": 33697,
+            "name": "Hartmut Finke-Beer",
+            "email": "uvollbrecht@sager.com",
+            "password_hash": "atque et omnis sequiatque et omnis sequiatque et omnis sequi",
+            "authorization_token": "de83e169d2a6f8f94ee7",
+            "authorization_expires": "1976-09-19T19:03:58.000000+00:00"
+        },
+        {
+            "identifier": "hbdemo.commenting.owner-34da796b-ae7b-337c-9a50-5a428ec8f107-de_DE-67674",
+            "@type": "HBDemo\\Commenting\\Owner\\Model\\Aggregate\\Owner",
+            "revision": 93602,
+            "uuid": "34da796b-ae7b-337c-9a50-5a428ec8f107",
+            "short_id": 32524,
+            "language": "de_DE",
+            "version": 67674,
+            "name": "Edith Anders B.A.",
+            "email": "sbachmann@reuter.de",
+            "password_hash": "nam recusandae ducimus doloribus sed quisnam recusandae duci",
+            "authorization_token": "41d0f759df8130b2c794",
+            "authorization_expires": "1992-11-04T04:14:15.000000+00:00"
+        },
+        {
+            "identifier": "hbdemo.commenting.owner-968724a5-b174-3b81-a8df-95ec3b1c9a6d-de_DE-6900",
+            "@type": "HBDemo\\Commenting\\Owner\\Model\\Aggregate\\Owner",
+            "revision": 43207,
+            "uuid": "968724a5-b174-3b81-a8df-95ec3b1c9a6d",
+            "short_id": 88070,
+            "language": "de_DE",
+            "version": 6900,
+            "name": "Almut Hornig",
+            "email": "bstahr@hotmail.de",
+            "password_hash": "nostrum quamnostrum quamnostrum quamnostrum quamnostrum quam",
+            "authorization_token": "31587705f4339ac18c53",
+            "authorization_expires": "1999-08-02T06:35:34.000000+00:00"
+        },
+        {
+            "identifier": "hbdemo.commenting.owner-163328eb-7064-3863-bd0c-ae6e949f5261-de_DE-77509",
+            "@type": "HBDemo\\Commenting\\Owner\\Model\\Aggregate\\Owner",
+            "revision": 26563,
+            "uuid": "163328eb-7064-3863-bd0c-ae6e949f5261",
+            "short_id": 88492,
+            "language": "de_DE",
+            "version": 77509,
+            "name": "Ivo Kramer",
+            "email": "dussenvan.herbert@klapp.de",
+            "password_hash": "ducimus rerum officiis facere blanditiis sapiente et asperna",
+            "authorization_token": "3c75c2d8b47a339f56ce",
+            "authorization_expires": "1981-08-06T01:54:41.000000+00:00"
+        },
+        {
+            "identifier": "hbdemo.commenting.owner-15ff4c43-8c6f-38dd-a104-194e487545a9-de_DE-60889",
+            "@type": "HBDemo\\Commenting\\Owner\\Model\\Aggregate\\Owner",
+            "revision": 82248,
+            "uuid": "15ff4c43-8c6f-38dd-a104-194e487545a9",
+            "short_id": 24886,
+            "language": "de_DE",
+            "version": 60889,
+            "name": "Leyla Heydrich",
+            "email": "oswald.otto@hermighausen.de",
+            "password_hash": "exercitationem corporis qui totam ipsam asperiores consequat",
+            "authorization_token": "e28b43ff573295e6b8f8",
+            "authorization_expires": "1995-10-01T08:16:54.000000+00:00"
+        }
+    ]
+}

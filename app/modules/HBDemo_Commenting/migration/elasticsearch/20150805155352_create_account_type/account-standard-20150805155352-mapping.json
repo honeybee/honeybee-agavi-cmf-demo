@@ -1,0 +1,30 @@
+{
+    "properties": {
+        "name": {
+            "type": "string",
+            "fields": {
+                "sort": {
+                    "type": "string",
+                    "analyzer": "IcuAnalyzer_DE",
+                    "include_in_all": false
+                },
+                "filter": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "suggest": {
+                    "type": "string",
+                    "analyzer": "AutoCompleteAnalyzer",
+                    "include_in_all": false
+                }
+            }
+        },
+        "account_token": {
+            "type": "string",
+            "index": "not_analyzed"
+        },
+        "owner": {
+            "type": "object"
+        }
+    }
+}

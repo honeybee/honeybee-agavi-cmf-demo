@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/HBDemo_Commenting/config/validators.xml">
+    <ae:configuration>
+        <validators translation_domain="hbdemo.commenting.comment.errors">
+            <validator class="Honeybee\FrameworkBinding\Agavi\Validator\ResourceValidator" name="invalid_comment">
+                <argument>resource</argument>
+                <error>The given comment(identifier) is invalid.</error>
+                <ae:parameter name="resource_type">hbdemo.commenting.comment</ae:parameter>
+            </validator>
+
+            <validator class="string" name="invalid_workflow_event" required="true">
+                <argument>event</argument>
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>

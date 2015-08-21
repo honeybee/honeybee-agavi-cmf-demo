@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/view_configs/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <view_configs>
+            <view_config scope="hbdemo.commenting.owner.collection">
+                <output_formats>
+                    <output_format name="html">
+                        <renderer_configs>
+                            <renderer_config subject="resource_collection">
+                                <settings>
+                                </settings>
+                            </renderer_config>
+                            <renderer_config subject="hbdemo.commenting.owner">
+                                <settings>
+                                </settings>
+                            </renderer_config>
+                            <renderer_config subject="owner.inactive.activity_map">
+                                <settings>
+                                    <!--<setting name="default_activity_name">promote</setting>-->
+                                    <!-- <setting name="as_list">true</setting> -->
+                                </settings>
+                            </renderer_config>
+                            <renderer_config subject="owner.active.activity_map">
+                                <settings>
+                                    <setting name="default_activity_name">edit</setting>
+                                    <setting name="hidden_activity_names">
+                                        <setting>delete</setting>
+                                    </setting>
+                                </settings>
+                            </renderer_config>
+                            <renderer_config subject="sort_activities">
+                                <settings>
+                                    <setting name="translation_domain">hbdemo.commenting.owner.activity</setting>
+                                    <setting name="as_dropdown">true</setting>
+                                </settings>
+                            </renderer_config>
+                            <renderer_config subject="primary_activities">
+                                <settings>
+                                    <setting name="translation_domain">hbdemo.commenting.owner.activity</setting>
+                                    <setting name="default_activity_name">create_resource</setting>
+                                    <setting name="as_list">true</setting>
+                                </settings>
+                            </renderer_config>
+                            <renderer_config subject="search_activity">
+                                <settings>
+                                    <setting name="translation_domain">hbdemo.commenting.owner.activity</setting>
+                                    <setting name="template">html/activity/search_form.twig</setting>
+                                    <setting name="form_id">search_form</setting>
+                                </settings>
+                            </renderer_config>
+                        </renderer_configs>
+                    </output_format>
+                    <output_format name="console">
+                        <renderer_configs>
+                            <renderer_config subject="collection">
+                                <settings>
+                                    <!-- <setting name="view_template_name">hbdemo.commenting.owner.collection</setting> -->
+                                </settings>
+                            </renderer_config>
+                        </renderer_configs>
+                    </output_format>
+                </output_formats>
+            </view_config>
+
+            <view_config scope="hbdemo.commenting.owner.collection.table" extends="hbdemo.commenting.owner.collection" />
+        </view_configs>
+    </ae:configuration>
+</ae:configurations>

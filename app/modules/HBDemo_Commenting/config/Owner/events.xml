@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE shortcuts [
+    <!ENTITY hbdemo_commenting_owner_related_entity_events
+    'event.getType() matches "/^hbdemo\.commenting\.owner\..*/"'>
+]>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/event_bus/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+    </ae:configuration>
+</ae:configurations>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/HBDemo_Commenting/config/validators.xml">
+    <ae:configuration>
+        <validators translation_domain="hbdemo.commenting.owner.errors">
+            <!--
+            <validator method="write" class="Honeybee\FrameworkBinding\Agavi\Validator\AggregateRootTypeAttributeValidator" name="invalid_attribute_path">
+                <arguments base="uploadform">
+                    <argument>attribute</argument>
+                </arguments>
+                <error>An attribute path must be specified.</error>
+                <ae:parameter name="aggregate_root_type">hbdemo.commenting.owner</ae:parameter>
+            </validator>
+            -->
+            <validator method="write" class="Honeybee\FrameworkBinding\Agavi\Validator\AggregateRootTypeFileUploadValidator" name="invalid_uploaded_files" source="files">
+                <arguments base="uploadform"></arguments>
+                <error>File is not acceptable.</error>
+                <error for="no_image">File is not an image.</error>
+                <ae:parameter name="aggregate_root_type">hbdemo.commenting.owner</ae:parameter>
+                <ae:parameter name="debug">true</ae:parameter>
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>

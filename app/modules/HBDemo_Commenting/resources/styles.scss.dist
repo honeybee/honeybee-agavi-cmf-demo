@@ -1,0 +1,29 @@
+/*
+ * This file can be used for custom styles that are special for this module.
+ * To make use of it, rename it to "styles.scss".
+ *
+ * If you put SCSS styles in here, they will be compiled via the CLI command
+ * "bin/cli core.util.compile_scss" automatically. If you want to watch changes
+ * automatically try running "bin/cli core.util.watch_scss".
+ *
+ * If your styles are applicable project wide you should either put them into a
+ * custom theme or put them into your project's styles.scss file.
+ * A theme is preferred as this file will be loaded in the HTML head after the
+ * theme and may be an additional request you may want to avoid if not needed.
+ *
+ */
+
+/*
+@import "../../../../pub/static/themes/honeybee/vars";
+@import "../../../../pub/static/themes/honeybee/vendor/inuit-responsive-settings/settings.responsive";
+@import "../../../../pub/static/themes/honeybee/vendor/inuit-responsive-tools/tools.responsive";
+
+.itemlist {
+@include media-query(desk) {
+        $w: percentage(1/12);
+        .hb-field[data-hb-field-name="example"] {
+            width: 3*$w;
+        }
+    }
+}
+*/

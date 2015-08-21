@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<state_machines xmlns="urn:schemas-workflux:statemachine:0.5.0">
+    <state_machine name="hbdemo_commenting_comment_workflow_default">
+
+        <initial name="published" class="Workflux\State\VariableState">
+            <event name="edit">
+                <transition target="edit_task" />
+            </event>
+            <event name="delete">
+                <transition target="deleted" />
+            </event>
+            <option name="read_only_actions">
+                <option name="resource_history">
+                    <option name="route">hbdemo.commenting.comment.resource.history</option>
+                </option>
+                <option name="view_resource">
+                    <option name="route">hbdemo.commenting.comment.resource</option>
+                </option>
+            </option>
+        </initial>
+
+        <state name="edit_task" class="Workflux\State\VariableState">
+            <transition target="published">
+                <guard class="Workflux\Guard\VariableGuard">
+                    <option name="expression">current_state == "published"</option>
+                </guard>
+            </transition>
+            <option name="variables">
+                <option name="task_action">
+                    <option name="module">HBDemo_Commenting</option>
+                    <option name="action">Comment.Resource.Modify</option>
+                </option>
+            </option>
+        </state>
+
+        <final name="deleted" />
+
+    </state_machine>
+</state_machines>

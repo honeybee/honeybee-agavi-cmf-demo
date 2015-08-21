@@ -1,0 +1,94 @@
+{
+    "hbdemo.commenting.account": [
+        {
+            "identifier": "hbdemo.commenting.account-e7e9e6a8-2294-3aa7-a208-c0354daad87d-de_DE-9971",
+            "@type": "HBDemo\\Commenting\\Account\\Model\\Aggregate\\Account",
+            "revision": 54713,
+            "uuid": "e7e9e6a8-2294-3aa7-a208-c0354daad87d",
+            "short_id": 52893,
+            "language": "de_DE",
+            "version": 9971,
+            "name": "Dr. Francisco Ortmann B.A.",
+            "account_token": "b5893afcc870b4620ab9",
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "d45ddfb3-c942-32c0-8ee8-3792ab0e2cb2",
+                    "referenced_identifier": "hbdemo.commenting.owner-25e446d5-cce1-3439-b676-1650680c579d-de_DE-33697"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.account-afed5b97-6896-3cd3-9144-0f5e2c0f530e-de_DE-64801",
+            "@type": "HBDemo\\Commenting\\Account\\Model\\Aggregate\\Account",
+            "revision": 16306,
+            "uuid": "afed5b97-6896-3cd3-9144-0f5e2c0f530e",
+            "short_id": 22929,
+            "language": "de_DE",
+            "version": 64801,
+            "name": "Bertram Thies",
+            "account_token": "31740427de83125a401a",
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "ef0fb25e-e902-3e87-be90-7eafd7021108",
+                    "referenced_identifier": "hbdemo.commenting.owner-34da796b-ae7b-337c-9a50-5a428ec8f107-de_DE-67674"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.account-334577fe-57bc-3fec-b7a8-09cbe7d4ebd8-de_DE-38255",
+            "@type": "HBDemo\\Commenting\\Account\\Model\\Aggregate\\Account",
+            "revision": 36237,
+            "uuid": "334577fe-57bc-3fec-b7a8-09cbe7d4ebd8",
+            "short_id": 92254,
+            "language": "de_DE",
+            "version": 38255,
+            "name": "Maria-Theresia Kroker",
+            "account_token": "a9850bcd14bdabb00980",
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "c6511fa1-e3ab-3f5e-9e8c-cc7ea53bb690",
+                    "referenced_identifier": "hbdemo.commenting.owner-968724a5-b174-3b81-a8df-95ec3b1c9a6d-de_DE-6900"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.account-74650f0f-589d-3163-b41f-91455b5876fa-de_DE-47448",
+            "@type": "HBDemo\\Commenting\\Account\\Model\\Aggregate\\Account",
+            "revision": 9298,
+            "uuid": "74650f0f-589d-3163-b41f-91455b5876fa",
+            "short_id": 77745,
+            "language": "de_DE",
+            "version": 47448,
+            "name": "Klaus-D. Jessel",
+            "account_token": "1bb6c0f9ba4d65f1cf39",
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "9a6d6dd9-872c-3420-879d-4b0aa8b9bb2c",
+                    "referenced_identifier": "hbdemo.commenting.owner-163328eb-7064-3863-bd0c-ae6e949f5261-de_DE-77509"
+                }
+            ]
+        },
+        {
+            "identifier": "hbdemo.commenting.account-d07607cc-5f14-3059-96e0-6185f64a2336-de_DE-14742",
+            "@type": "HBDemo\\Commenting\\Account\\Model\\Aggregate\\Account",
+            "revision": 682,
+            "uuid": "d07607cc-5f14-3059-96e0-6185f64a2336",
+            "short_id": 41271,
+            "language": "de_DE",
+            "version": 14742,
+            "name": "Dipl.-Ing. John Austermühle",
+            "account_token": "d106b4fa5a2863fbb87c",
+            "owner": [
+                {
+                    "@type": "owner",
+                    "identifier": "58ac703c-b6f3-3228-a194-c4d5a1fe3912",
+                    "referenced_identifier": "hbdemo.commenting.owner-15ff4c43-8c6f-38dd-a104-194e487545a9-de_DE-60889"
+                }
+            ]
+        }
+    ]
+}
