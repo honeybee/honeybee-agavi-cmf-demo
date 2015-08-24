@@ -14,8 +14,11 @@
                             <cell>
                                 <group name="user">
                                     <field name="title" attribute_path="title" />
+                                    
                                     <field name="account" attribute_path="account.account.name" attribute_value_path="account.account[0].name" />
+                                    
                                     <field name="modified_at" attribute_path="modified_at" />
+                                    
                                     <field name="workflow_state" attribute_path="workflow_state" />
                                 </group>
                             </cell>

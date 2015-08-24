@@ -13,6 +13,8 @@
                         <row>
                             <cell>
                                 <group name="user">
+                                    <field name="owner" attribute_path="owner.owner.name" attribute_value_path="owner.owner[0].name" />
+
                                     <field name="content" attribute_path="content" />
                                     
                                     <field name="topic" attribute_path="topic.topic.title" attribute_value_path="topic.topic[0].title" />

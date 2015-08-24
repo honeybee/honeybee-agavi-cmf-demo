@@ -25,6 +25,7 @@
                                     
                                     <field name="owner" attribute_path="owner">
                                         <setting name="owner.suggest_attribute">name</setting>
+                                        <setting name="hide_entity_list">true</setting>
                                     </field>
                                 </group>
                             </cell>

@@ -25,10 +25,12 @@
                                     
                                     <field name="topic" attribute_path="topic">
                                         <setting name="topic.suggest_attribute">title</setting>
+                                        <setting name="hide_entity_list">true</setting>
                                     </field>
                                     
                                     <field name="owner" attribute_path="owner">
                                         <setting name="owner.suggest_attribute">name</setting>
+                                        <setting name="hide_entity_list">true</setting>
                                     </field>
                                 </group>
                             </cell>

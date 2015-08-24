@@ -1,10 +1,10 @@
 {
-    "name": "honeybee/honeybee-agavi-cmf-demo",
+    "name": "honeybee/honeybee-agavi-cmf-project",
     "license": "MIT",
     "type": "project",
-    "description": "A demo CMS built from the Honeybee-Agavi CMF project.",
-    "keywords": [ "demo", "honeybee", "agavi", "mvc", "cqrs", "ddd", "event-sourcing", "hexagonal", "framework", "php" ],
-    "homepage": "https://github.com/honeybee/honeybee-agavi-cmf-demo",
+    "description": "Project (template) for building content-management applications, that base on Agavi and the Honeybee CQRS library.",
+    "keywords": [ "honeybee", "agavi", "project-template" ],
+    "homepage": "https://github.com/honeybee/honeybee-agavi-cmf-project",
     "authors": [
         {
             "name": "Hasham Ahmad",
@@ -24,12 +24,12 @@
         },
         {
             "name": "Honeybee Contributors",
-            "homepage": "https://github.com/honeybee/honeybee-agavi-cmf-demo/graphs/contributors"
+            "homepage": "https://github.com/honeybee/honeybee-agavi-cmf-vendor/graphs/contributors"
         }
     ],
 
     "support": {
-        "issues": "https://github.com/honeybee/honeybee-agavi-cmf-demo/issues",
+        "issues": "https://github.com/honeybee/honeybee-agavi-cmf-vendor/issues",
         "irc": "irc://irc.freenode.org/honeybee"
     },
 
@@ -63,7 +63,7 @@
     },
 
     "autoload": {
-        "psr-0": { "ScriptHandler": "etc/composer/" }
+        "psr-4": { "HoneybeeExtensions\\Composer\\": "etc/composer/" }
     },
 
     "scripts": {
@@ -87,7 +87,33 @@
             "./bin/composer.phar code-sniffer"
         ],
         "post-root-package-install": [
-            "ScriptHandler::postRootPackageInstall"
+            "HoneybeeExtensions\\Composer\\CreateProjectHandler::postRootPackageInstall"
+        ],
+        "migration-create": [
+            "HoneybeeExtensions\\Composer\\MigrationHandler::createMigration"
+        ],
+        "migration-list": [
+            "HoneybeeExtensions\\Composer\\MigrationHandler::listMigrations"
+        ],
+        "migration-run-all": [
+            "HoneybeeExtensions\\Composer\\MigrationHandler::runAllMigrations"
+        ],
+        "migration-run": [
+            "HoneybeeExtensions\\Composer\\MigrationHandler::runMigration"
+        ],
+        "fixture-create": [
+            "HoneybeeExtensions\\Composer\\FixtureHandler::createFixture"
+        ],
+        "fixture-import": [
+            "HoneybeeExtensions\\Composer\\FixtureHandler::importFixture"
+        ],
+        "fixture-generate": [
+            "HoneybeeExtensions\\Composer\\FixtureHandler::generateFixture"
+        ],
+        "build-config": [
+            "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig",
+            "HoneybeeExtensions\\Composer\\ConfigurationHandler::clearCaches",
+            "HoneybeeExtensions\\Composer\\ConfigurationHandler::makeAutoload"
         ]
     }
 }
