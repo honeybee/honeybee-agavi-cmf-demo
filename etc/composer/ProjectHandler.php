@@ -1,8 +1,14 @@
 <?php
 
-use Composer\Script\Event;
+namespace HoneybeeExtensions\Composer;
 
-class ScriptHandler
+use Composer\Script\Event;
+use RecursiveIteratorIterator;
+use RecursiveCallbackFilterIterator;
+use RecursiveDirectoryIterator;
+use Exception;
+
+class ProjectHandler
 {
     const DEFAULT_HOST_NAME = 'honeybee-agavi-cmf-demo.local';
     const DEFAULT_REPOSITORY_NAME = 'honeybee/honeybee-agavi-cmf-demo';
@@ -10,7 +16,7 @@ class ScriptHandler
 
     public static function postRootPackageInstall(Event $event)
     {
-        $project_path = realpath(__DIR__ . '/../../');
+        $project_path = ScriptToolkit::getProjectPath($event);
 
         $io = $event->getIO();
         $io->write('');
@@ -71,9 +77,6 @@ class ScriptHandler
         self::replaceStringInFiles(self::DEFAULT_REPOSITORY_NAME, $vendor_package, $project_path);
         self::replaceStringInFiles(self::DEFAULT_PROJECT_NAME, $package_name, $project_path);
 
-        // Remove .git files if present
-        // self::deleteGitFiles($project_path . DIRECTORY_SEPARATOR . '.git');
-
         $io->write('<fg=green;options=bold>Your project configuration is complete.</>');
         $io->write('<info>--------------------------------------------------------------------------------------------');
 
@@ -112,14 +115,14 @@ class ScriptHandler
         $io->write('');
         $io->write('Further Honeybee information and support can be found here:');
         $io->write('Installation documentation: <options=underscore>https://github.com/honeybee/honeybee-agavi-cmf-demo</>');
-        $io->write('Cookbook & demo project: <options=underscore>https://github.com/honeybee/honeybee-agavi-cmf-demo/cookbook</>');
+        $io->write('Demo project & Cookbook: <options=underscore>https://github.com/honeybee/honeybee-agavi-cmf-demo/docs</>');
         $io->write('IRC support and feedback: <options=underscore>irc://irc.freenode.org/honeybee</>');
         $io->write('--------------------------------------------------------------------------------------------</info>');
         $io->write('<fg=green;options=bold>Thank you for using Honeybee.</>');
         $io->write('');
     }
 
-    protected static function replaceStringInFiles($search, $replacement, $path, array $exclude_paths = array())
+    protected static function replaceStringInFiles($search, $replacement, $path, array $exclude_paths = [])
     {
         $objects = new RecursiveIteratorIterator(
             new RecursiveCallbackFilterIterator(
@@ -145,17 +148,6 @@ class ScriptHandler
                 $file_contents = str_replace($search, $replacement, $file_contents);
                 file_put_contents($object->getRealPath(), $file_contents);
             }
-        }
-    }
-
-    protected static function deleteGitFiles($path)
-    {
-        if (is_writable($path)) {
-            $files = array_diff(scandir($path), array('.','..'));
-            foreach ($files as $file) {
-                (is_dir("$path/$file")) ? self::deleteGitFiles("$path/$file") : unlink("$path/$file");
-            }
-            rmdir($path);
         }
     }
 }

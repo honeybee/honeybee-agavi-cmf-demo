@@ -19,10 +19,10 @@ class Fixture_20150810231335_InitialTestData extends Fixture
     protected function getFixtureFiles()
     {
         return [
-            __DIR__ . DIRECTORY_SEPARATOR . '20150810231335-owner-data.json',
-            __DIR__ . DIRECTORY_SEPARATOR . '20150810231335-account-data.json',
-            __DIR__ . DIRECTORY_SEPARATOR . '20150810231335-topic-data.json',
-            __DIR__ . DIRECTORY_SEPARATOR . '20150810231335-comment-data.json'
+            __DIR__ . DIRECTORY_SEPARATOR . 'owner-data.json',
+            __DIR__ . DIRECTORY_SEPARATOR . 'account-data.json',
+            __DIR__ . DIRECTORY_SEPARATOR . 'topic-data.json',
+            __DIR__ . DIRECTORY_SEPARATOR . 'comment-data.json'
         ];
     }
 }

@@ -326,20 +326,6 @@ fixture:
 
 	@bin/cli honeybee.core.fixture.create
 
-destroy-data:
-	
-	@echo "Destroying databases..."
-	@curl -s -XDELETE http://localhost:9200/honeybee-agavi-cmf-demo.* > /dev/null
-	@curl -s -XDELETE http://127.0.0.1:5984/honeybee-agavi-cmf-demo%2Bdomain_events > /dev/null
-
-rebuild-all:
-	
-	@make destroy-data
-	@echo "Rebuilding databases and importing fixtures..."
-	@bin/cli honeybee.core.migrate.run -target all
-	@bin/cli honeybee.core.fixture.import -target 'honeybee.system_account::fixture::writer' -fixture '20150819120801:import_demo_user'
-	@bin/cli honeybee.core.fixture.import -target 'hbdemo.commenting::fixture::writer' -fixture '20150810231335:initial_test_data'
-
 #
 #
 # TESTING AND CODE QUALITY METRICS

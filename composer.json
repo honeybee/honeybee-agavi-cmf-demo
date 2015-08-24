@@ -63,9 +63,11 @@
     },
 
     "autoload": {
-        "psr-4": { "HoneybeeExtensions\\Composer\\": "etc/composer/" }
+        "psr-4": { 
+            "HoneybeeExtensions\\Composer\\": "etc/composer/"
+         }
     },
-
+    
     "scripts": {
         "test": [
             "echo \"\nRunning unit tests ...\n\"",
@@ -87,16 +89,13 @@
             "./bin/composer.phar code-sniffer"
         ],
         "post-root-package-install": [
-            "HoneybeeExtensions\\Composer\\CreateProjectHandler::postRootPackageInstall"
+            "HoneybeeExtensions\\Composer\\ProjectHandler::postRootPackageInstall"
         ],
         "migration-create": [
             "HoneybeeExtensions\\Composer\\MigrationHandler::createMigration"
         ],
         "migration-list": [
             "HoneybeeExtensions\\Composer\\MigrationHandler::listMigrations"
-        ],
-        "migration-run-all": [
-            "HoneybeeExtensions\\Composer\\MigrationHandler::runAllMigrations"
         ],
         "migration-run": [
             "HoneybeeExtensions\\Composer\\MigrationHandler::runMigration"
@@ -110,10 +109,28 @@
         "fixture-generate": [
             "HoneybeeExtensions\\Composer\\FixtureHandler::generateFixture"
         ],
-        "build-config": [
+        "module-create": [
             "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig",
-            "HoneybeeExtensions\\Composer\\ConfigurationHandler::clearCaches",
-            "HoneybeeExtensions\\Composer\\ConfigurationHandler::makeAutoload"
+            "HoneybeeExtensions\\Composer\\ModuleHandler::createModule"
+        ],
+        "type-create": [
+            "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig",
+            "HoneybeeExtensions\\Composer\\TypeHandler::createType",
+            "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig"
+        ],
+        "type-build": [
+            "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig",
+            "HoneybeeExtensions\\Composer\\TypeHandler::buildType",
+            "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig"
+        ],
+        "build-config": [
+            "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig"
+        ],
+        "data-destroy": [
+            "HoneybeeExtensions\\Composer\\DemoProjectHandler::destroyData"
+        ],
+        "data-rebuild": [
+            "HoneybeeExtensions\\Composer\\DemoProjectHandler::rebuildData"
         ]
     }
 }
