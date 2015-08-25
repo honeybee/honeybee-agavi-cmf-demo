@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 use Honeybee\FrameworkBinding\Agavi\App\ActionPack\Suggestions\SuggestionsSuccessView;
 
