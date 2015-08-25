@@ -1,10 +1,10 @@
 {
-    "name": "honeybee/honeybee-agavi-cmf-project",
+    "name": "honeybee/honeybee-agavi-cmf-demo",
     "license": "MIT",
     "type": "project",
     "description": "Project (template) for building content-management applications, that base on Agavi and the Honeybee CQRS library.",
     "keywords": [ "honeybee", "agavi", "project-template" ],
-    "homepage": "https://github.com/honeybee/honeybee-agavi-cmf-project",
+    "homepage": "https://github.com/honeybee/honeybee-agavi-cmf-demo",
     "authors": [
         {
             "name": "Hasham Ahmad",
@@ -30,6 +30,7 @@
 
     "support": {
         "issues": "https://github.com/honeybee/honeybee-agavi-cmf-vendor/issues",
+        "cookbook": "https://github.com/honeybee/honeybee-agavi-cmf-demo/cookbook",
         "irc": "irc://irc.freenode.org/honeybee"
     },
 
@@ -90,6 +91,9 @@
         ],
         "post-root-package-install": [
             "HoneybeeExtensions\\Composer\\ProjectHandler::postRootPackageInstall"
+        ],
+        "user-create": [
+            "HoneybeeExtensions\\Composer\\ProjectHandler::createUser"
         ],
         "migration-create": [
             "HoneybeeExtensions\\Composer\\MigrationHandler::createMigration"
