@@ -16,11 +16,18 @@
                                     <field name="identifier" attribute_path="identifier" template="html/attribute/as_input_text.twig">
                                         <setting name="readonly">true</setting>
                                     </field>
+                                    
                                     <field name="revision" attribute_path="revision" template="html/attribute/as_input_text.twig">
                                         <setting name="readonly">true</setting>
                                     </field>
+                                    
                                     <field name="name" attribute_path="name" template="html/attribute/as_input_text.twig" />
+                                    
                                     <field name="email" attribute_path="email" template="html/attribute/as_input_text.twig" />
+                                    
+                                    <field name="images" attribute_path="images" template="html/attribute/image-list/as_tabs.twig">
+                                        <setting name="use_converjon">true</setting>
+                                    </field>
                                 </group>
                             </cell>
                         </row>

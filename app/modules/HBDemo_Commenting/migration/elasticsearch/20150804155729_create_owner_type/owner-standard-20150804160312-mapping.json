@@ -33,6 +33,10 @@
         },
         "authorization_expires": {
             "type": "date"
+        },
+        "image": {
+            "type": "object",
+            "enabled": false
         }
     }
 }

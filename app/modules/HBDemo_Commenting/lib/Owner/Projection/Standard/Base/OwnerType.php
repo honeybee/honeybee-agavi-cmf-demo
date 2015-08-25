@@ -83,6 +83,11 @@ abstract class OwnerType extends ProjectionType
                     $this,
                     []
                 ),
+                new \Trellis\Runtime\Attribute\ImageList\ImageListAttribute(
+                    'images',
+                    $this,
+                    []
+                ),
             ],
             new Options(
                 array(

@@ -83,6 +83,11 @@ abstract class OwnerType extends AggregateRootType
                     $this,
                     []
                 ),
+                new \Trellis\Runtime\Attribute\ImageList\ImageListAttribute(
+                    'images',
+                    $this,
+                    []
+                ),
             ],
             new Options(
                 array(

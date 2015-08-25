@@ -34,6 +34,8 @@
             </attribute>
             
             <attribute name="authorization_expires" type="timestamp" />
+
+            <attribute name="images" type="image-list" />
         </attributes>
     </type_definition>
 </type_schema>

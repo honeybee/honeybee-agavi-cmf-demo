@@ -103,4 +103,17 @@ abstract class Owner extends Projection
     {
         return $this->getValue('authorization_expires');
     }
+
+    /**
+     * Returns the current value of the 'images' attribute on this
+     * 'Owner' entity. The 'default_value' option set for
+     * this attribute is returned if no value was set. If neither a value nor
+     * default value was set the 'null_value' option value is returned.
+     *
+     * @return mixed Value or default value of attribute 'images'. Null value otherwise (defaults to NULL).
+     */
+    public function getImages()
+    {
+        return $this->getValue('images');
+    }
 }

@@ -12,7 +12,19 @@
             "email": "uvollbrecht@sager.com",
             "password_hash": "atque et omnis sequiatque et omnis sequiatque et omnis sequi",
             "authorization_token": "de83e169d2a6f8f94ee7",
-            "authorization_expires": "1976-09-19T19:03:58.000000+00:00"
+            "authorization_expires": "1976-09-19T19:03:58.000000+00:00",
+            "images": [
+	            {
+	                "location": "owner_image.jpg",
+	                "title": "Ratione est quia et modi voluptatum voluptates.",
+	                "caption": "ut est ea",
+	                "copyright": "non inventore et",
+	                "copyright_url": "https://jacobijackel.com/sed-et-est-pariatur.html",
+	                "source": "tempora non aspernatur",
+	                "width": 200,
+	                "height": 200
+	            }
+	        ]
         },
         {
             "identifier": "hbdemo.commenting.owner-34da796b-ae7b-337c-9a50-5a428ec8f107-de_DE-67674",
@@ -26,7 +38,19 @@
             "email": "sbachmann@reuter.de",
             "password_hash": "nam recusandae ducimus doloribus sed quisnam recusandae duci",
             "authorization_token": "41d0f759df8130b2c794",
-            "authorization_expires": "1992-11-04T04:14:15.000000+00:00"
+            "authorization_expires": "1992-11-04T04:14:15.000000+00:00",
+            "images": [
+	                {
+	                "location": "owner_image.jpg",
+	                "title": "Ea et et sit.",
+	                "caption": "dolores laboriosam expedita",
+	                "copyright": "optio dignissimos cupiditate",
+	                "copyright_url": "http://trub.com/tempora-sunt-ad-voluptatem-ea-recusandae",
+	                "source": "sint labore est",
+	                "width": 200,
+	                "height": 200
+	            }
+	        ]
         },
         {
             "identifier": "hbdemo.commenting.owner-968724a5-b174-3b81-a8df-95ec3b1c9a6d-de_DE-6900",
@@ -40,7 +64,19 @@
             "email": "bstahr@hotmail.de",
             "password_hash": "nostrum quamnostrum quamnostrum quamnostrum quamnostrum quam",
             "authorization_token": "31587705f4339ac18c53",
-            "authorization_expires": "1999-08-02T06:35:34.000000+00:00"
+            "authorization_expires": "1999-08-02T06:35:34.000000+00:00",
+            "images": [
+                {
+	                "location": "owner_image.jpg",
+	                "title": "Ea et et sit.",
+	                "caption": "dolores laboriosam expedita",
+	                "copyright": "optio dignissimos cupiditate",
+	                "copyright_url": "http://trub.com/tempora-sunt-ad-voluptatem-ea-recusandae",
+	                "source": "sint labore est",
+	                "width": 200,
+	                "height": 200
+	            }
+	        ]
         },
         {
             "identifier": "hbdemo.commenting.owner-163328eb-7064-3863-bd0c-ae6e949f5261-de_DE-77509",
@@ -54,7 +90,19 @@
             "email": "dussenvan.herbert@klapp.de",
             "password_hash": "ducimus rerum officiis facere blanditiis sapiente et asperna",
             "authorization_token": "3c75c2d8b47a339f56ce",
-            "authorization_expires": "1981-08-06T01:54:41.000000+00:00"
+            "authorization_expires": "1981-08-06T01:54:41.000000+00:00",
+            "images": [
+                {
+	                "location": "owner_image.jpg",
+	                "title": "At qui consequatur praesentium beatae eius quibusdam illum.",
+	                "caption": "tempore incidunt reprehenderit",
+	                "copyright": "asperiores nisi accusantium",
+	                "copyright_url": "http://www.neureuther.com/",
+	                "source": "dolorum dolores dolor",
+	                "width": 200,
+	                "height": 200
+	            }
+	        ]
         },
         {
             "identifier": "hbdemo.commenting.owner-15ff4c43-8c6f-38dd-a104-194e487545a9-de_DE-60889",
@@ -68,7 +116,19 @@
             "email": "oswald.otto@hermighausen.de",
             "password_hash": "exercitationem corporis qui totam ipsam asperiores consequat",
             "authorization_token": "e28b43ff573295e6b8f8",
-            "authorization_expires": "1995-10-01T08:16:54.000000+00:00"
+            "authorization_expires": "1995-10-01T08:16:54.000000+00:00",
+            "images": [
+                {
+	                "location": "owner_image.jpg",
+	                "title": "Id rerum aut illum velit qui.",
+	                "caption": "consequatur et laborum",
+	                "copyright": "explicabo facere velit",
+	                "copyright_url": "http://trub.org/mollitia-officia-explicabo-ducimus-eius-dolorem",
+	                "source": "et corrupti omnis",
+	                "width": 200,
+	                "height": 200
+	            }
+	        ]
         }
     ]
 }
