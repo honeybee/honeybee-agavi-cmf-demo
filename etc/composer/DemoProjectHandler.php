@@ -15,11 +15,14 @@ class DemoProjectHandler extends ProjectHandler
             $client = new Client();
             $client->setDefaultOption('exceptions', false);
             $es_indices = self::DEFAULT_PROJECT_NAME . '.*';
-            $couch_dbs = self::DEFAULT_PROJECT_NAME . '%2Bdomain_events';
+            $couch_event_db = self::DEFAULT_PROJECT_NAME . '%2Bdomain_events';
+            $couch_process_db = self::DEFAULT_PROJECT_NAME . '%2Bprocess_states';
             $io->write('-> deleting Elasticsearch indices "' . $es_indices . '"');
             $client->delete('http://localhost:9200/' . $es_indices)->send();
-            $io->write('-> deleting CouchDb database "' . $couch_dbs . '"');
-            $client->delete('http://127.0.0.1:5984/' . $couch_dbs)->send();
+            $io->write('-> deleting CouchDb database "' . $couch_event_db . '"');
+            $client->delete('http://127.0.0.1:5984/' . $couch_event_db)->send();
+            $io->write('-> deleting CouchDb database "' . $couch_process_db . '"');
+            $client->delete('http://127.0.0.1:5984/' . $couch_process_db)->send();
         }
     }
 

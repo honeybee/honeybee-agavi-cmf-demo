@@ -2,7 +2,7 @@
     "name": "honeybee/honeybee-agavi-cmf-demo",
     "license": "MIT",
     "type": "project",
-    "description": "Project (template) for building content-management applications, that base on Agavi and the Honeybee CQRS library.",
+    "description": "Demo project for building content-management applications, based on Agavi and the Honeybee CQRS library.",
     "keywords": [ "honeybee", "agavi", "project-template" ],
     "homepage": "https://github.com/honeybee/honeybee-agavi-cmf-demo",
     "authors": [
@@ -50,8 +50,7 @@
         "ext-imagick": "*",
         "honeybee/honeybee-agavi-cmf-vendor": "dev-master",
         "honeybee/trellis": "master@dev",
-        "shrink0r/workflux": "master@dev",
-        "webmozart/json": "^1.0"
+        "shrink0r/workflux": "master@dev"
     },
 
      "require-dev": {
