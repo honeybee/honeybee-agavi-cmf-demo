@@ -5,7 +5,7 @@
 >
     <ae:configuration>
         <activity_containers>
-            <activity_container scope="hbdemo.commenting.comment" extends="default_type_activities">
+            <activity_container scope="hbdemo.commenting.comment" extends="default_resource_activities">
 
                 <activity name="view_resource" type="workflow">
                     <description>comment.activity.view_resource.description</description>

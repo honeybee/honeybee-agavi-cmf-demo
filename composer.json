@@ -91,6 +91,15 @@
         "post-root-package-install": [
             "HoneybeeExtensions\\Composer\\ProjectHandler::postRootPackageInstall"
         ],
+        "pre-install-cmd": [
+            "HoneybeeExtensions\\Composer\\ProjectHandler::preInstall"
+        ],
+        "post-install-cmd": [
+            "HoneybeeExtensions\\Composer\\ProjectHandler::postInstall"
+        ],
+        "project-install": [
+            "HoneybeeExtensions\\Composer\\ProjectHandler::installProject"
+        ],
         "user-create": [
             "HoneybeeExtensions\\Composer\\ProjectHandler::createUser"
         ],
@@ -116,18 +125,21 @@
             "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig",
             "HoneybeeExtensions\\Composer\\ModuleHandler::createModule"
         ],
-        "type-create": [
+        "resource-create": [
             "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig",
-            "HoneybeeExtensions\\Composer\\TypeHandler::createType",
+            "HoneybeeExtensions\\Composer\\ResourceHandler::createResource",
             "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig"
         ],
-        "type-build": [
+        "resource-build": [
             "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig",
-            "HoneybeeExtensions\\Composer\\TypeHandler::buildType",
+            "HoneybeeExtensions\\Composer\\ResourceHandler::buildResource",
             "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig"
         ],
         "config-build": [
             "HoneybeeExtensions\\Composer\\ConfigurationHandler::buildConfig"
+        ],
+        "assets-build": [
+            "HoneybeeExtensions\\Composer\\ProjectHandler::buildAssets"
         ],
         "data-destroy": [
             "HoneybeeExtensions\\Composer\\DemoProjectHandler::destroyData"
