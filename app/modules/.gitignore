@@ -5,4 +5,5 @@
 # you to actually get a diff of changes after updating the honeybee version.
 #
 /Honeybee_Core
-/Honeybee_SystemAccount
+/Honeybee_SystemAccount/*
+!/Honeybee_SystemAccount/fixture

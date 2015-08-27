@@ -1,0 +1,20 @@
+{
+    "honeybee.system_account.user": [
+        {
+            "identifier": "honeybee.system_account.user-11ee4239-3e82-38ee-8f0b-e59ce9e6cbe0-de_DE-35428",
+            "@type": "Honeybee\\SystemAccount\\User\\Model\\Aggregate\\User",
+            "uuid": "11ee4239-3e82-38ee-8f0b-e59ce9e6cbe0",
+            "language": "de_DE",
+            "version": 1,
+            "username": "admin",
+            "email": "admin@honeybee-demo.xyz",
+            "role": "administrator",
+            "firstname": "Admin",
+            "lastname": "Nasanov",
+            "password_hash": "$2y$11$.Ibtap1VFV07jSmbVwHv3eFHeFInlQPGf9S/rNA5Mwpoyg6cz4L6C",
+            "biography": "Sint beatae non illo exercitationem impedit. Assumenda ratione nulla natus consequatur soluta qui culpa. Hic nisi et sed autem et.\n\nQuisquam est dolores soluta consequatur tempora sit optio. Ipsam architecto odio accusantium dolor libero impedit assumenda.\n\nMollitia fuga quia blanditiis sint deleniti. Ea sit sit beatae qui. Veniam et ut ratione deleniti ab. Nihil aut et quae tempora commodi.",
+            "auth_token": "b74cdb8c8ef61c73322d8c4c3b45ebc1247c4d0e",
+            "token_expire_date": "2015-08-19T15:12:10.000000+00:00"
+        }
+    ]
+}
