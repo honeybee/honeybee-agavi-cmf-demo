@@ -14,9 +14,14 @@ class ProjectHandler
     const DEFAULT_REPOSITORY_NAME = 'honeybee/honeybee-agavi-cmf-demo';
     const DEFAULT_PROJECT_NAME = 'honeybee-agavi-cmf-demo';
 
+    protected static function getProjectPath(Event $event)
+    {
+        return realpath($event->getComposer()->getConfig()->get('vendor-dir') . DIRECTORY_SEPARATOR . '..');
+    }
+
     public static function postRootPackageInstall(Event $event)
     {
-        $project_path = realpath($event->getComposer()->getConfig()->get('vendor-dir') . DIRECTORY_SEPARATOR . '..');
+        $project_path = self::getProjectPath($event);
 
         $io = $event->getIO();
         $io->write('');
@@ -232,7 +237,7 @@ class ProjectHandler
     {
         $io = $event->getIO();
         $io->write('-> copying and linking Honeybee files into project');
-        $project_path = ScriptToolkit::getProjectPath($event);
+        $project_path = self::getProjectPath($event);
 
         $modules_path = $project_path . DIRECTORY_SEPARATOR . 'pub/static/modules';
         $files = array_diff(scandir($modules_path), [ '.', '..' ]);
@@ -307,7 +312,7 @@ class ProjectHandler
     {
         $io = $event->getIO();
         $io->write('-> initialising directories');
-        $project_path = ScriptToolkit::getProjectPath($event);
+        $project_path = self::getProjectPath($event);
         $paths = [
             'app/cache',
             'app/log',
@@ -321,8 +326,12 @@ class ProjectHandler
             'etc/local'
         ];
 
+        // pre-install manual mkdir
         foreach ($paths as $path) {
-            ScriptToolkit::makeDirectory($project_path . DIRECTORY_SEPARATOR . $path);
+            $target = $project_path . DIRECTORY_SEPARATOR . $path;
+            if (!is_dir($target)) {
+                mkdir($target, 0755, true);
+            }
         }
 
         // @todo remove pub/static/modules symlinks here?
@@ -338,7 +347,7 @@ class ProjectHandler
                 new RecursiveDirectoryIterator($path, RecursiveDirectoryIterator::SKIP_DOTS),
                 function ($current) use ($path, $exclude_paths) {
                     if ($current->isDir()) {
-                       foreach ($exclude_paths as $exclusion) {
+                        foreach ($exclude_paths as $exclusion) {
                             $real_exclusion = $path . DIRECTORY_SEPARATOR . $exclusion;
                             if ($current->getRealPath() == $real_exclusion) {
                                 return false;
