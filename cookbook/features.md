@@ -4,7 +4,6 @@
 
 ###Write Side
 
-####Event Sourcing
 #####Storage technology
 The system events are stored by default in [CouchDb][1]. We selected this database because it is an append only, JSON document store, which promises availability. It is also a mature technology and provides sufficient performance, robust consistency and failure resilience.
 
@@ -22,6 +21,8 @@ The entity projections are stored by default in [Elasticsearch][2].
 An Elasticsearch index is created for each bounded context, although you are free to organise your indexes and types as you wish. Indicies are named with an application prefix and timestamp, and are aliased to enables support for zero down-time migrations when re-indexing is required.
 
 It is possible to replace or augment this database with the storage technology of your choice.
+
+##Event Sourcing
 
 ##Immutability
 
