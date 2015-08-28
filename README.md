@@ -29,7 +29,8 @@ Creating a project with `composer` will guide you through configuring a project 
 
 ```shell
 # replace the last argument with your chosen folder name if required
-composer create-project --ignore-platform-reqs --no-install honeybee/honeybee-agavi-cmf-demo honeybee-agavi-cmf-demo
+composer create-project -sdev --ignore-platform-reqs --no-install \
+honeybee/honeybee-agavi-cmf-demo honeybee-agavi-cmf-demo
 ```
 
 The repository will be cloned and a post-install script will be executed which will prompt you with some simple configuration questions.
