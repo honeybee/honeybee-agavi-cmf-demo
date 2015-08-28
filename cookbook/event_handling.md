@@ -83,7 +83,7 @@ In this shortcut we specify the type of the events we are interested in by speci
 ###Topic related events
 The **Topic** has a similar configuration with a different shortcut name and expression:
 
-######config/Topic/events.xml
+######config/Topic/events.xml (snippet)
 ```xml
 <!ENTITY hbdemo_commenting_topic_related_entity_events 
 'event.getType() matches "/^hbdemo\.commenting\.account\..*/"'>
@@ -92,7 +92,7 @@ The **Topic** has a similar configuration with a different shortcut name and exp
 ###Comment related events
 The **Comment** related event listener configuration is slightly different since it is listening for events of two different types. The regular expression is easily written to enable this.
 
-######config/Comment/events.xml
+######config/Comment/events.xml (snippet)
 ```xml
 <!ENTITY hbdemo_commenting_comment_related_entity_events 
 'event.getType() matches "/^hbdemo\.commenting\.(owner|topic)\..*/"'>

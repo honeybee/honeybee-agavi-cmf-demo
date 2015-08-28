@@ -11,6 +11,6 @@ This cookbook is currently being expanded as the demo application and underlying
  8. [Migration](./migration.md)
  9. [Data Fixtures](./data_fixtures.md)
  10. [Event Handling](./event_handling.md)
- 11. [Process Manager](./process_manager.md) (coming soon)
+ 11. [Processes](./processes.md)
  12. [Templating](./templating.md)
  13. [Integration](./integration.md) (coming soon)

@@ -1,10 +1,8 @@
 #Features
 
 ##CQRS
-Coming soon...
 
 ###Write Side
-Coming soon...
 
 ####Event Sourcing
 #####Storage technology
@@ -25,15 +23,26 @@ An Elasticsearch index is created for each bounded context, although you are fre
 
 It is possible to replace or augment this database with the storage technology of your choice.
 
-##Sync & Aysnc Busses
-Coming soon...
+##Immutability
 
-##Memory Management
-Coming soon...
+##Modular Architecture
 
 ##Framework Bindings
-Coming soon...
 
+##Sync & Aysnc Busses
+
+##Processes
+
+##Memory Management
+
+##Internationalization (i18n)
+
+##UI
+
+##Tooling
+###Migration
+###Fixtures
+Coming soon...
 
 [1]: http://couchdb.apache.org/
 [2]: https://www.elastic.co/products/elasticsearch

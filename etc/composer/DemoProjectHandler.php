@@ -15,7 +15,7 @@ class DemoProjectHandler extends ProjectHandler
             return;
         }
 
-            $destroy_data = $io->askConfirmation('<options=bold>Are you sure you want to destroy all local data? [y,N]: </>', false);
+        $destroy_data = $io->askConfirmation('<options=bold>Are you sure you want to destroy all local data? [y,N]: </>', false);
         if (true === $destroy_data) {
             $client = new Client();
             $client->setDefaultOption('exceptions', false);
