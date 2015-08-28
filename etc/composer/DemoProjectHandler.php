@@ -10,7 +10,12 @@ class DemoProjectHandler extends ProjectHandler
     public static function destroyData(Event $event)
     {
         $io = $event->getIO();
-        $destroy_data = $io->askConfirmation('<options=bold>Are you sure you want to destroy all local data? [y,N]: </>', false);
+        if (!$event->isDevMode()) {
+            $io->write('This script is only supported in development mode. Exiting.');
+            return;
+        }
+
+            $destroy_data = $io->askConfirmation('<options=bold>Are you sure you want to destroy all local data? [y,N]: </>', false);
         if (true === $destroy_data) {
             $client = new Client();
             $client->setDefaultOption('exceptions', false);
@@ -24,43 +29,53 @@ class DemoProjectHandler extends ProjectHandler
             $io->write('-> deleting CouchDb database "' . $couch_process_db . '"');
             $client->delete('http://127.0.0.1:5984/' . $couch_process_db)->send();
         }
+
+        return $destroy_data;
     }
 
     public static function rebuildData(Event $event)
     {
-        self::destroyData($event);
-        MigrationHandler::runMigration(
-            new Event(
-                $event->getName(),
-                $event->getComposer(),
-                $event->getIO(),
-                $event->isDevMode(),
-                [ '--all' ]
-            )
-        );
-        FixtureHandler::importFixture(
-            new Event(
-                $event->getName(),
-                $event->getComposer(),
-                $event->getIO(),
-                $event->isDevMode(),
-                [
-                    '-target=honeybee.system_account::fixture::writer',
-                    '-fixture=20150819120801:import_demo_user'
-                ]
-            )
-        );
-        FixtureHandler::importFixture(
-            new Event(
-                $event->getName(),
-                $event->getComposer(),
-                $event->getIO(),
-                $event->isDevMode(),
-                [
-                    '-target=hbdemo.commenting::fixture::writer',
-                    '-fixture=20150810231335:initial_test_data'
-                ]
-            )
-        );
+        $io = $event->getIO();
+        if (!$event->isDevMode()) {
+            $io->write('This script is only supported in development mode. Exiting.');
+            return;
+        }
+
+        $destroyed = self::destroyData($event);
+        if ($destroyed) {
+            MigrationHandler::runMigration(
+                new Event(
+                    $event->getName(),
+                    $event->getComposer(),
+                    $event->getIO(),
+                    $event->isDevMode(),
+                    [ '--all' ]
+                )
+            );
+            FixtureHandler::importFixture(
+                new Event(
+                    $event->getName(),
+                    $event->getComposer(),
+                    $event->getIO(),
+                    $event->isDevMode(),
+                    [
+                        '-target=honeybee.system_account::fixture::writer',
+                        '-fixture=20150819120801:import_demo_user'
+                    ]
+                )
+            );
+            FixtureHandler::importFixture(
+                new Event(
+                    $event->getName(),
+                    $event->getComposer(),
+                    $event->getIO(),
+                    $event->isDevMode(),
+                    [
+                        '-target=hbdemo.commenting::fixture::writer',
+                        '-fixture=20150810231335:initial_test_data'
+                    ]
+                )
+            );
+        }
     }
 }

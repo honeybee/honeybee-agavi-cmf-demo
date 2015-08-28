@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE shortcuts [
+    <!ENTITY propagate_state_transition 
+    'Honeybee\Infrastructure\ProcessManager\StateMachine\PropagateStateTransitionNode'>
+]>
+<state_machines xmlns="urn:schemas-workflux:statemachine:0.5.0">
+    <state_machine name="state_propagation_process">
+        <initial name="check_origin_state">
+            <transition target="propagate_state">
+                <guard class="Workflux\Guard\VariableGuard">
+                    <option name="expression">origin_state == "deleted"</option>
+                </guard>
+            </transition>
+            <transition target="state_transition_ignored">
+                <guard class="Workflux\Guard\VariableGuard">
+                    <option name="expression">origin_state != "deleted"</option>
+                </guard>
+            </transition>
+        </initial>
+
+        <state name="propagate_state" class="&propagate_state_transition;">
+            <transition target="state_transition_propagated" />
+            <option name="transition_map">
+                <option name="hbdemo.commenting.account">
+                    <option name="deleted">delete</option>
+                </option>
+                <option name="hbdemo.commenting.topic">
+                    <option name="deleted">delete</option>
+                </option>
+                <option name="hbdemo.commenting.comment">
+                    <option name="deleted">delete</option>
+                </option>
+            </option>
+            <option name="command_map">
+                <option name="hbdemo.commenting.account">
+                    HBDemo\Commenting\Account\Model\Task\ProceedAccountWorkflow\ProceedAccountWorkflowCommand
+                </option>
+                <option name="hbdemo.commenting.topic">
+                    HBDemo\Commenting\Topic\Model\Task\ProceedTopicWorkflow\ProceedTopicWorkflowCommand
+                </option>
+                <option name="hbdemo.commenting.comment">
+                    HBDemo\Commenting\Comment\Model\Task\ProceedCommentWorkflow\ProceedCommentWorkflowCommand
+                </option>
+            </option>
+        </state>
+
+        <final name="state_transition_propagated" />
+        <final name="state_transition_ignored" />
+    </state_machine>
+</state_machines>

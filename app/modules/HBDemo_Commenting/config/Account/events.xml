@@ -19,8 +19,9 @@
                             <filter>
                                 <setting name="expression">&hbdemo_commenting_account_related_entity_events;</setting>
                             </filter>
-                            <handler implementor="\Honeybee\Projection\EventHandler\RelationProjectionUpdater">
+                            <handler implementor="\Honeybee\Projection\EventHandler\RelationStateProjectionProcessor">
                                 <setting name="projection_type">hbdemo.commenting.account</setting>
+                                <setting name="process_name">state_propagation_process</setting>
                             </handler>
                         </subscription>
                     </subscriptions>
@@ -37,7 +38,6 @@
                         </handler>
                     </subscription>
                 </channel>
-
             </channels>
         </event_bus>
     </ae:configuration>
