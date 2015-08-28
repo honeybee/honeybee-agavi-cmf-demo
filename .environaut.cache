@@ -1,0 +1,26 @@
+[
+    {
+        "name": "php_command",
+        "value": "\/usr\/bin\/php",
+        "group": "local_config",
+        "flag": 1
+    },
+    {
+        "name": "cmd.sass",
+        "value": "\/usr\/bin\/sass",
+        "group": "config",
+        "flag": 1
+    },
+    {
+        "name": "base_href",
+        "value": "https:\/\/honeybee-agavi-cmf-demo.local\/",
+        "group": "local_config",
+        "flag": 1
+    },
+    {
+        "name": "agavi_environment",
+        "value": "development",
+        "group": "local_config",
+        "flag": 1
+    }
+]

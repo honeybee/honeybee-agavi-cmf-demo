@@ -4,7 +4,6 @@
 /build
 /dev/trellis_templates
 .environment
-.environaut.cache
 codecache
 .sass-cache
 .DS_Store
