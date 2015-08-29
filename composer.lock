@@ -607,12 +607,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybee/honeybee.git",
-                "reference": "48bae2ff2fff10e6e7857646e711775bd4d6c580"
+                "reference": "fa230451c8572b51586a4d6cfa262a0fa5ef38b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/48bae2ff2fff10e6e7857646e711775bd4d6c580",
-                "reference": "48bae2ff2fff10e6e7857646e711775bd4d6c580",
+                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/fa230451c8572b51586a4d6cfa262a0fa5ef38b3",
+                "reference": "fa230451c8572b51586a4d6cfa262a0fa5ef38b3",
                 "shasum": ""
             },
             "require": {
@@ -692,7 +692,7 @@
                 "hexagonal",
                 "messaging"
             ],
-            "time": "2015-08-28 13:15:31"
+            "time": "2015-08-29 17:10:00"
         },
         {
             "name": "honeybee/honeybee-agavi-cmf-vendor",
@@ -700,12 +700,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybee/honeybee-agavi-cmf-vendor.git",
-                "reference": "0f427515c1881390ed402e0db19508aabd3ebd0b"
+                "reference": "834d778b38e955efefe0343a4b902ec67698a77e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/0f427515c1881390ed402e0db19508aabd3ebd0b",
-                "reference": "0f427515c1881390ed402e0db19508aabd3ebd0b",
+                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/834d778b38e955efefe0343a4b902ec67698a77e",
+                "reference": "834d778b38e955efefe0343a4b902ec67698a77e",
                 "shasum": ""
             },
             "require": {
@@ -764,7 +764,7 @@
                 "agavi",
                 "honeybee"
             ],
-            "time": "2015-08-28 14:20:09"
+            "time": "2015-08-29 17:11:59"
         },
         {
             "name": "honeybee/trellis",
