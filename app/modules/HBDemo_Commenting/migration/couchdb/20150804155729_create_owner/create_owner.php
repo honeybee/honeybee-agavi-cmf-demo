@@ -6,7 +6,7 @@ use Honeybee\Infrastructure\Migration\CouchDbMigration;
 use Honeybee\Infrastructure\Migration\MigrationTargetInterface;
 use Honeybee\Infrastructure\Migration\MigrationInterface;
 
-class Migration_20150805155352_CreateAccountType extends CouchDbMigration
+class Migration_20150804155729_CreateOwner extends CouchDbMigration
 {
     protected function up(MigrationTargetInterface $migration_target)
     {
@@ -21,9 +21,9 @@ class Migration_20150805155352_CreateAccountType extends CouchDbMigration
     public function getDescription($direction = MigrationInterface::MIGRATE_UP)
     {
         if ($direction === MigrationInterface::MIGRATE_UP) {
-            return 'Will add Account type design docs to the CouchDb database for the HBDemo_Commenting context.';
+            return 'Will add Owner design docs to the CouchDb database for the HBDemo_Commenting context.';
         }
-        return 'Will delete Account type design docs in the CouchDb database HBDemo_Commenting context.';
+        return 'Will delete Owner design docs in the CouchDb database HBDemo_Commenting context.';
     }
 
     public function isReversible()
@@ -38,6 +38,6 @@ class Migration_20150805155352_CreateAccountType extends CouchDbMigration
 
     protected function getDesignDocName()
     {
-        return 'hbdemo-commenting-account';
+        return 'hbdemo-commenting-owner';
     }
 }

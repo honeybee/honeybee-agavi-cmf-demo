@@ -6,7 +6,7 @@ use Honeybee\Infrastructure\Migration\ElasticsearchMigration;
 use Honeybee\Infrastructure\Migration\MigrationTargetInterface;
 use Honeybee\Infrastructure\Migration\MigrationInterface;
 
-class Migration_20150804155729_CreateOwnerType extends ElasticsearchMigration
+class Migration_20150804155729_CreateOwner extends ElasticsearchMigration
 {
     protected function up(MigrationTargetInterface $migration_target)
     {
@@ -20,7 +20,7 @@ class Migration_20150804155729_CreateOwnerType extends ElasticsearchMigration
     public function getDescription($direction = MigrationInterface::MIGRATE_UP)
     {
         if ($direction === MigrationInterface::MIGRATE_UP) {
-            return 'Will create the Elasticsearch mapping for the Owner type in the HBDemo_Commenting context.';
+            return 'Will create the Elasticsearch mapping for Owner in the HBDemo_Commenting context.';
         }
     }
 

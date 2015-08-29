@@ -6,7 +6,7 @@ use Honeybee\Infrastructure\Migration\ElasticsearchMigration;
 use Honeybee\Infrastructure\Migration\MigrationTargetInterface;
 use Honeybee\Infrastructure\Migration\MigrationInterface;
 
-class Migration_20150805155352_CreateAccountType extends ElasticsearchMigration
+class Migration_20150810224420_CreateComment extends ElasticsearchMigration
 {
     protected function up(MigrationTargetInterface $migration_target)
     {
@@ -20,7 +20,7 @@ class Migration_20150805155352_CreateAccountType extends ElasticsearchMigration
     public function getDescription($direction = MigrationInterface::MIGRATE_UP)
     {
         if ($direction === MigrationInterface::MIGRATE_UP) {
-            return 'Will create the Elasticsearch mapping for the Account type in the HBDemo_Commenting context.';
+            return 'Will create the Elasticsearch mapping for Comment in the HBDemo_Commenting context.';
         }
     }
 
@@ -36,7 +36,7 @@ class Migration_20150805155352_CreateAccountType extends ElasticsearchMigration
     protected function getTypeMappingPaths(MigrationTargetInterface $migration_target)
     {
         return [
-            'hbdemo-commenting-account-standard' => __DIR__ . DIRECTORY_SEPARATOR . 'account-standard-20150805155352-mapping.json'
+            'hbdemo-commenting-comment-standard' => __DIR__ . DIRECTORY_SEPARATOR . 'comment-standard-20150810224420-mapping.json'
         ];
     }
 }
