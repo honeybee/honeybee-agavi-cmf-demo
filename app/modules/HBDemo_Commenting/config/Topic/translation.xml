@@ -140,6 +140,9 @@
                         <ae:parameter name="de">
                             <ae:parameter name="name">Topic</ae:parameter>
                         </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="name">Topic</ae:parameter>
+                        </ae:parameter>
                     </ae:parameter>
 
                     <ae:parameter name="activity">
@@ -153,9 +156,39 @@
                             <ae:parameter name="hierarchy">Baumansicht</ae:parameter>
                             <ae:parameter name="topic.activity.collection.search.description">Suchen</ae:parameter>
                             <ae:parameter name="topic.activity.collection.search.title">Suche</ae:parameter>
-                            <ae:parameter name="topic.activity.create_resource.title">Dokument erstellen</ae:parameter>
+                            <ae:parameter name="topic.activity.create_resource.title">Topic erstellen</ae:parameter>
+                            <ae:parameter name="topic.activity.sort_by_modified_at.description">Sortiert neueste Topic nach oben</ae:parameter>
+                            <ae:parameter name="topic.activity.sort_by_modified_at.title">Neueste oben</ae:parameter>
                             <ae:parameter name="topic.activity.sort_by_workflow_state.description">Aufsteigend nach Status sortiert</ae:parameter>
                             <ae:parameter name="topic.activity.sort_by_workflow_state.title">Status</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.edit.label">Bearbeiten</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.promote.label">Aktivieren</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.demote.label">Deaktivieren</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.delete.label">Löschen</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.view_resource.label">Anschauen</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.resource_history.label">Historie</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="edit">Edit</ae:parameter>
+                            <ae:parameter name="delete">Delete</ae:parameter>
+                            <ae:parameter name="promote">Promote</ae:parameter>
+                            <ae:parameter name="demote">Demote</ae:parameter>
+                            <ae:parameter name="view_resource">View</ae:parameter>
+                            <ae:parameter name="view_history">History</ae:parameter>
+                            <ae:parameter name="hierarchy">Hierarchy</ae:parameter>
+                            <ae:parameter name="topic.activity.collection.search.description">Search</ae:parameter>
+                            <ae:parameter name="topic.activity.collection.search.title">Search</ae:parameter>
+                            <ae:parameter name="topic.activity.create_resource.title">Create Topic</ae:parameter>
+                            <ae:parameter name="topic.activity.sort_by_modified_at.description">Sort by modification date</ae:parameter>
+                            <ae:parameter name="topic.activity.sort_by_modified_at.title">Modified At</ae:parameter>
+                            <ae:parameter name="topic.activity.sort_by_workflow_state.description">Sort by status</ae:parameter>
+                            <ae:parameter name="topic.activity.sort_by_workflow_state.title">Status</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.edit.label">Edit</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.promote.label">Promote</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.demote.label">Demote</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.delete.label">Delete</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.view_resource.label">View</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.topic.resource_history.label">History</ae:parameter>
                         </ae:parameter>
                     </ae:parameter>
 
@@ -167,6 +200,11 @@
                             <ae:parameter name="inactive">Inaktiv</ae:parameter>
                             <ae:parameter name="active">Aktiv</ae:parameter>
                             <ae:parameter name="deleted">Gelöscht</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="inactive">Inactive</ae:parameter>
+                            <ae:parameter name="active">Active</ae:parameter>
+                            <ae:parameter name="deleted">Deleted</ae:parameter>
                         </ae:parameter>
                     </ae:parameter>
 

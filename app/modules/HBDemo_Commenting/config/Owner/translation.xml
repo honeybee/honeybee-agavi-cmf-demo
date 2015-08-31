@@ -163,6 +163,13 @@
                             <ae:parameter name="owner.activity.sort_by_modified_at.title">Neueste oben</ae:parameter>
                             <ae:parameter name="owner.activity.sort_by_workflow_state.description">Sortiert Owner aufsteigend nach Status</ae:parameter>
                             <ae:parameter name="owner.activity.sort_by_workflow_state.title">Status</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_name.title">Name</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.edit.label">Bearbeiten</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.promote.label">Aktivieren</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.demote.label">Deaktivieren</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.delete.label">Löschen</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.view_resource.label">Anschauen</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.resource_history.label">Historie</ae:parameter>
                         </ae:parameter>
                         <ae:parameter name="en">
                             <ae:parameter name="edit">Edit</ae:parameter>
@@ -179,6 +186,13 @@
                             <ae:parameter name="owner.activity.sort_by_modified_at.title">Modified At</ae:parameter>
                             <ae:parameter name="owner.activity.sort_by_workflow_state.description">Sort by status</ae:parameter>
                             <ae:parameter name="owner.activity.sort_by_workflow_state.title">Status</ae:parameter>
+                            <ae:parameter name="owner.activity.sort_by_name.title">Name</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.edit.label">Edit</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.promote.label">Promote</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.demote.label">Demote</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.delete.label">Delete</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.view_resource.label">View</ae:parameter>
+                            <ae:parameter name="hbdemo.commenting.owner.resource_history.label">History</ae:parameter>
                         </ae:parameter>
                     </ae:parameter>
 
