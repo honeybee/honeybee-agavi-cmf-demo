@@ -76,9 +76,6 @@ class ProjectHandler
         $io->write(PHP_EOL);
 
         // Replace repository and package name
-        if (isset($hostname)) {
-            self::replaceStringInFiles(self::DEFAULT_HOST_NAME, $hostname, $project_path);
-        }
         self::replaceStringInFiles(self::DEFAULT_REPOSITORY_NAME, $vendor_package, $project_path);
         self::replaceStringInFiles(self::DEFAULT_PROJECT_NAME, $package_name, $project_path);
 
