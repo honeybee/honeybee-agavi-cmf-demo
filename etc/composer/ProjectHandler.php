@@ -75,12 +75,13 @@ class ProjectHandler
         $io->write('Please wait while your project is configured...</>');
         $io->write(PHP_EOL);
 
-        // Replace repository and package name
+        // Replace host, repository and package name
         if (isset($hostname)) {
-            self::replaceStringInFiles(self::DEFAULT_HOST_NAME, $hostname, $project_path);
+            $replacements[self::DEFAULT_HOST_NAME] = $hostname;
         }
-        self::replaceStringInFiles(self::DEFAULT_REPOSITORY_NAME, $vendor_package, $project_path);
-        self::replaceStringInFiles(self::DEFAULT_PROJECT_NAME, $package_name, $project_path);
+        $replacements[self::DEFAULT_REPOSITORY_NAME] = $vendor_package;
+        $replacements[self::DEFAULT_PROJECT_NAME] = $package_name;
+        self::replaceStringInFiles($replacements, $project_path);
 
         $io->write('<fg=green;options=bold>Your project configuration is complete.</>');
         $io->write('<info>--------------------------------------------------------------------------------------------');
@@ -106,12 +107,12 @@ class ProjectHandler
             $io->write('');
             $io->write('<options=bold>vagrant ssh</>');
             $io->write('<options=bold>cd /srv/www/' . $hostname . '</>');
-            $io->write('<options=bold>make install</>');
+            $io->write('<options=bold>composer install</>');
             $io->write('<options=bold>sudo service nginx restart</>');
         } else {
             $io->write('You can now install the application by executing the following command:');
             $io->write('');
-            $io->write('<options=bold>make install</>');
+            $io->write('<options=bold>composer install</>');
             $io->write('');
             $io->write('Don\'t forget to setup your git repository as detailed here:');
             $io->write('<options=underscore>https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line</>');
@@ -119,7 +120,7 @@ class ProjectHandler
 
         $io->write('');
         $io->write('Further Honeybee information and support can be found here:');
-        $io->write('Installation documentation: <options=underscore>https://github.com/honeybee/honeybee-agavi-cmf-demo</>');
+        $io->write('Installation documentation: <options=underscore>https://github.com/' . self::DEFAULT_REPOSITORY_NAME . '</>');
         $io->write('Demo project & Cookbook: <options=underscore>https://github.com/honeybee/honeybee-agavi-cmf-demo/wiki</>');
         $io->write('IRC support and feedback: <options=underscore>irc://irc.freenode.org/honeybee</>');
         $io->write('--------------------------------------------------------------------------------------------</info>');
@@ -353,7 +354,7 @@ class ProjectHandler
     /*
      * This method lives here so it can be used by create-project prior to dependencies being installed
      */
-    protected static function replaceStringInFiles($search, $replacement, $path, array $exclude_paths = [])
+    protected static function replaceStringInFiles(array $replacements, $path, array $exclude_paths = [])
     {
         $iterator = new RecursiveIteratorIterator(
             new RecursiveCallbackFilterIterator(
@@ -376,7 +377,14 @@ class ProjectHandler
         foreach ($iterator as $name => $object) {
             if ($object->isFile() && is_writable($object->getRealPath())) {
                 $file_contents = file_get_contents($object->getRealPath());
-                $file_contents = str_replace($search, $replacement, $file_contents);
+                // To avoid renaming collisions we rename to uniqids first, then replace
+                foreach ($replacements as $search => $replace) {
+                    $uniqids[$search] = $unqid = uniqid('projecthandler::');
+                    $file_contents = str_replace($search, $unqid, $file_contents);
+                }
+                foreach ($replacements as $search => $replace) {
+                    $file_contents = str_replace($uniqids[$search], $replace, $file_contents);
+                }
                 file_put_contents($object->getRealPath(), $file_contents);
             }
         }
