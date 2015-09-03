@@ -76,6 +76,7 @@ class ProjectHandler
         $io->write(PHP_EOL);
 
         // Replace repository and package name
+        // @todo better hostname/project name replacement
         self::replaceStringInFiles(self::DEFAULT_REPOSITORY_NAME, $vendor_package, $project_path);
         self::replaceStringInFiles(self::DEFAULT_PROJECT_NAME, $package_name, $project_path);
 
@@ -83,7 +84,7 @@ class ProjectHandler
         $io->write('<info>--------------------------------------------------------------------------------------------');
 
         if (true === $configure_vm) {
-            $io->write('<fg=green;options=reverse>Before launching the VM you must commit and push this repository to Github.</>');
+            $io->write('<fg=green;options=reverse>Before launching the VM you must create and push this repository to Github.</>');
             $io->write('');
             $io->write('Please execute the following git commands as detailed here:');
             $io->write('<options=underscore>https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line</>');
@@ -92,7 +93,7 @@ class ProjectHandler
             $io->write('<options=bold>git add .</>');
             $io->write('<options=bold>git commit -m "Initialising project"</>');
             $io->write('<options=bold>git remote add origin git@github.com:' . $vendor_package . '.git</>');
-            $io->write('<options=bold>git push origin master</>');
+            $io->write('<options=bold>git push -u origin master</>');
             $io->write('');
             $io->write('When the repository is ready, you can launch the VM by executing the following commands:');
             $io->write('');
