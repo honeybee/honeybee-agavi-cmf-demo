@@ -36,7 +36,7 @@
                             <renderer_config subject="sort_activities">
                                 <settings>
                                     <setting name="translation_domain">hbdemo.commenting.account.activity</setting>
-                                    <setting name="as_dropdown">true</setting>
+                                    <!-- <setting name="as_dropdown">true</setting> -->
                                 </settings>
                             </renderer_config>
                             <renderer_config subject="primary_activities">
