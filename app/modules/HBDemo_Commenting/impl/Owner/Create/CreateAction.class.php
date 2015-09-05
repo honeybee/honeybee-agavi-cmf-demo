@@ -15,7 +15,7 @@ class HBDemo_Commenting_Owner_CreateAction extends CreateAction
             return 'Success';
         */
 
-        $this->setAttribute('resource_type', $this->getResourceType());
+        $this->setAttribute('resource_type', $this->getProjectionType());
 
         return 'Success';
     }
