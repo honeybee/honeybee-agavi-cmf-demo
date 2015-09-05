@@ -7,8 +7,6 @@
         <activity_containers>
             <activity_container scope="hbdemo.commenting.account.collection" extends="hbdemo.commenting.account">
                 <activity name="search">
-                    <description>account.activity.collection.search.description</description>
-                    <label>account.activity.collection.search.title</label>
                     <url type="route">null</url>
                     <url_param name="offset">0</url_param>
                     <rels>
@@ -21,8 +19,6 @@
 
             <activity_container scope="hbdemo.commenting.account.collection.primary_activities">
                 <activity name="create_resource">
-                    <description>account.activity.create_resource.description</description>
-                    <label>account.activity.create_resource.title</label>
                     <url type="route">hbdemo.commenting.account.create</url>
                     <rels>
                         <rel>activity</rel>
@@ -34,8 +30,6 @@
 
             <activity_container scope="hbdemo.commenting.account.collection.sort_activities">
                 <activity name="sort_by_modified_at">
-                    <description>account.activity.sort_by_modified_at.description</description>
-                    <label>account.activity.sort_by_modified_at.title</label>
                     <url type="route">null</url>
                     <url_param name="sort">modified_at:desc</url_param>
                     <url_param name="offset">0</url_param>
@@ -46,8 +40,6 @@
                     </rels>
                 </activity>
                 <activity name="sort_by_workflow_state">
-                    <description>account.activity.sort_by_workflow_state.description</description>
-                    <label>account.activity.sort_by_workflow_state.title</label>
                     <url type="route">null</url>
                     <url_param name="sort">workflow_state:asc</url_param>
                     <url_param name="offset">0</url_param>

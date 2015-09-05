@@ -9,9 +9,15 @@
                 <arguments base="create_account" />
                 <ae:parameter name="aggregate_root_type">hbdemo.commenting.account</ae:parameter>
                 <ae:parameter name="command_implementor">HBDemo\Commenting\Account\Model\Task\CreateAccount\CreateAccountCommand</ae:parameter>
+                <!--
+                These attributes will be ignored. Alternatively you can use an attribute_whitelist
+                to select which attributes are acceptable to your command payload.
                 <ae:parameter name="attribute_blacklist">
-                    <ae:parameter>account_token</ae:parameter>
+                    <ae:parameter>auth_token</ae:parameter>
+                    <ae:parameter>password_hash</ae:parameter>
+                    <ae:parameter>token_expire_date</ae:parameter>
                 </ae:parameter>
+                -->
                 <ae:parameter name="export">__command</ae:parameter>
                 <error>Invalid command payload given.</error>
                 <!-- 
