@@ -32,6 +32,26 @@
                         </ae:parameter>
                     </ae:parameter>
 
+                    <!--
+                        Comment collection view's translations go here
+                    -->
+                    <ae:parameter name="collection">
+                        <ae:parameter name="de">
+                            <ae:parameter name="title">Titel</ae:parameter>
+                            <ae:parameter name="created_at">Erstellt</ae:parameter>
+                            <ae:parameter name="modified_at">Zuletzt bearbeitet</ae:parameter>
+                            <ae:parameter name="workflow_state">Status</ae:parameter>
+                            <ae:parameter name="actions">Aktionen</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="title">Title</ae:parameter>
+                            <ae:parameter name="created_at">Created at</ae:parameter>
+                            <ae:parameter name="modified_at">Modified at</ae:parameter>
+                            <ae:parameter name="workflow_state">Status</ae:parameter>
+                            <ae:parameter name="actions">Actions</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+
                     <ae:parameter name="tabs">
                         <ae:parameter name="de">
                         <!--
@@ -59,42 +79,73 @@
                         </ae:parameter>
                     </ae:parameter>
 
-                    <!--
-                        Comment/Embed action's translations go here
-                    -->
-                    <ae:parameter name="embed">
-                        <ae:parameter name="de">
-                        </ae:parameter>
-                    </ae:parameter>
-
-                    <ae:parameter name="groups">
-                        <ae:parameter name="de">
-                        </ae:parameter>
-                    </ae:parameter>
-
                     <ae:parameter name="fields">
                         <ae:parameter name="de">
-                        <!--
-                            Example field translation:
-
-                                <ae:parameter name="url.field_name">Web URL</ae:parameter>
-                                <ae:parameter name="url.placeholder">http://</ae:parameter>
-                                <ae:parameter name="url.pattern"><![CDATA[^http\:\/\/.*]]></ae:parameter>
-                                <ae:parameter name="location.url.field_name">Location Web URL</ae:parameter>
-
-                            <field_name>.<message>, with the key <message> specified into
-                            the template or into the renderer for the field named <field_name>.
-
-                            Different fields with the same name can rely on a single
-                            message translation.
-                            A different name into the action view_template.xml can be specified
-                            to allow different translations.
-                        -->
+                            <ae:parameter name="uuid.field_name">UUID</ae:parameter>
+                            <ae:parameter name="workflow_state.field_name">Status</ae:parameter>
+                            <ae:parameter name="created_at.field_name">Created at</ae:parameter>
+                            <ae:parameter name="modified_at.field_name">Modified at</ae:parameter>
+                            <ae:parameter name="identifier.field_name">Identifer</ae:parameter>
+                            <ae:parameter name="revision.field_name">Revision</ae:parameter>
+                            <ae:parameter name="version.field_name">Version</ae:parameter>
+                            <ae:parameter name="language.field_name">Language</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="uuid.field_name">UUID</ae:parameter>
+                            <ae:parameter name="workflow_state.field_name">Status</ae:parameter>
+                            <ae:parameter name="created_at.field_name">Created at</ae:parameter>
+                            <ae:parameter name="modified_at.field_name">Modified at</ae:parameter>
+                            <ae:parameter name="identifier.field_name">Identifer</ae:parameter>
+                            <ae:parameter name="revision.field_name">Revision</ae:parameter>
+                            <ae:parameter name="version.field_name">Version</ae:parameter>
+                            <ae:parameter name="language.field_name">Language</ae:parameter>
                         </ae:parameter>
                     </ae:parameter>
 
-                    <ae:parameter name="activities">
+                    <ae:parameter name="activity">
                         <ae:parameter name="de">
+                            <ae:parameter name="collection.label">Comment Liste</ae:parameter>
+                            <ae:parameter name="edit.label">Bearbeiten</ae:parameter>
+                            <ae:parameter name="delete.label">Löschen</ae:parameter>
+                            <ae:parameter name="promote.label">Aktivieren</ae:parameter>
+                            <ae:parameter name="demote.label">Deaktivieren</ae:parameter>
+                            <ae:parameter name="view_resource.label">Anschauen</ae:parameter>
+                            <ae:parameter name="resource_history.label">Historie</ae:parameter>
+                            <ae:parameter name="resource_hierarchy.label">Baumansicht</ae:parameter>
+                            <ae:parameter name="search.description">Suchen</ae:parameter>
+                            <ae:parameter name="search.label">Suche</ae:parameter>
+                            <ae:parameter name="create_resource.label">Comment erstellen</ae:parameter>
+                            <ae:parameter name="save_resource.label">Datensatz erstellen</ae:parameter>
+                            <ae:parameter name="save_resource_and_continue.label">Datensatz erstellen und neuen anlegen</ae:parameter>
+                            <ae:parameter name="back_to_collection.label">Zurück zur Liste</ae:parameter>
+                            <ae:parameter name="back_to_list.label">Zurück zur Liste</ae:parameter>
+                            <ae:parameter name="sort_by_workflow_state.description">Aufsteigend nach Status sortiert</ae:parameter>
+                            <ae:parameter name="sort_by_workflow_state.label">Status</ae:parameter>
+                            <ae:parameter name="sort_by_modified_at.description">Aufsteigend nach Zuletzt bearbeitet sortiert</ae:parameter>
+                            <ae:parameter name="sort_by_modified_at.label">Zuletzt bearbeitet</ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="en">
+                            <ae:parameter name="collection.label">Comment List</ae:parameter>
+                            <ae:parameter name="edit.label">Edit</ae:parameter>
+                            <ae:parameter name="delete.label">Delete</ae:parameter>
+                            <ae:parameter name="promote.label">Promote</ae:parameter>
+                            <ae:parameter name="demote.label">Demote</ae:parameter>
+                            <ae:parameter name="view_resource.label">View resource</ae:parameter>
+                            <ae:parameter name="resource_history.label">History</ae:parameter>
+                            <ae:parameter name="resource_hierarchy.label">Hierarchy</ae:parameter>
+                            <ae:parameter name="search.description">Search</ae:parameter>
+                            <ae:parameter name="search.label">Search</ae:parameter>
+                            <ae:parameter name="create_resource.label">Create Comment</ae:parameter>
+                            <ae:parameter name="save_resource.label">Save</ae:parameter>
+                            <ae:parameter name="save_resource_and_continue.label">Save and continue</ae:parameter>
+                            <ae:parameter name="back_to_collection.label">Back to collection</ae:parameter>
+                            <ae:parameter name="back_to_list.label">Back to list</ae:parameter>
+                            <ae:parameter name="search.description">Search</ae:parameter>
+                            <ae:parameter name="search.label">Search</ae:parameter>
+                            <ae:parameter name="sort_by_workflow_state.description">Sort by status (Ascending)</ae:parameter>
+                            <ae:parameter name="sort_by_workflow_state.label">Status</ae:parameter>
+                            <ae:parameter name="sort_by_modified_at.description">Sort by last modified date (Ascending)</ae:parameter>
+                            <ae:parameter name="sort_by_modified_at.label">Last modified</ae:parameter>
                         </ae:parameter>
                     </ae:parameter>
 
@@ -108,6 +159,8 @@
                 <message_translator class="AgaviSimpleTranslator">
                     <ae:parameter name="views">
                         <ae:parameter name="de">
+                        </ae:parameter>
+                        <ae:parameter name="en">
                         </ae:parameter>
                     </ae:parameter>
                 </message_translator>
@@ -145,116 +198,20 @@
                         </ae:parameter>
                     </ae:parameter>
 
-                    <ae:parameter name="activity">
+                    <!--
+                        Comment/Embed action's translations go here
+                    -->
+                    <ae:parameter name="embed">
                         <ae:parameter name="de">
-                            <ae:parameter name="edit">Bearbeiten</ae:parameter>
-                            <ae:parameter name="delete">Löschen</ae:parameter>
-                            <ae:parameter name="promote">Aktivieren</ae:parameter>
-                            <ae:parameter name="demote">Deaktivieren</ae:parameter>
-                            <ae:parameter name="view_resource">Anschauen</ae:parameter>
-                            <ae:parameter name="view_history">Historie</ae:parameter>
-                            <ae:parameter name="hierarchy">Baumansicht</ae:parameter>
-                            <ae:parameter name="comment.activity.collection.search.description">Suchen</ae:parameter>
-                            <ae:parameter name="comment.activity.collection.search.title">Suche</ae:parameter>
-                            <ae:parameter name="comment.activity.create_resource.title">Comment erstellen</ae:parameter>
-                            <ae:parameter name="comment.activity.sort_by_modified_at.description">Sortiert neueste Comment nach oben</ae:parameter>
-                            <ae:parameter name="comment.activity.sort_by_modified_at.title">Neueste oben</ae:parameter>
-                            <ae:parameter name="comment.activity.sort_by_workflow_state.description">Aufsteigend nach Status sortiert</ae:parameter>
-                            <ae:parameter name="comment.activity.sort_by_workflow_state.title">Status</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.edit.label">Bearbeiten</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.promote.label">Aktivieren</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.demote.label">Deaktivieren</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.delete.label">Löschen</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.view_resource.label">Anschauen</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.resource_history.label">Historie</ae:parameter>
                         </ae:parameter>
                         <ae:parameter name="en">
-                            <ae:parameter name="edit">Edit</ae:parameter>
-                            <ae:parameter name="delete">Delete</ae:parameter>
-                            <ae:parameter name="promote">Promote</ae:parameter>
-                            <ae:parameter name="demote">Demote</ae:parameter>
-                            <ae:parameter name="view_resource">View</ae:parameter>
-                            <ae:parameter name="view_history">History</ae:parameter>
-                            <ae:parameter name="hierarchy">Hierarchy</ae:parameter>
-                            <ae:parameter name="comment.activity.collection.search.description">Search</ae:parameter>
-                            <ae:parameter name="comment.activity.collection.search.title">Search</ae:parameter>
-                            <ae:parameter name="comment.activity.create_resource.title">Create Comment</ae:parameter>
-                            <ae:parameter name="comment.activity.sort_by_modified_at.description">Sort by modification date</ae:parameter>
-                            <ae:parameter name="comment.activity.sort_by_modified_at.title">Modified At</ae:parameter>
-                            <ae:parameter name="comment.activity.sort_by_workflow_state.description">Sort by status</ae:parameter>
-                            <ae:parameter name="comment.activity.sort_by_workflow_state.title">Status</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.edit.label">Edit</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.promote.label">Promote</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.demote.label">Demote</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.delete.label">Delete</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.view_resource.label">View</ae:parameter>
-                            <ae:parameter name="hbdemo.commenting.comment.resource_history.label">History</ae:parameter>
                         </ae:parameter>
                     </ae:parameter>
 
-                    <!--
-                        Workflow state translations.
-                    -->
-                    <ae:parameter name="workflow">
+                    <ae:parameter name="groups">
                         <ae:parameter name="de">
-                            <ae:parameter name="inactive">Inaktiv</ae:parameter>
-                            <ae:parameter name="active">Aktiv</ae:parameter>
-                            <ae:parameter name="deleted">Gelöscht</ae:parameter>
                         </ae:parameter>
                         <ae:parameter name="en">
-                            <ae:parameter name="inactive">Inactive</ae:parameter>
-                            <ae:parameter name="active">Active</ae:parameter>
-                            <ae:parameter name="deleted">Deleted</ae:parameter>
-                        </ae:parameter>
-                    </ae:parameter>
-
-                    <!--
-                        List translations for the Comment module go here.
-                    -->
-                    <ae:parameter name="list">
-                        <ae:parameter name="de">
-                            <!-- list headers/column-labels -->
-                            <ae:parameter name="created_at">Erstellt</ae:parameter>
-
-                            <!-- batch dialogs -->
-                            <ae:parameter name="batch_actions">Stapelverarbeitung</ae:parameter>
-
-                            <!-- item actions -->
-                            <ae:parameter name="actions">Aktionen</ae:parameter>
-                            <ae:parameter name="promote">Aktivieren</ae:parameter>
-                            <ae:parameter name="demote">Deaktivieren</ae:parameter>
-                            <ae:parameter name="edit">Bearbeiten</ae:parameter>
-                            <ae:parameter name="view">Ansehen</ae:parameter>
-                            <ae:parameter name="disabled">Gesperrt</ae:parameter>
-                            <ae:parameter name="delete">Löschen</ae:parameter>
-
-                            <!-- workflow transitions (context sensitive action names for promote and demote) -->
-                            <ae:parameter name="edit.promote">Aktivieren</ae:parameter>
-                            <ae:parameter name="edit.delete">Löschen</ae:parameter>
-                            <ae:parameter name="published.demote">Deaktivieren</ae:parameter>
-                            <ae:parameter name="published.delete">Löschen</ae:parameter>
-
-                            <!-- workflow transition prompts -->
-                            <ae:parameter name="edit.delete.prompt">Sind sie sicher, dass sie dieses Dokument löschen möchten?</ae:parameter>
-                            <ae:parameter name="published.delete.prompt">Sind sie sicher, dass sie dieses Dokument löschen möchten?</ae:parameter>
-                        </ae:parameter>
-                    </ae:parameter>
-
-                    <!--
-                        Error translations for the Comment module go here.
-                    -->
-                    <ae:parameter name="errors">
-                        <ae:parameter name="de">
-                            <ae:parameter name="storage_error">Das speichern der (Comment) Daten schlug fehl.</ae:parameter>
-                            <ae:parameter name="export_error">Während der Datenverarbeitung trat ein unerwarteter Fehler auf.</ae:parameter>
-                        </ae:parameter>
-                    </ae:parameter>
-
-                    <!--
-                        Any other non-ui translations may be added here
-                    -->
-                    <ae:parameter name="messages">
-                        <ae:parameter name="de">
                         </ae:parameter>
                     </ae:parameter>
                 </message_translator>

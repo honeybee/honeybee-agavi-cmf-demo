@@ -41,14 +41,12 @@
                             </renderer_config>
                             <renderer_config subject="primary_activities">
                                 <settings>
-                                    <setting name="translation_domain">hbdemo.commenting.comment.activity</setting>
                                     <setting name="default_activity_name">create_resource</setting>
                                     <setting name="as_list">true</setting>
                                 </settings>
                             </renderer_config>
                             <renderer_config subject="search_activity">
                                 <settings>
-                                    <setting name="translation_domain">hbdemo.commenting.comment.activity</setting>
                                     <setting name="template">html/activity/search_form.twig</setting>
                                     <setting name="form_id">search_form</setting>
                                 </settings>

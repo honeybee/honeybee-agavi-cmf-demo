@@ -11,6 +11,7 @@
         <options>
             <option name="vendor">HBDemo</option>
             <option name="package">Commenting</option>
+            <option name="projection">Standard</option>
             <option name="is_hierarchical">false</option>
         </options>
         <!-- attribute definitions -->

@@ -4,7 +4,7 @@
     xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
     xmlns:xi="http://www.w3.org/2001/XInclude"
 >
-    <!-- include standard honeybee type routes -->
+    <!-- include standard honeybee resource routes -->
     <xi:include href="../../../../config/default_resource_routing.xml" xpointer="xmlns(ae=http://agavi.org/agavi/config/global/envelope/1.0) xmlns(r=http://agavi.org/agavi/config/parts/routing/1.0) xpointer(//ae:configurations/*)" />
 
     <!-- custom routes go here:
