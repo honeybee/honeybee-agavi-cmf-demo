@@ -29,6 +29,7 @@
                                     
                                     <field name="account" attribute_path="account">
                                         <setting name="account.suggest_attribute">name</setting>
+                                        <setting name="hide_entity_list">true</setting>
                                     </field>
                                 </group>
                             </cell>

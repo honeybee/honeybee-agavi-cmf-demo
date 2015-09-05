@@ -6,7 +6,6 @@
         <settings prefix="hbdemo-commenting-topic.">
             <setting name="type">hbdemo-commenting-topic</setting>
             <setting name="standard.type">hbdemo-commenting-topic-standard</setting>
-            <setting name="summary.type">hbdemo-commenting-topic-summary</setting>
         </settings>
     </ae:configuration>
 </ae:configurations>

@@ -81,6 +81,7 @@ abstract class TopicType extends ProjectionType
                 array(
                 'vendor' => 'HBDemo',
                 'package' => 'Commenting',
+                'projection' => 'Standard',
                 'is_hierarchical' => false,
             )
             )

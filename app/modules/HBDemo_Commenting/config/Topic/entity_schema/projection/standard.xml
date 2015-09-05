@@ -6,11 +6,12 @@
         <implementor>\Honeybee\Projection\ProjectionType</implementor>
         <entity_implementor>\Honeybee\Projection\Projection</entity_implementor>
         <description>
-            Defines the (normalized) strucuture of the standard topic projection.
+            Defines the (normalized) structure of the standard topic projection.
         </description>
         <options>
             <option name="vendor">HBDemo</option>
             <option name="package">Commenting</option>
+            <option name="projection">Standard</option>
             <option name="is_hierarchical">false</option>
         </options>
         <!-- attribute definitions -->

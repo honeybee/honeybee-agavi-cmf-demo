@@ -77,7 +77,7 @@
                 </dependencies>
             </finder>
         </finders>
-       
+        
         <query_services>
             <query_service name="hbdemo.commenting.topic::query_service" class="Honeybee\Infrastructure\DataAccess\Query\QueryService">
                 <setting name="default_mapping">topic.standard</setting>
@@ -85,9 +85,11 @@
                     <finder_mapping name="topic.standard">
                         <finder>hbdemo.commenting.topic::projection.standard::view_store::finder</finder>
                         <query_translation class="Honeybee\Infrastructure\DataAccess\Finder\Elasticsearch\ElasticsearchQueryTranslation">
+                            <setting name="multi_fields"></setting>
                             <setting name="query_filters">
                                 <setting name="workflow_state">!deleted</setting>
                             </setting>
+                            <setting name="dynamic_mappings"></setting>
                         </query_translation>
                     </finder_mapping>
                     <finder_mapping name="domain_event">

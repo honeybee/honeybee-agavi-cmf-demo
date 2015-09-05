@@ -8,19 +8,15 @@
             <activity_container scope="hbdemo.commenting.topic" extends="default_resource_activities">
 
                 <activity name="view_resource" type="workflow">
-                    <description>topic.activity.view_resource.description</description>
-                    <label>topic.activity.view_resource.title</label>
                     <url type="route">hbdemo.commenting.topic.resource</url>
                     <rels>
                         <rel>activity</rel>
                         <rel>view_resource</rel>
-                        <rel>viewtopic</rel>
+                        <rel>view_topic</rel>
                     </rels>
                 </activity>
 
                 <activity name="view_history" type="workflow">
-                    <description>topic.activity.view_history.description</description>
-                    <label>topic.activity.view_history.title</label>
                     <url type="route">hbdemo.commenting.topic.history</url>
                     <rels>
                         <rel>activity</rel>
@@ -29,19 +25,15 @@
                 </activity>
 
                 <activity name="create_resource">
-                    <description>topic.activity.create_resource.description</description>
-                    <label>topic.activity.create_resource.title</label>
                     <url type="route">hbdemo.commenting.topic.create</url>
                     <rels>
                         <rel>activity</rel>
                         <rel>create_resource</rel>
-                        <rel>createtopic</rel>
+                        <rel>create_topic</rel>
                     </rels>
                 </activity>
 
                 <activity name="collection">
-                    <description>topic.activity.collection.description</description>
-                    <label>topic.activity.collection.title</label>
                     <url type="route">hbdemo.commenting.topic.collection</url>
                     <url_param name="sort">modified_at:desc</url_param>
                     <rels>
@@ -52,8 +44,6 @@
                 </activity>
 
                 <activity name="hierarchy">
-                    <description>topic.activity.hierarchy.description</description>
-                    <label>topic.activity.hierarchy.title</label>
                     <url type="route">hbdemo.commenting.topic.hierarchy</url>
                     <url_param name="sort">modified_at:desc</url_param>
                     <rels>
@@ -64,8 +54,6 @@
                 </activity>
 
                 <activity name="hierarchy_root">
-                    <description>topic.activity.hierarchy.description</description>
-                    <label>topic.activity.hierarchy.title</label>
                     <url type="route">hbdemo.commenting.topic.hierarchy</url>
                     <url_param name="resource" />
                     <url_param name="sort">modified_at:desc</url_param>
@@ -81,15 +69,13 @@
 
             <activity_container scope="hbdemo.commenting.topic.resource.workflow.proceed">
                 <activity name="cancel">
-                    <description>topic.activity.cancel.description</description>
-                    <label>topic.activity.cancel.title</label>
                     <url type="route">hbdemo.commenting.topic.collection</url>
                     <url_param name="sort">modified_at:desc</url_param>
                     <rels>
                         <rel>activity</rel>
                         <rel>cancel</rel>
                         <rel>collection</rel>
-                    </rels>
+                    </rels> 
                 </activity>
             </activity_container>
 
@@ -98,19 +84,23 @@
 
             <activity_container scope="hbdemo.commenting.topic.resource.modify.primary_activities">
                 <activity name="save_resource">
-                    <description>Datensatz speichern</description>
-                    <label>Speichern</label>
+                    <!--
+                        Eventual custom 'description' or 'label' can be specified for the activity.
+                        Otherwise they will be generated automatically, with the following format:
+                            topic.activity.view_resource.description
+                            topic.activity.view_resource.label
+                    -->
+                    <description>save_resource.description</description>
+                    <label>save_resource.label</label>
                     <url type="route">null</url>
                     <verb>write</verb>
                     <rels>
                         <rel>activity</rel>
                         <rel>edit_resource</rel>
-                        <rel>edittopic</rel>
+                        <rel>edit_topic</rel>
                     </rels>
                 </activity>
                 <activity name="back_to_list">
-                    <description>Zurück zur Liste von Nutzern</description>
-                    <label>Zurück zur Liste</label>
                     <url type="route">hbdemo.commenting.topic.collection</url>
                     <url_param name="sort">modified_at:desc</url_param>
                     <rels>
@@ -123,8 +113,6 @@
 
             <activity_container scope="hbdemo.commenting.topic.create.primary_activities">
                 <activity name="save_resource">
-                    <description>Datensatz erstellen</description>
-                    <label>Erstellen</label>
                     <url type="route">hbdemo.commenting.topic.collection</url>
                     <verb>write</verb>
                     <rels>
@@ -134,19 +122,15 @@
                     </rels>
                 </activity>
                 <activity name="save_resource_and_continue">
-                    <description>Datensatz erstellen und neuen anlegen</description>
-                    <label>Erstellen und weiter</label>
                     <url type="route">hbdemo.commenting.topic.create</url>
                     <verb>write</verb>
                     <rels>
                         <rel>activity</rel>
                         <rel>create_resource</rel>
-                        <rel>createtopic</rel>
+                        <rel>create_topic</rel>
                     </rels>
                 </activity>
                 <activity name="back_to_list">
-                    <description>Zurück zur Liste von Nutzern</description>
-                    <label>Zurück zur Liste</label>
                     <url type="route">hbdemo.commenting.topic.collection</url>
                     <url_param name="sort">modified_at:desc</url_param>
                     <rels>
