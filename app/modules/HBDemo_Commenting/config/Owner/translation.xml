@@ -136,16 +136,18 @@
                             <ae:parameter name="search.description">Search</ae:parameter>
                             <ae:parameter name="search.label">Search</ae:parameter>
                             <ae:parameter name="create_resource.label">Create Owner</ae:parameter>
-                            <ae:parameter name="save_resource.label">Save resource</ae:parameter>
-                            <ae:parameter name="save_resource_and_continue.label">Save resource and continue</ae:parameter>
+                            <ae:parameter name="save_resource.label">Save</ae:parameter>
+                            <ae:parameter name="save_resource_and_continue.label">Save and continue</ae:parameter>
                             <ae:parameter name="back_to_collection.label">Back to collection</ae:parameter>
                             <ae:parameter name="back_to_list.label">Back to list</ae:parameter>
                             <ae:parameter name="search.description">Search</ae:parameter>
                             <ae:parameter name="search.label">Search</ae:parameter>
-                            <ae:parameter name="sort_by_workflow_state.description">Sort by Status (Ascending)</ae:parameter>
+                            <ae:parameter name="sort_by_workflow_state.description">Sort by status (Ascending)</ae:parameter>
                             <ae:parameter name="sort_by_workflow_state.label">Status</ae:parameter>
-                            <ae:parameter name="sort_by_modified_at.description">Sort by Last modified date (Ascending)</ae:parameter>
-                            <ae:parameter name="sort_by_modified_at.label">Last modified date</ae:parameter>
+                            <ae:parameter name="sort_by_modified_at.description">Sort by last modified date (Ascending)</ae:parameter>
+                            <ae:parameter name="sort_by_modified_at.label">Last modified</ae:parameter>
+                            <ae:parameter name="sort_by_name.description">Sort by name</ae:parameter>
+                            <ae:parameter name="sort_by_name.label">Name</ae:parameter>
                         </ae:parameter>
                     </ae:parameter>
 
