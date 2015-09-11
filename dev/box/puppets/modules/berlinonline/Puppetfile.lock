@@ -5,7 +5,7 @@ FORGE
       puppetlabs-stdlib (< 5.0.0, >= 4.5.0)
     puppetlabs-concat (1.2.3)
       puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs-java (1.4.0)
+    puppetlabs-java (1.4.1)
       puppetlabs-stdlib (< 5.0.0, >= 2.4.0)
     puppetlabs-stdlib (4.6.0)
     puppetlabs-vcsrepo (1.3.0)
@@ -14,7 +14,7 @@ FORGE
 GIT
   remote: https://github.com/camptocamp/puppet-openssl
   ref: master
-  sha: aa93a3a03429041d7f924624cf32c6d2e8a99eca
+  sha: fc1ca7811ce3315a8aa8796798b834c86581a8a0
   specs:
     camptocamp-openssl (1.3.9)
       puppetlabs-stdlib (< 5.0.0, >= 2.0.0)
@@ -43,7 +43,7 @@ GIT
 
 GIT
   remote: https://gitlab.berlinonline.net/puppets/basics.git
-  ref: master
+  ref: 0.0.1
   sha: 311bb0e9e32c07415ee5c0d6a212cf9258a96b17
   specs:
     berlinonline-basics (0.0.1)
@@ -74,14 +74,14 @@ GIT
 
 GIT
   remote: https://gitlab.berlinonline.net/puppets/nginx.git
-  ref: master
+  ref: 0.0.1
   sha: def2e77bc4fb2ccd91798ed5e57c1e302f3935c1
   specs:
     berlinonline-nginx (0.0.1)
 
 GIT
   remote: https://gitlab.berlinonline.net/puppets/php.git
-  ref: master
+  ref: 0.0.1
   sha: 5d1b4f47744ae3cd9128acfe3e68959904e7df06
   specs:
     berlinonline-php (0.0.1)
@@ -95,7 +95,7 @@ GIT
 
 GIT
   remote: https://gitlab.berlinonline.net/puppets/ssh.git
-  ref: master
+  ref: 0.0.1
   sha: feb2fe5b7355eb7362a93392c0d8196b528f1b69
   specs:
     berlinonline-ssh (0.0.1)
@@ -112,10 +112,10 @@ DEPENDENCIES
   berlinonline-converjon (>= 0)
   berlinonline-couchdb (>= 0)
   berlinonline-elasticsearch (>= 0)
-  berlinonline-nginx (>= 0)
+  berlinonline-nginx (= 0.0.1)
   berlinonline-php (>= 0)
   berlinonline-phpfpm (>= 0)
-  berlinonline-ssh (>= 0)
+  berlinonline-ssh (= 0.0.1)
   berlinonline-sudo (>= 0)
   camptocamp-openssl (>= 0)
   deadpoint-zypprepo (>= 0)

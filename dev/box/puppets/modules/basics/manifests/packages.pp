@@ -3,11 +3,7 @@
 #
 class basics::packages {
   require ::berlinonline
-  define multi_package ($packagelist = $packagelist) {
-    package { $packagelist:
-      ensure => installed,
-    }
-  }
+  
   
   hiera_hash('berlinonline::packagelist').each |$package| {
     if has_key($package[1], 'ensure') {
@@ -19,7 +15,7 @@ class basics::packages {
 
     if is_array($package[1][name]) {
       # we do have an alias for multiple packages, so use our own type defined for that
-      @multi_package { $package[0]:
+      @basics::multi_package { $package[0]:
         packagelist => $package[1][name],
       }
     }

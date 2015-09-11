@@ -1,6 +1,6 @@
 ---
-berlinonline::project_name: "honeybee-agavi-cmf-demo"
-berlinonline::project_prefix: "honeybee-agavi-cmf-demo"
+berlinonline::project_name: "popula"
+berlinonline::project_prefix: "popula"
 berlinonline::cms_name: "honeybee-agavi-cmf-demo.local"
 berlinonline::cms_dir: "pub"
 berlinonline::bo_environment: "development"
@@ -15,10 +15,14 @@ berlinonline::sudos:all:
 
 elasticsearch::version: "1.5.1"
 
+couchdb::version: "1.6.1"
 couchdb::bind_address: "0.0.0.0"
+couchdb::version: "1.6.1"
 
+converjon::version: "2.5.0"
+converjon::alias_basepath: "/etc/converjon/aliases"
 converjon::url_whitelist:
-  - '~ ^http:\/\/honeybee-agavi-cmf-demo.local:?\d*\/\S+'
+  - '~ ^https:\/\/honeybee-agavi-cmf-demo.local:?\d*\/\S+'
 converjon::base_url_path: /converjon/
 converjon::nginx_deployment: path
 converjon::reject_invalid_ssl: false

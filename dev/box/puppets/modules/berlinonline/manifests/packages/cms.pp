@@ -36,10 +36,7 @@ class berlinonline::packages::cms {
     notify => Service['php-fpm']
   }
 
-  package { 'php5-mbstring':
-    ensure => installed,
-    notify => Service['php-fpm']
-  }
+  realize Package[php5-mbstring]
 
   package { 'php5-bcmath':
     ensure => installed,

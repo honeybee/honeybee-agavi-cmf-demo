@@ -14,10 +14,10 @@ berlinonline::packagelist:
     name:
       - ca-certificates-cacert
       - ca-certificates-mozilla
-  php5-zip: 
+  php5-zip:
     name: php5-zip
     notify: Service[php-fpm]
-  php5-zlib: 
+  php5-zlib:
     name: php5-zlib
     notify: Service[php-fpm]
   php5-fileinfo:
@@ -64,7 +64,10 @@ berlinonline::packagelist:
     name: npm
   php5-ctype:
     name: php5-ctype
-    notfiy: Service[php-fpm]
+    notify: Service[php-fpm]
+  php5-mbstring:
+    name: php5-mbstring
+    notify: Service[php-fpm]
 
 
 php::fpm_service_name:    'php-fpm'

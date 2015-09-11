@@ -11,6 +11,7 @@ class berlinonline::roles::server {
   include ::berlinonline::update
   include ::berlinonline::motd
   include ::berlinonline::sudos
+  include ::berlinonline::certs
   include ::ssh::server
   include ::php
   include ::php::modules::cli

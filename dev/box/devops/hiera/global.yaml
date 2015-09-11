@@ -1,4 +1,4 @@
-  ---
+---
 berlinonline::scm_user: deploy
 berlinonline::scm_group_primary: deploy
 berlinonline::scm_groups:
