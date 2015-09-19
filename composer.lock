@@ -606,12 +606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybee/honeybee.git",
-                "reference": "32852c7ae06350fb55b150a89ca4fac4fa48d048"
+                "reference": "1b38a5f02794f4960a24c783f61d8b390f4004e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/32852c7ae06350fb55b150a89ca4fac4fa48d048",
-                "reference": "32852c7ae06350fb55b150a89ca4fac4fa48d048",
+                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/1b38a5f02794f4960a24c783f61d8b390f4004e7",
+                "reference": "1b38a5f02794f4960a24c783f61d8b390f4004e7",
                 "shasum": ""
             },
             "require": {
@@ -691,7 +691,7 @@
                 "hexagonal",
                 "messaging"
             ],
-            "time": "2015-09-11 13:58:01"
+            "time": "2015-09-18 15:40:32"
         },
         {
             "name": "honeybee/honeybee-agavi-cmf-vendor",
@@ -699,12 +699,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybee/honeybee-agavi-cmf-vendor.git",
-                "reference": "1a117c485a21294c36872c3f07ba721a49ab6f63"
+                "reference": "8aba1a26eb34da13c30990e8282a2dde67b6da48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/1a117c485a21294c36872c3f07ba721a49ab6f63",
-                "reference": "1a117c485a21294c36872c3f07ba721a49ab6f63",
+                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/8aba1a26eb34da13c30990e8282a2dde67b6da48",
+                "reference": "8aba1a26eb34da13c30990e8282a2dde67b6da48",
                 "shasum": ""
             },
             "require": {
@@ -763,7 +763,7 @@
                 "agavi",
                 "honeybee"
             ],
-            "time": "2015-09-11 09:54:31"
+            "time": "2015-09-18 12:19:30"
         },
         {
             "name": "honeybee/trellis",
@@ -1481,12 +1481,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "a890e64a7643464cee275eec5659f4b254e8159f"
+                "reference": "243cf1223c1d31cff1eed0874b4e958633652cd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/a890e64a7643464cee275eec5659f4b254e8159f",
-                "reference": "a890e64a7643464cee275eec5659f4b254e8159f",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/243cf1223c1d31cff1eed0874b4e958633652cd0",
+                "reference": "243cf1223c1d31cff1eed0874b4e958633652cd0",
                 "shasum": ""
             },
             "conflict": {
@@ -1517,7 +1517,8 @@
                 "pusher/pusher-php-server": "<2.2.1",
                 "sabre/dav": ">=1.6.0,<1.6.99|>=1.7.0,<1.7.11|>=1.8.0,<1.8.9",
                 "silverstripe/cms": ">=3.1.0,<=3.1.9",
-                "silverstripe/framework": ">=3.0.0,<=3.0.13|>=3.1.0,<3.1.13",
+                "silverstripe/forum": "<=0.6.1|>=0.7.0,<=0.7.3",
+                "silverstripe/framework": ">=3.0.0,<=3.0.13|>=3.1.0,<3.1.14",
                 "silverstripe/userforms": "<3.0.0",
                 "socalnick/scn-social-auth": "<1.15.2",
                 "swiftmailer/swiftmailer": ">=4.0.0,<4.99.99|>=5.0.0,<5.2.1",
@@ -1546,6 +1547,7 @@
                 "yiisoft/yii2-dev": "<2.0.4",
                 "yiisoft/yii2-gii": "<2.0.4",
                 "yiisoft/yii2-jui": "<2.0.4",
+                "zendframework/zend-cache": ">=2.4.0,<2.4.8|>=2.5.0,<2.5.3",
                 "zendframework/zend-db": ">=2.0.0,<2.0.99|>=2.1.0,<2.1.99|>=2.2.0,<2.2.10|>=2.3.0,<2.3.5",
                 "zendframework/zend-diactoros": ">=1.0.0,<1.0.4",
                 "zendframework/zend-form": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.1",
@@ -1558,11 +1560,12 @@
                 "zendframework/zend-validator": ">=2.3.0,<2.3.6",
                 "zendframework/zend-view": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.1",
                 "zendframework/zend-xmlrpc": ">=2.1.0,<2.1.6|>=2.2.0,<2.2.6",
-                "zendframework/zendframework": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.8|>=2.2.0,<2.2.99|>=2.4.0,<2.4.6|>=2.5.0,<2.5.1",
-                "zendframework/zendframework1": ">=1.0.0,<1.11.13|>=1.11.0,<1.11.15|>=1.12.0,<1.12.14",
+                "zendframework/zendframework": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.8|>=2.2.0,<2.2.99|>=2.5.0,<2.5.1|>=2.4.0,<2.4.8",
+                "zendframework/zendframework1": ">=1.0.0,<1.11.13|>=1.11.0,<1.11.15|>=1.12.0,<1.12.16",
                 "zendframework/zendopenid": ">=2.0.0,<2.0.2",
                 "zendframework/zendxml": ">=1.0.0,<1.0.1",
                 "zf-commons/zfc-user": "<1.2.2",
+                "zfcampus/zf-apigility-doctrine": ">=1.0.0,<1.0.3",
                 "zfr/zfr-oauth2-server-module": "<0.1.2"
             },
             "type": "metapackage",
@@ -1578,7 +1581,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2015-09-10 12:35:59"
+            "time": "2015-09-16 13:24:07"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -2646,16 +2649,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c"
+                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2d7c03c0e4e080901b8f33b2897b0577be18a13c",
-                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef1ca6835468857944d5c3b48fa503d5554cff2f",
+                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f",
                 "shasum": ""
             },
             "require": {
@@ -2704,7 +2707,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-04 03:42:39"
+            "time": "2015-09-14 06:51:16"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2837,16 +2840,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.6",
+            "version": "1.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b"
+                "reference": "3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da",
+                "reference": "3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da",
                 "shasum": ""
             },
             "require": {
@@ -2882,20 +2885,20 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-08-16 08:51:00"
+            "time": "2015-09-15 10:49:45"
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.6",
+            "version": "4.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357"
+                "reference": "521720279261e5b14799cf1bb895d4b55e516f26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2246830f4a1a551c67933e4171bf2126dc29d357",
-                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/521720279261e5b14799cf1bb895d4b55e516f26",
+                "reference": "521720279261e5b14799cf1bb895d4b55e516f26",
                 "shasum": ""
             },
             "require": {
@@ -2954,7 +2957,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-24 04:09:38"
+            "time": "2015-09-19 05:44:37"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

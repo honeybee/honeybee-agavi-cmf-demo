@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://berlinonline.de/schemas/honeybee/config/process/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <ae:configuration>
+        <processes>
+            <process name="state_propagation_process">
+                <builder class="Honeybee\Infrastructure\ProcessManager\StateMachine\StateMachineBuilder">
+                    <setting name="state_machine_definition">%core.modules_dir%/HBDemo_Commenting/process/state_propagation.xml</setting>
+                </builder>
+            </process>
+        </processes>
+    </ae:configuration>
+    
+</ae:configurations>
