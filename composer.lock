@@ -606,12 +606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybee/honeybee.git",
-                "reference": "1b38a5f02794f4960a24c783f61d8b390f4004e7"
+                "reference": "ffc1e51561a1c4333bc760104ba4b2b0a08dd08f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/1b38a5f02794f4960a24c783f61d8b390f4004e7",
-                "reference": "1b38a5f02794f4960a24c783f61d8b390f4004e7",
+                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/ffc1e51561a1c4333bc760104ba4b2b0a08dd08f",
+                "reference": "ffc1e51561a1c4333bc760104ba4b2b0a08dd08f",
                 "shasum": ""
             },
             "require": {
@@ -691,7 +691,7 @@
                 "hexagonal",
                 "messaging"
             ],
-            "time": "2015-09-18 15:40:32"
+            "time": "2015-09-19 10:51:20"
         },
         {
             "name": "honeybee/honeybee-agavi-cmf-vendor",
