@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/activities/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+>
+    <ae:configuration>
+        <activity_containers>
+
+            <activity_container scope="hbdemo.commenting.owner.resource">
+            </activity_container>
+
+            <activity_container scope="hbdemo.commenting.owner.resource.subheader_activities" extends="hbdemo.commenting.owner.subheader_activities">
+            </activity_container>
+
+        </activity_containers>
+    </ae:configuration>
+</ae:configurations>

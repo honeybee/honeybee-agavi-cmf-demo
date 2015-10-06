@@ -28,6 +28,9 @@
                 </activity>
             </activity_container>
 
+            <activity_container scope="hbdemo.commenting.comment.collection.subheader_activities" extends="hbdemo.commenting.comment.subheader_activities">
+            </activity_container>
+
             <activity_container scope="hbdemo.commenting.comment.collection.sort_activities">
                 <activity name="sort_by_modified_at">
                     <url type="route">null</url>

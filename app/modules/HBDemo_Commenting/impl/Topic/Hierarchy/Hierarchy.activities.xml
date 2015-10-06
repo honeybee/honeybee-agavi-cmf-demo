@@ -11,6 +11,9 @@
             <activity_container scope="hbdemo.commenting.topic.hierarchy.primary_activities" extends="hbdemo.commenting.topic.collection.primary_activities">
             </activity_container>
 
+            <activity_container scope="hbdemo.commenting.topic.hierarchy.subheader_activities" extends="hbdemo.commenting.topic.subheader_activities">
+            </activity_container>
+
             <activity_container scope="hbdemo.commenting.topic.hierarchy.sort_activities" extends="hbdemo.commenting.topic.collection.sort_activities">
             </activity_container>
         </activity_containers>

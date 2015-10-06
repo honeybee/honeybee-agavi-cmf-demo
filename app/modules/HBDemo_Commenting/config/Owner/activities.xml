@@ -75,67 +75,22 @@
                         <rel>activity</rel>
                         <rel>cancel</rel>
                         <rel>collection</rel>
-                    </rels> 
-                </activity>
-            </activity_container>
-
-            <activity_container scope="hbdemo.commenting.owner.resource.modify">
-            </activity_container>
-
-            <activity_container scope="hbdemo.commenting.owner.resource.modify.primary_activities">
-                <activity name="save_resource">
-                    <!--
-                        Eventual custom 'description' or 'label' can be specified for the activity.
-                        Otherwise they will be generated automatically, with the following format:
-                            owner.activity.view_resource.description
-                            owner.activity.view_resource.label
-                    -->
-                    <description>save_resource.description</description>
-                    <label>save_resource.label</label>
-                    <url type="route">null</url>
-                    <verb>write</verb>
-                    <rels>
-                        <rel>activity</rel>
-                        <rel>edit_resource</rel>
-                        <rel>edit_owner</rel>
-                    </rels>
-                </activity>
-                <activity name="back_to_list">
-                    <url type="route">hbdemo.commenting.owner.collection</url>
-                    <url_param name="sort">modified_at:desc</url_param>
-                    <rels>
-                        <rel>activity</rel>
-                        <rel>collection</rel>
-                        <rel>owner_collection</rel>
                     </rels>
                 </activity>
             </activity_container>
 
-            <activity_container scope="hbdemo.commenting.owner.create.primary_activities">
-                <activity name="save_resource">
-                    <url type="route">hbdemo.commenting.owner.collection</url>
-                    <verb>write</verb>
-                    <rels>
-                        <rel>activity</rel>
-                        <rel>create_resource</rel>
-                        <rel>createowner</rel>
-                    </rels>
-                </activity>
-                <activity name="save_resource_and_continue">
+            <activity_container scope="hbdemo.commenting.owner.subheader_activities" extends="default_subheader_activities">
+                <activity name="create_resource">
                     <url type="route">hbdemo.commenting.owner.create</url>
-                    <verb>write</verb>
                     <rels>
-                        <rel>activity</rel>
-                        <rel>create_resource</rel>
                         <rel>create_owner</rel>
                     </rels>
                 </activity>
-                <activity name="back_to_list">
+
+                <activity name="back_to_collection">
                     <url type="route">hbdemo.commenting.owner.collection</url>
                     <url_param name="sort">modified_at:desc</url_param>
                     <rels>
-                        <rel>activity</rel>
-                        <rel>collection</rel>
                         <rel>owner_collection</rel>
                     </rels>
                 </activity>

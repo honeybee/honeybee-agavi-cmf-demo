@@ -28,18 +28,10 @@
                 </activity>
             </activity_container>
 
+            <activity_container scope="hbdemo.commenting.owner.collection.subheader_activities" extends="hbdemo.commenting.owner.subheader_activities">
+            </activity_container>
+
             <activity_container scope="hbdemo.commenting.owner.collection.sort_activities">
-                <activity name="sort_by_name">
-                    <description>owner.activity.sort_by_name.description</description>
-                    <url type="route">null</url>
-                    <url_param name="sort">name:asc</url_param>
-                    <url_param name="offset">0</url_param>
-                    <rels>
-                        <rel>activity</rel>
-                        <rel>sort</rel>
-                        <rel>sort-by-name:asc</rel>
-                    </rels>
-                </activity>
                 <activity name="sort_by_modified_at">
                     <url type="route">null</url>
                     <url_param name="sort">modified_at:desc</url_param>

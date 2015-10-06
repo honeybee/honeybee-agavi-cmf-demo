@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/activities/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+>
+    <ae:configuration>
+        <activity_containers>
+
+            <activity_container scope="hbdemo.commenting.account.resource.modify">
+            </activity_container>
+
+            <activity_container scope="hbdemo.commenting.account.resource.modify.primary_activities">
+                <activity name="save_resource">
+                    <!--
+                        Eventual custom 'description' or 'label' can be specified for the activity.
+                        Otherwise they will be generated automatically, with the following format:
+                            account.activity.save_resource.description
+                            account.activity.save_resource.label
+                    -->
+                    <description>save_resource.description</description>
+                    <label>save_resource.label</label>
+                    <url type="route">null</url>
+                    <verb>write</verb>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>edit_resource</rel>
+                        <rel>edit_account</rel>
+                    </rels>
+                </activity>
+                <activity name="back_to_collection">
+                    <url type="route">hbdemo.commenting.account.collection</url>
+                    <url_param name="sort">modified_at:desc</url_param>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>collection</rel>
+                        <rel>account_collection</rel>
+                    </rels>
+                </activity>
+            </activity_container>
+
+            <activity_container scope="hbdemo.commenting.account.resource.modify.subheader_activities" extends="hbdemo.commenting.account.subheader_activities">
+            </activity_container>
+
+        </activity_containers>
+    </ae:configuration>
+</ae:configurations>

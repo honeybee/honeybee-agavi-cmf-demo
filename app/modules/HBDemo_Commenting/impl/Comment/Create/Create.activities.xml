@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/activities/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+>
+    <ae:configuration>
+        <activity_containers>
+
+            <activity_container scope="hbdemo.commenting.comment.create">
+            </activity_container>
+
+            <activity_container scope="hbdemo.commenting.comment.create.primary_activities">
+                <activity name="save_resource">
+                    <url type="route">hbdemo.commenting.comment.collection</url>
+                    <verb>write</verb>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>create_resource</rel>
+                        <rel>createcomment</rel>
+                    </rels>
+                </activity>
+                <activity name="save_resource_and_continue">
+                    <url type="route">hbdemo.commenting.comment.create</url>
+                    <verb>write</verb>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>create_resource</rel>
+                        <rel>create_comment</rel>
+                    </rels>
+                </activity>
+                <activity name="back_to_collection">
+                    <url type="route">hbdemo.commenting.comment.collection</url>
+                    <url_param name="sort">modified_at:desc</url_param>
+                    <rels>
+                        <rel>activity</rel>
+                        <rel>collection</rel>
+                        <rel>comment_collection</rel>
+                    </rels>
+                </activity>
+            </activity_container>
+
+            <activity_container scope="hbdemo.commenting.comment.create.subheader_activities" extends="hbdemo.commenting.comment.subheader_activities">
+            </activity_container>
+
+        </activity_containers>
+    </ae:configuration>
+</ae:configurations>

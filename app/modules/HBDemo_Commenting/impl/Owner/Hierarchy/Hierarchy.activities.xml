@@ -11,6 +11,9 @@
             <activity_container scope="hbdemo.commenting.owner.hierarchy.primary_activities" extends="hbdemo.commenting.owner.collection.primary_activities">
             </activity_container>
 
+            <activity_container scope="hbdemo.commenting.owner.hierarchy.subheader_activities" extends="hbdemo.commenting.owner.subheader_activities">
+            </activity_container>
+
             <activity_container scope="hbdemo.commenting.owner.hierarchy.sort_activities" extends="hbdemo.commenting.owner.collection.sort_activities">
             </activity_container>
         </activity_containers>
