@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "d6012785c67bff735f435ab64515ce00",
+    "content-hash": "fea2f775d74ec72837d245a33f8d18a9",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -610,7 +611,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/ffc1e51561a1c4333bc760104ba4b2b0a08dd08f",
+                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/ef8fc4b138b9a7c9ce46e78ec0910f6544517189",
                 "reference": "ffc1e51561a1c4333bc760104ba4b2b0a08dd08f",
                 "shasum": ""
             },
@@ -699,12 +700,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybee/honeybee-agavi-cmf-vendor.git",
-                "reference": "8aba1a26eb34da13c30990e8282a2dde67b6da48"
+                "reference": "60fed68e4363fb55708842aff73a4a1e654f7ae3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/8aba1a26eb34da13c30990e8282a2dde67b6da48",
-                "reference": "8aba1a26eb34da13c30990e8282a2dde67b6da48",
+                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/60fed68e4363fb55708842aff73a4a1e654f7ae3",
+                "reference": "60fed68e4363fb55708842aff73a4a1e654f7ae3",
                 "shasum": ""
             },
             "require": {
@@ -763,7 +764,7 @@
                 "agavi",
                 "honeybee"
             ],
-            "time": "2015-09-18 12:19:30"
+            "time": "2015-10-05 13:48:39"
         },
         {
             "name": "honeybee/trellis",
@@ -775,7 +776,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/trellis/zipball/253d0ed887fc3db00d64873f0410e1070e298edf",
+                "url": "https://api.github.com/repos/honeybee/trellis/zipball/31b5f7c2c429fb870a7fe7d7d764247eadba30d6",
                 "reference": "253d0ed887fc3db00d64873f0410e1070e298edf",
                 "shasum": ""
             },
@@ -1485,7 +1486,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/243cf1223c1d31cff1eed0874b4e958633652cd0",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/43ac5a3afcae6ab9ec1a4cb193c9c9a995d9e1df",
                 "reference": "243cf1223c1d31cff1eed0874b4e958633652cd0",
                 "shasum": ""
             },
@@ -1637,7 +1638,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shrink0r/workflux/zipball/cbafc4620200171f5d121a06ec355f21ff25d20d",
+                "url": "https://api.github.com/repos/shrink0r/workflux/zipball/56cb4ed524981f084ac7b547b1914d5ab379ae2d",
                 "reference": "cbafc4620200171f5d121a06ec355f21ff25d20d",
                 "shasum": ""
             },
@@ -1739,12 +1740,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
+                "url": "https://github.com/symfony/console.git",
                 "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/9ff9032151186bd66ecee727d728f1319f52d1d8",
+                "url": "https://api.github.com/repos/symfony/console/zipball/9ff9032151186bd66ecee727d728f1319f52d1d8",
                 "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8",
                 "shasum": ""
             },
@@ -1796,12 +1797,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
                 "reference": "b58c916f1db03a611b72dd702564f30ad8fe83fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/b58c916f1db03a611b72dd702564f30ad8fe83fa",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b58c916f1db03a611b72dd702564f30ad8fe83fa",
                 "reference": "b58c916f1db03a611b72dd702564f30ad8fe83fa",
                 "shasum": ""
             },
@@ -1903,12 +1904,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Filesystem.git",
+                "url": "https://github.com/symfony/filesystem.git",
                 "reference": "f079e9933799929584200b9a926f72f29e291654"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/f079e9933799929584200b9a926f72f29e291654",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/f079e9933799929584200b9a926f72f29e291654",
                 "reference": "f079e9933799929584200b9a926f72f29e291654",
                 "shasum": ""
             },
@@ -3681,12 +3682,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Config.git",
+                "url": "https://github.com/symfony/config.git",
                 "reference": "5ab9ff48b3cb5b40951a607f77fc1cbfd29edba8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Config/zipball/5ab9ff48b3cb5b40951a607f77fc1cbfd29edba8",
+                "url": "https://api.github.com/repos/symfony/config/zipball/5ab9ff48b3cb5b40951a607f77fc1cbfd29edba8",
                 "reference": "5ab9ff48b3cb5b40951a607f77fc1cbfd29edba8",
                 "shasum": ""
             },
@@ -3731,12 +3732,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/DependencyInjection.git",
+                "url": "https://github.com/symfony/dependency-injection.git",
                 "reference": "c0a3a97b9450d77cd8eff81c5825efb3624c255b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/c0a3a97b9450d77cd8eff81c5825efb3624c255b",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/c0a3a97b9450d77cd8eff81c5825efb3624c255b",
                 "reference": "c0a3a97b9450d77cd8eff81c5825efb3624c255b",
                 "shasum": ""
             },
