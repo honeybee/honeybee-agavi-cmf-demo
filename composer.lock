@@ -700,12 +700,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybee/honeybee-agavi-cmf-vendor.git",
-                "reference": "6886b6bdb2be04631b8dc5b92bf2e01aa65dac64"
+                "reference": "bd90aee282b98c6fb3eef44cb3d34641f95e91dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/6886b6bdb2be04631b8dc5b92bf2e01aa65dac64",
-                "reference": "6886b6bdb2be04631b8dc5b92bf2e01aa65dac64",
+                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/bd90aee282b98c6fb3eef44cb3d34641f95e91dc",
+                "reference": "bd90aee282b98c6fb3eef44cb3d34641f95e91dc",
                 "shasum": ""
             },
             "require": {
@@ -764,7 +764,7 @@
                 "agavi",
                 "honeybee"
             ],
-            "time": "2015-10-08 12:09:50"
+            "time": "2015-10-08 13:36:04"
         },
         {
             "name": "honeybee/trellis",
