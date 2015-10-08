@@ -86,14 +86,6 @@
                         <rel>create_owner</rel>
                     </rels>
                 </activity>
-
-                <activity name="back_to_collection">
-                    <url type="route">hbdemo.commenting.owner.collection</url>
-                    <url_param name="sort">modified_at:desc</url_param>
-                    <rels>
-                        <rel>owner_collection</rel>
-                    </rels>
-                </activity>
             </activity_container>
 
         </activity_containers>

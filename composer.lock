@@ -611,7 +611,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/ef8fc4b138b9a7c9ce46e78ec0910f6544517189",
+                "url": "https://api.github.com/repos/honeybee/honeybee/zipball/7918857cb2a13cfa46ea41490361b92bb1f905c1",
                 "reference": "ffc1e51561a1c4333bc760104ba4b2b0a08dd08f",
                 "shasum": ""
             },
@@ -700,12 +700,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/honeybee/honeybee-agavi-cmf-vendor.git",
-                "reference": "60fed68e4363fb55708842aff73a4a1e654f7ae3"
+                "reference": "6886b6bdb2be04631b8dc5b92bf2e01aa65dac64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/60fed68e4363fb55708842aff73a4a1e654f7ae3",
-                "reference": "60fed68e4363fb55708842aff73a4a1e654f7ae3",
+                "url": "https://api.github.com/repos/honeybee/honeybee-agavi-cmf-vendor/zipball/6886b6bdb2be04631b8dc5b92bf2e01aa65dac64",
+                "reference": "6886b6bdb2be04631b8dc5b92bf2e01aa65dac64",
                 "shasum": ""
             },
             "require": {
@@ -764,7 +764,7 @@
                 "agavi",
                 "honeybee"
             ],
-            "time": "2015-10-05 13:48:39"
+            "time": "2015-10-08 12:09:50"
         },
         {
             "name": "honeybee/trellis",
